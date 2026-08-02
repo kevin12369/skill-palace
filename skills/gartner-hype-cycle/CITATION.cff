@@ -1,0 +1,62 @@
+cff-version: 1.2.0
+message: "If you use this skill, please cite it using the metadata below."
+title: "Gartner Hype Cycle for Emerging Technologies Analysis Framework SKILL"
+type: software
+authors:
+  - family-names: "Fenn"
+    given-names: "Jackie"
+    orcid: ""
+  - family-names: "Raskino"
+    given-names: "Mark"
+    orcid: ""
+repository-code: ""
+url: ""
+abstract: "A reusable analytical framework based on Gartner's Hype Cycle for Emerging Technologies (1995) and Technology Adoption Lifecycle models. Designed to assist in positioning emerging technologies within the five-phase Hype Cycle, distinguishing hype from substance, assessing 'crossing the chasm' probability, and providing resource allocation guidance via priority matrices. This skill provides a structured analytical framework and writing style calibration. It does NOT claim to represent Gartner, Inc. or its analysts. The Hype Cycle framework was developed by Gartner; this skill is an independent implementation for analytical purposes."
+license: ""
+version: "1.0.0"
+date-released: "2025-08-02"
+identifiers:
+  - type: other
+    value: "gartner-hype-cycle-skill-v1"
+    description: "Gartner Hype Cycle Analysis Framework SKILL version 1.0.0"
+keywords:
+  - "Hype Cycle"
+  - "Technology Adoption"
+  - "Gartner"
+  - "Peak of Inflated Expectations"
+  - "Trough of Disillusionment"
+  - "Plateau of Productivity"
+  - "Crossing the Chasm"
+  - "Technology Forecasting"
+  - "Innovation Diffusion"
+  - "Technology Maturity"
+  - "Hype vs Substance"
+references:
+  - type: book
+    title: "Mastering the Hype Cycle: How to Choose the Right Innovation at the Right Time"
+    authors:
+      - family-names: "Fenn"
+        given-names: "Jackie"
+      - family-names: "Raskino"
+        given-names: "Mark"
+    year: 2008
+    publisher: "Harvard Business Press"
+  - type: book
+    title: "Crossing the Chasm"
+    authors:
+      - family-names: "Moore"
+        given-names: "Geoffrey A."
+    year: 1991
+    publisher: "HarperBusiness"
+  - type: book
+    title: "Diffusion of Innovations"
+    authors:
+      - family-names: "Rogers"
+        given-names: "Everett M."
+    year: 1962
+    publisher: "Free Press"
+  - type: report
+    title: "Gartner Hype Cycle for Emerging Technologies"
+    institution: "Gartner, Inc."
+    year: "2000-2025"
+notes: "The Hype Cycle framework was developed by Gartner, Inc. This skill is an independent implementation for analytical purposes and does not claim to represent Gartner, Inc. or its analysts' views. 'Gartner' and 'Hype Cycle' are trademarks/service marks of Gartner, Inc."
