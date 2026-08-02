@@ -2,7 +2,7 @@
   "name": "SKILL Palace",
   "version": "1.0.0",
   "description": "世界知名人物思维框架的 SKILL 化名人堂",
-  "updated": "2026-07-09",
+  "updated": "2026-08-02",
   "skills": [
     {
       "name": "gao-shanwen",
@@ -14,6 +14,8 @@
       "status": "released",
       "frameworks": ["资产重估理论", "河床水位比喻", "刘易斯拐点", "人口结构分析"],
       "style_keywords": ["隐喻化", "方法论先行", "长期视角"],
+      "roundtable_role": "中国宏观背景提供者",
+      "roundtable_tags": ["中国宏观", "资产定价", "房地产", "人口", "货币政策", "汇率"],
       "complements": ["greenspan"],
       "path": "skills/gao-shanwen"
     },
@@ -27,6 +29,8 @@
       "status": "released",
       "frameworks": ["Fedspeak", "全球储蓄过剩", "利率之谜", "生产率奇迹", "非理性繁荣", "Greenspan Put"],
       "style_keywords": ["数据驱动", "谨慎含蓄", "多层语义", "长期视角"],
+      "roundtable_role": "全球宏观背景提供者",
+      "roundtable_tags": ["全球宏观", "美联储", "利率", "美元", "跨境资本", "泡沫识别", "非理性繁荣"],
       "complements": ["gao-shanwen"],
       "path": "skills/greenspan"
     },
@@ -40,17 +44,53 @@
       "status": "released",
       "frameworks": ["多元思维模型格栅", "逆向思考", "能力圈", "安全边际", "Lollapalooza效应", "人类误判心理学25条", "三筐分类法", "冲浪模型"],
       "style_keywords": ["犀利直白", "逆向先行", "警句式", "承认无知"],
+      "roundtable_role": "首席逆向质疑者",
+      "roundtable_tags": ["微观决策", "逆向思考", "偏误扫描", "Lollapalooza", "商业判断", "企业质量", "风险识别"],
       "complements": ["gao-shanwen", "greenspan"],
       "path": "skills/charlie-munger"
+    },
+    {
+      "name": "warren-buffett",
+      "person": "沃伦·巴菲特",
+      "person_en": "Warren Buffett",
+      "domain": "value-investing",
+      "domain_cn": "价值投资",
+      "region": "global",
+      "status": "released",
+      "frameworks": ["能力圈", "安全边际", "市场先生", "经济护城河", "所有者盈余", "资本配置", "内在价值", "长期复利", "管理层质量", "集中投资", "通货膨胀绦虫", "20孔打卡"],
+      "style_keywords": ["朴实平易", "故事化", "自嘲式幽默", "长期视角", "股东信语体"],
+      "roundtable_role": "估值与最终决策者",
+      "roundtable_tags": ["价值投资", "护城河", "估值", "安全边际", "管理层", "资本配置", "长期持有"],
+      "complements": ["charlie-munger", "greenspan"],
+      "path": "skills/warren-buffett"
     }
   ],
-  "combos": [
+  "roundtable": {
+    "doc": "combos/ROUNDTABLE.md",
+    "description": "动态圆桌会议机制——按需组阁，根据问题领域动态组装最合适的专家圆桌",
+    "rules": [
+      "不预设组合：每次根据问题的具体领域动态组装",
+      "最少1人，通常2-3人",
+      "先宏观后微观：严格遵守分析顺序",
+      "分歧必须呈现：不强制统一，标注分歧并做前提审计",
+      "圆桌不替代单一skill：简单问题直接调用单一skill，复杂/跨领域问题启动圆桌"
+    ]
+  },
+  "roundtable_examples": [
     {
-      "name": "macro-council",
-      "title": "宏观智囊团",
-      "members": ["gao-shanwen", "greenspan"],
-      "scenario": "需要同时从中国宏观与全球宏观视角分析（中美利差、全球资本流动、汇率走势）",
-      "path": "combos/macro-council.md"
+      "question": "现在的 AI 板块是不是泡沫？应该怎么办？",
+      "domains": ["泡沫识别", "逆向审视", "估值"],
+      "members": ["greenspan", "charlie-munger"]
+    },
+    {
+      "question": "买入茅台长期持有，这个决策对吗？",
+      "domains": ["中国宏观", "护城河", "估值", "逆向审视"],
+      "members": ["gao-shanwen", "warren-buffett", "charlie-munger"]
+    },
+    {
+      "question": "美联储降息周期，对A股意味着什么？",
+      "domains": ["全球宏观", "中国宏观", "跨境传导"],
+      "members": ["greenspan", "gao-shanwen"]
     }
   ],
   "domains": [
@@ -63,6 +103,11 @@
       "id": "investment-decision",
       "name_cn": "投资决策",
       "skills": ["charlie-munger"]
+    },
+    {
+      "id": "value-investing",
+      "name_cn": "价值投资",
+      "skills": ["warren-buffett"]
     }
   ]
 }

@@ -1,0 +1,69 @@
+cff-version: 1.2.0
+message: "If you use this skill, please cite it using the metadata below."
+title: "Warren Buffett Value Investing Analysis Framework SKILL"
+type: software
+authors:
+  - family-names: "Buffett"
+    given-names: "Warren"
+    orcid: ""
+repository-code: ""
+url: ""
+abstract: "A reusable analysis framework and writing style tool based on Warren Buffett's public methodology, including the Circle of Competence, Margin of Safety, Mr. Market, Economic Moat (five types), Owner Earnings, Capital Allocation (five pathways), Intrinsic Value, Long-term Compounding, Management Quality (three dimensions), Concentration, Inflation Defense, and 20-Slot Punch Card discipline. Designed to assist in corporate quality assessment, moat analysis, intrinsic value estimation, management evaluation, and capital allocation judgment. This skill provides a thinking framework and writing style calibration, and does NOT claim to represent Warren Buffett personally or his unpublished views."
+license: ""
+version: "1.0.0"
+date-released: "2026-08-02"
+identifiers:
+  - type: other
+    value: "warren-buffett-skill-v1"
+    description: "Warren Buffett Value Investing Analysis Framework SKILL version 1.0.0"
+keywords:
+  - "Warren Buffett"
+  - "Value Investing"
+  - "Circle of Competence"
+  - "Margin of Safety"
+  - "Mr. Market"
+  - "Economic Moat"
+  - "Owner Earnings"
+  - "Capital Allocation"
+  - "Intrinsic Value"
+  - "Long-term Compounding"
+  - "Management Quality"
+  - "Concentration"
+  - "Inflation"
+  - "20-Slot Punch Card"
+  - "Berkshire Hathaway"
+  - "Business Analysis"
+references:
+  - type: book
+    title: "The Essays of Warren Buffett: Lessons for Corporate America"
+    authors:
+      - family-names: "Cunningham"
+        given-names: "Lawrence A."
+    year: 1997
+  - type: book
+    title: "The Snowball: Warren Buffett and the Business of Life"
+    authors:
+      - family-names: "Schroeder"
+        given-names: "Alice"
+    year: 2008
+  - type: book
+    title: "Buffett: The Making of an American Capitalist"
+    authors:
+      - family-names: "Lowenstein"
+        given-names: "Roger"
+    year: 1995
+  - type: report
+    title: "Berkshire Hathaway Annual Shareholder Letters"
+    authors:
+      - family-names: "Buffett"
+        given-names: "Warren"
+    year: "1977-present"
+  - type: speech
+    title: "Berkshire Hathaway Annual Shareholder Meetings"
+    authors:
+      - family-names: "Buffett"
+        given-names: "Warren"
+      - family-names: "Munger"
+        given-names: "Charlie"
+    year: "1965-present"
+notes: "This framework is based on Warren Buffett's public methodology and writings. It does NOT claim to represent Warren Buffett personally or his unpublished views. All quotations are from publicly available sources."
