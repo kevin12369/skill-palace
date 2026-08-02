@@ -103,7 +103,7 @@ SKILL Palace 的 skill 不是孤立的——它们可以组合成"多人物会�
 
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/<your-user>/skill-palace /tmp/skill-palace
+git clone https://github.com/kevin12369/skill-palace /tmp/skill-palace
 
 # 2. 复制你需要的 skill（以 charlie-munger 为例）
 
