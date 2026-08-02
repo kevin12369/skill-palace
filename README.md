@@ -24,9 +24,9 @@ SKILL Palace 不是"人设聊天机器人"。它走的是相反路线：**不追
 
 | 人物 | 领域 | 核心框架 | 文风关键词 | 状态 | 安装命令 |
 |------|------|---------|-----------|------|---------|
-| 高善文 | 宏观经济 | 资产重估理论、河床水位比喻、刘易斯拐点 | 隐喻化、方法论先行、长期视角 | ✅ 已发布 | `cp -r skills/gao-shanwen ~/.workbuddy/skills/` |
-| 格林斯潘 | 全球宏观 | Fedspeak、全球储蓄过剩、非理性繁荣 | 数据驱动、谨慎含蓄、多层语义 | ✅ 已发布 | `cp -r skills/greenspan ~/.workbuddy/skills/` |
-| 查理·芒格 | 投资决策 | 多元思维模型、逆向思考、Lollapalooza 效应 | 犀利直白、警句式、承认无知 | ✅ 已发布 | `cp -r skills/charlie-munger ~/.workbuddy/skills/` |
+| 高善文 | 宏观经济 | 资产重估理论、河床水位比喻、刘易斯拐点 | 隐喻化、方法论先行、长期视角 | ✅ 已发布 | `git clone https://github.com/kevin12369/gaoshanwen-skill` |
+| 格林斯潘 | 全球宏观 | Fedspeak、全球储蓄过剩、非理性繁荣 | 数据驱动、谨慎含蓄、多层语义 | ✅ 已发布 | → [安装说明](#快速开始) |
+| 查理·芒格 | 投资决策 | 多元思维模型、逆向思考、Lollapalooza 效应 | 犀利直白、警句式、承认无知 | ✅ 已发布 | → [安装说明](#快速开始) |
 
 ---
 
@@ -99,29 +99,30 @@ SKILL Palace 的 skill 不是孤立的——它们可以组合成"多人物会�
 
 ## 快速开始
 
-### 安装单个 skill
+### 安装
 
 ```bash
 # 1. 克隆仓库
 git clone https://github.com/kevin12369/skill-palace /tmp/skill-palace
 
-# 2. 复制你需要的 skill（以 charlie-munger 为例）
+# 2. 复制你需要的 skill 到对应平台的 skills 目录
+#    以 charlie-munger 为例，路径详见下方各平台对照表
+cp -r /tmp/skill-palace/skills/charlie-munger <skills路径>/charlie-munger
 
-# 方式一：用户级安装（推荐，所有项目可用）
-cp -r /tmp/skill-palace/skills/charlie-munger ~/.workbuddy/skills/charlie-munger
-
-# 方式二：项目级安装（仅当前项目）
-cp -r /tmp/skill-palace/skills/charlie-munger your-project/.workbuddy/skills/charlie-munger
-
-# 方式三：Claude Code 兼容安装
-cp -r /tmp/skill-palace/skills/charlie-munger your-project/.claude/skills/charlie-munger
+# 3. 安装全部 skill
+cp -r /tmp/skill-palace/skills/* <skills路径>/
 ```
 
-### 安装全部 skill
+### 各平台 skills 路径
 
-```bash
-cp -r /tmp/skill-palace/skills/* ~/.workbuddy/skills/
-```
+| 平台 | 用户级（推荐，全局可用） | 项目级（随项目走） |
+|------|------------------------|-------------------|
+| WorkBuddy | `~/.workbuddy/skills/` | `your-project/.workbuddy/skills/` |
+| Claude Code | `~/.claude/skills/` | `your-project/.claude/skills/` |
+| Cursor | `~/.cursor/skills/` | `your-project/.cursor/skills/` |
+| OpenClaw | `~/.openclaw/skills/` | `your-project/.openclaw/skills/` |
+| Codex | `$CODEX_HOME/skills/` | — |
+| Trae | `~/.trae/skills/` | — |
 
 ### 选择 SKILL 变体
 
@@ -135,8 +136,8 @@ cp -r /tmp/skill-palace/skills/* ~/.workbuddy/skills/
 | 英文版 | `SKILL.en.md` | 国际化场景 |
 
 ```bash
-# 示例：安装精简版
-cp /tmp/skill-palace/skills/charlie-munger/SKILL-condensed.md ~/.workbuddy/skills/charlie-munger/SKILL.md
+# 示例：安装精简版（将变体重命名为 SKILL.md 即可）
+cp /tmp/skill-palace/skills/charlie-munger/SKILL-condensed.md <skills路径>/charlie-munger/SKILL.md
 ```
 
 ### 验证
