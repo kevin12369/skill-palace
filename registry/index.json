@@ -1,0 +1,68 @@
+{
+  "name": "SKILL Palace",
+  "version": "1.0.0",
+  "description": "世界知名人物思维框架的 SKILL 化名人堂",
+  "updated": "2026-07-09",
+  "skills": [
+    {
+      "name": "gao-shanwen",
+      "person": "高善文",
+      "person_en": "Gao Shanwen",
+      "domain": "macroeconomics",
+      "domain_cn": "宏观经济",
+      "region": "china",
+      "status": "released",
+      "frameworks": ["资产重估理论", "河床水位比喻", "刘易斯拐点", "人口结构分析"],
+      "style_keywords": ["隐喻化", "方法论先行", "长期视角"],
+      "complements": ["greenspan"],
+      "path": "skills/gao-shanwen"
+    },
+    {
+      "name": "greenspan",
+      "person": "格林斯潘",
+      "person_en": "Alan Greenspan",
+      "domain": "macroeconomics",
+      "domain_cn": "全球宏观",
+      "region": "global",
+      "status": "released",
+      "frameworks": ["Fedspeak", "全球储蓄过剩", "利率之谜", "生产率奇迹", "非理性繁荣", "Greenspan Put"],
+      "style_keywords": ["数据驱动", "谨慎含蓄", "多层语义", "长期视角"],
+      "complements": ["gao-shanwen"],
+      "path": "skills/greenspan"
+    },
+    {
+      "name": "charlie-munger",
+      "person": "查理·芒格",
+      "person_en": "Charlie Munger",
+      "domain": "investment-decision",
+      "domain_cn": "投资决策",
+      "region": "global",
+      "status": "released",
+      "frameworks": ["多元思维模型格栅", "逆向思考", "能力圈", "安全边际", "Lollapalooza效应", "人类误判心理学25条", "三筐分类法", "冲浪模型"],
+      "style_keywords": ["犀利直白", "逆向先行", "警句式", "承认无知"],
+      "complements": ["gao-shanwen", "greenspan"],
+      "path": "skills/charlie-munger"
+    }
+  ],
+  "combos": [
+    {
+      "name": "macro-council",
+      "title": "宏观智囊团",
+      "members": ["gao-shanwen", "greenspan"],
+      "scenario": "需要同时从中国宏观与全球宏观视角分析（中美利差、全球资本流动、汇率走势）",
+      "path": "combos/macro-council.md"
+    }
+  ],
+  "domains": [
+    {
+      "id": "macroeconomics",
+      "name_cn": "宏观经济",
+      "skills": ["gao-shanwen", "greenspan"]
+    },
+    {
+      "id": "investment-decision",
+      "name_cn": "投资决策",
+      "skills": ["charlie-munger"]
+    }
+  ]
+}

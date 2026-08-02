@@ -1,0 +1,129 @@
+name: Lint Skills
+
+on:
+  pull_request:
+    paths:
+      - 'skills/**'
+      - 'registry/**'
+  push:
+    branches: [main]
+    paths:
+      - 'skills/**'
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate skill structure
+        run: |
+          python - <<'PYEOF'
+          import os, re, json, sys
+
+          errors = []
+          skills_dir = "skills"
+
+          if not os.path.isdir(skills_dir):
+              print("No skills/ directory found, skipping.")
+              sys.exit(0)
+
+          for name in sorted(os.listdir(skills_dir)):
+              path = os.path.join(skills_dir, name)
+              if not os.path.isdir(path) or name.startswith("_"):
+                  continue
+
+              skill_md = os.path.join(path, "SKILL.md")
+              profile_md = os.path.join(path, "PROFILE.md")
+              refs_dir = os.path.join(path, "references")
+
+              # SKILL.md must exist
+              if not os.path.isfile(skill_md):
+                  errors.append(f"[{name}] Missing SKILL.md")
+                  continue
+
+              # Read and validate frontmatter
+              with open(skill_md, "r", encoding="utf-8") as f:
+                  content = f.read()
+
+              fm_match = re.match(r"^---\n(.*?)\n---", content, re.DOTALL)
+              if not fm_match:
+                  errors.append(f"[{name}] SKILL.md missing frontmatter")
+                  continue
+
+              fm = fm_match.group(1)
+              required_fields = ["name:", "description:", "agent_created:"]
+              for field in required_fields:
+                  if field not in fm:
+                      errors.append(f"[{name}] frontmatter missing field: {field}")
+
+              # name must match directory
+              name_match = re.search(r"^name:\s*(.+)$", fm, re.MULTILINE)
+              if name_match:
+                  fm_name = name_match.group(1).strip()
+                  if fm_name != name:
+                      errors.append(f"[{name}] frontmatter name '{fm_name}' != directory '{name}'")
+
+              # Check免责声明
+              if "不声称代表" not in content and "不声称" not in content:
+                  errors.append(f"[{name}] SKILL.md missing disclaimer (不声称代表本人)")
+
+              # PROFILE.md must exist
+              if not os.path.isfile(profile_md):
+                  errors.append(f"[{name}] Missing PROFILE.md")
+
+              # references/ must exist with 8 numbered files
+              required_refs = [
+                  "01-core-theories.md",
+                  "02-analysis-frameworks.md",
+                  "03-style-and-voice.md",
+                  "04-key-views-timeline.md",
+                  "05-publications.md",
+                  "06-glossary.md",
+                  "07-checklist.md",
+                  "08-style-anti-patterns.md",
+              ]
+              if not os.path.isdir(refs_dir):
+                  errors.append(f"[{name}] Missing references/ directory")
+              else:
+                  for ref_file in required_refs:
+                      if not os.path.isfile(os.path.join(refs_dir, ref_file)):
+                          errors.append(f"[{name}] Missing references/{ref_file}")
+
+              # examples/INDEX.md recommended
+              if not os.path.isfile(os.path.join(path, "examples", "INDEX.md")):
+                  errors.append(f"[{name}] Missing examples/INDEX.md")
+
+              # SKILL-condensed.md recommended (warn only)
+              if not os.path.isfile(os.path.join(path, "SKILL-condensed.md")):
+                  print(f"  WARN: [{name}] SKILL-condensed.md not found (recommended)")
+
+              print(f"[OK] {name}")
+
+          # Validate registry
+          registry = "registry/index.json"
+          if os.path.isfile(registry):
+              try:
+                  with open(registry, "r", encoding="utf-8") as f:
+                      data = json.load(f)
+                  skill_names = [s["name"] for s in data.get("skills", [])]
+                  for name in sorted(os.listdir(skills_dir)):
+                      if os.path.isdir(os.path.join(skills_dir, name)) and not name.startswith("_"):
+                          if name not in skill_names:
+                              errors.append(f"[{name}] not found in registry/index.json")
+              except json.JSONDecodeError as e:
+                  errors.append(f"registry/index.json is not valid JSON: {e}")
+
+          if errors:
+              print("\n=== VALIDATION ERRORS ===")
+              for e in errors:
+                  print(f"  ERROR: {e}")
+              sys.exit(1)
+          else:
+              print("\nAll skills passed validation.")
+          PYEOF
