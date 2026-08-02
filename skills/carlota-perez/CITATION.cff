@@ -1,0 +1,55 @@
+cff-version: 1.2.0
+message: "If you use this skill, please cite it using the metadata below."
+title: "Carlota Perez Techno-Economic Paradigm and Financial Capital Cycle Analysis Framework SKILL"
+type: software
+authors:
+  - family-names: "Perez"
+    given-names: "Carlota"
+    orcid: ""
+repository-code: ""
+url: ""
+abstract: "A reusable analysis framework and writing style tool based on Carlota Perez's public methodology, including the Techno-Economic Paradigm, Great Surge Cycle (Installation-Turning Point-Deployment), the dialectical relationship between Financial Capital and Production Capital, and the conditions for paradigm transition. Designed to assist in analyzing technological revolutions, industrial transformation, bubble evolution, and institutional change. This skill provides a thinking framework and writing style calibration, and does NOT claim to represent Carlota Perez personally or her unpublished views."
+license: ""
+version: "1.0.0"
+date-released: "2025-01-01"
+identifiers:
+  - type: other
+    value: "carlota-perez-skill-v1"
+    description: "Carlota Perez Analysis Framework SKILL version 1.0.0"
+keywords:
+  - "Carlota Perez"
+  - "Techno-Economic Paradigm"
+  - "Great Surges"
+  - "Financial Capital"
+  - "Production Capital"
+  - "Technological Revolution"
+  - "Bubble"
+  - "Turning Point"
+  - "Installation Period"
+  - "Deployment Period"
+  - "Innovation"
+  - "Institutional Change"
+  - "Evolutionary Economics"
+references:
+  - type: book
+    title: "Technological Revolutions and Financial Capital: The Dynamics of Bubbles and Golden Ages"
+    authors:
+      - family-names: "Perez"
+        given-names: "Carlota"
+    year: 2002
+    publisher: "Edward Elgar Publishing"
+  - type: article
+    title: "Structural Change and Assimilation of New Technologies in the Economic and Social Systems"
+    authors:
+      - family-names: "Perez"
+        given-names: "Carlota"
+    year: 1983
+    journal: "Futures"
+  - type: article
+    title: "Technological Revolutions and Techno-economic Paradigms"
+    authors:
+      - family-names: "Perez"
+        given-names: "Carlota"
+    year: 2009
+    journal: "TOC/TUT Working Paper Series"
+notes: "Carlota Perez is living (born 1940). This framework is based on her published works and may evolve with new publications."

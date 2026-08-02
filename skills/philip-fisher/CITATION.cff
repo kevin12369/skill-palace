@@ -1,0 +1,50 @@
+cff-version: 1.2.0
+message: "If you use this skill, please cite it using the metadata below."
+title: "Philip Fisher Growth Stock Investment and Analysis Framework SKILL"
+type: software
+authors:
+  - family-names: "Fisher"
+    given-names: "Philip A."
+    orcid: ""
+repository-code: ""
+url: ""
+abstract: "A reusable analysis framework and writing style tool based on Philip Fisher's public methodology, including the Scuttlebutt Method, Fifteen Points checklist, Growth Stock Investment Philosophy, Long-term Holding principles, Management Quality Assessment, and Concentrated Investing approach. Designed to assist in evaluating corporate growth prospects, management quality, R&D innovation, and long-term holding value. This skill provides an investment analysis framework and writing style calibration, and does NOT claim to represent Philip Fisher personally or his unpublished views."
+license: ""
+version: "1.0.0"
+date-released: "2025-01-01"
+identifiers:
+  - type: other
+    value: "philip-fisher-skill-v1"
+    description: "Philip Fisher Growth Stock Investment Analysis Framework SKILL version 1.0.0"
+keywords:
+  - "Philip Fisher"
+  - "Scuttlebutt Method"
+  - "Fifteen Points"
+  - "Growth Stock Investing"
+  - "Common Stocks and Uncommon Profits"
+  - "Long-term Holding"
+  - "Management Assessment"
+  - "Concentrated Investing"
+  - "Qualitative Analysis"
+  - "R&D Evaluation"
+  - "Investment Philosophy"
+references:
+  - type: book
+    title: "Common Stocks and Uncommon Profits"
+    authors:
+      - family-names: "Fisher"
+        given-names: "Philip A."
+    year: 1958
+  - type: book
+    title: "Conservative Investors Sleep Well"
+    authors:
+      - family-names: "Fisher"
+        given-names: "Philip A."
+    year: 1975
+  - type: book
+    title: "Developing an Investment Philosophy"
+    authors:
+      - family-names: "Fisher"
+        given-names: "Philip A."
+    year: 1980
+notes: "Philip Fisher passed away on March 11, 2004. All public views included in this framework are from sources dated on or before that date. Warren Buffett has stated that his investment philosophy is '85% Graham and 15% Fisher.' In Chinese-language contexts, Philip Fisher is commonly referred to as '小费雪' (Small Fisher) to distinguish him from Irving Fisher ('大费雪', Big Fisher), the monetary economics pioneer."

@@ -1,113 +1,35 @@
 {
   "name": "SKILL Palace",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "世界知名人物思维框架的 SKILL 化名人堂",
   "updated": "2026-08-02",
   "skills": [
-    {
-      "name": "gao-shanwen",
-      "person": "高善文",
-      "person_en": "Gao Shanwen",
-      "domain": "macroeconomics",
-      "domain_cn": "宏观经济",
-      "region": "china",
-      "status": "released",
-      "frameworks": ["资产重估理论", "河床水位比喻", "刘易斯拐点", "人口结构分析"],
-      "style_keywords": ["隐喻化", "方法论先行", "长期视角"],
-      "roundtable_role": "中国宏观背景提供者",
-      "roundtable_tags": ["中国宏观", "资产定价", "房地产", "人口", "货币政策", "汇率"],
-      "complements": ["greenspan"],
-      "path": "skills/gao-shanwen"
-    },
-    {
-      "name": "greenspan",
-      "person": "格林斯潘",
-      "person_en": "Alan Greenspan",
-      "domain": "macroeconomics",
-      "domain_cn": "全球宏观",
-      "region": "global",
-      "status": "released",
-      "frameworks": ["Fedspeak", "全球储蓄过剩", "利率之谜", "生产率奇迹", "非理性繁荣", "Greenspan Put"],
-      "style_keywords": ["数据驱动", "谨慎含蓄", "多层语义", "长期视角"],
-      "roundtable_role": "全球宏观背景提供者",
-      "roundtable_tags": ["全球宏观", "美联储", "利率", "美元", "跨境资本", "泡沫识别", "非理性繁荣"],
-      "complements": ["gao-shanwen"],
-      "path": "skills/greenspan"
-    },
-    {
-      "name": "charlie-munger",
-      "person": "查理·芒格",
-      "person_en": "Charlie Munger",
-      "domain": "investment-decision",
-      "domain_cn": "投资决策",
-      "region": "global",
-      "status": "released",
-      "frameworks": ["多元思维模型格栅", "逆向思考", "能力圈", "安全边际", "Lollapalooza效应", "人类误判心理学25条", "三筐分类法", "冲浪模型"],
-      "style_keywords": ["犀利直白", "逆向先行", "警句式", "承认无知"],
-      "roundtable_role": "首席逆向质疑者",
-      "roundtable_tags": ["微观决策", "逆向思考", "偏误扫描", "Lollapalooza", "商业判断", "企业质量", "风险识别"],
-      "complements": ["gao-shanwen", "greenspan"],
-      "path": "skills/charlie-munger"
-    },
-    {
-      "name": "warren-buffett",
-      "person": "沃伦·巴菲特",
-      "person_en": "Warren Buffett",
-      "domain": "value-investing",
-      "domain_cn": "价值投资",
-      "region": "global",
-      "status": "released",
-      "frameworks": ["能力圈", "安全边际", "市场先生", "经济护城河", "所有者盈余", "资本配置", "内在价值", "长期复利", "管理层质量", "集中投资", "通货膨胀绦虫", "20孔打卡"],
-      "style_keywords": ["朴实平易", "故事化", "自嘲式幽默", "长期视角", "股东信语体"],
-      "roundtable_role": "估值与最终决策者",
-      "roundtable_tags": ["价值投资", "护城河", "估值", "安全边际", "管理层", "资本配置", "长期持有"],
-      "complements": ["charlie-munger", "greenspan"],
-      "path": "skills/warren-buffett"
-    }
+    {"name":"gao-shanwen","person":"高善文","person_en":"Gao Shanwen","domain":"macroeconomics","domain_cn":"宏观经济","region":"china","status":"released","frameworks":["资产重估理论","河床水位比喻","刘易斯拐点","人口结构分析"],"style_keywords":["隐喻化","方法论先行","长期视角"],"roundtable_role":"中国宏观背景提供者","roundtable_tags":["中国宏观","资产定价","房地产","人口","货币政策","汇率"],"complements":["greenspan"],"path":"skills/gao-shanwen"},
+    {"name":"greenspan","person":"格林斯潘","person_en":"Alan Greenspan","domain":"macroeconomics","domain_cn":"全球宏观","region":"global","status":"released","frameworks":["Fedspeak","全球储蓄过剩","利率之谜","生产率奇迹","非理性繁荣","Greenspan Put"],"style_keywords":["数据驱动","谨慎含蓄","多层语义","长期视角"],"roundtable_role":"全球宏观背景提供者","roundtable_tags":["全球宏观","美联储","利率","美元","跨境资本","泡沫识别","非理性繁荣"],"complements":["gao-shanwen"],"path":"skills/greenspan"},
+    {"name":"charlie-munger","person":"查理·芒格","person_en":"Charlie Munger","domain":"investment-decision","domain_cn":"投资决策","region":"global","status":"released","frameworks":["多元思维模型格栅","逆向思考","能力圈","安全边际","Lollapalooza效应","人类误判心理学25条","三筐分类法","冲浪模型"],"style_keywords":["犀利直白","逆向先行","警句式","承认无知"],"roundtable_role":"首席逆向质疑者","roundtable_tags":["微观决策","逆向思考","偏误扫描","Lollapalooza","商业判断","企业质量","风险识别"],"complements":["gao-shanwen","greenspan"],"path":"skills/charlie-munger"},
+    {"name":"warren-buffett","person":"沃伦·巴菲特","person_en":"Warren Buffett","domain":"value-investing","domain_cn":"价值投资","region":"global","status":"released","frameworks":["能力圈","安全边际","市场先生","经济护城河","所有者盈余","资本配置","内在价值","长期复利","管理层质量","集中投资","通胀绦虫","20孔打卡"],"style_keywords":["朴实平易","故事化","自嘲式幽默","长期视角","股东信语体"],"roundtable_role":"估值与最终决策者","roundtable_tags":["价值投资","护城河","估值","安全边际","管理层","资本配置","长期持有"],"complements":["charlie-munger","greenspan"],"path":"skills/warren-buffett"},
+    {"name":"carlota-perez","person":"卡洛塔·佩雷斯","person_en":"Carlota Perez","domain":"technology-cycles","domain_cn":"技术周期","region":"global","status":"released","frameworks":["技术-经济范式","大浪潮四阶段","金融资本vs生产资本","转折点","导入期-展开期转型条件","范式判断"],"style_keywords":["结构性叙事","周期直觉","金融vs生产区分","历史类比","冷疏离"],"roundtable_role":"技术周期分析师","roundtable_tags":["技术革命","范式转型","导入期","展开期","金融资本","生产资本","泡沫","转折点"],"complements":["kondratiev","george-soros"],"path":"skills/carlota-perez"},
+    {"name":"kondratiev","person":"康德拉季耶夫","person_en":"Nikolai Kondratiev","domain":"economic-cycles","domain_cn":"经济长周期","region":"global","status":"released","frameworks":["长波周期(K-Wave)","四阶段(春夏秋冬)","创新集群理论","价格-生产波","战争与革命周期论"],"style_keywords":["宏大历史叙事","数据驱动","结构性因果","谨慎不确定性","历史类比"],"roundtable_role":"长周期分析师","roundtable_tags":["长波","康波","创新集群","周期","价格长波","萧条","创造性毁灭","地缘政治周期"],"complements":["carlota-perez"],"path":"skills/kondratiev"},
+    {"name":"george-soros","person":"乔治·索罗斯","person_en":"George Soros","domain":"macro-trading","domain_cn":"宏观对冲与反身性","region":"global","status":"released","frameworks":["反身性","繁荣-萧条模型","可错性","三维诊断(偏见/趋势/反身性)","试错投资法","政治-经济反身性","开放社会哲学"],"style_keywords":["哲学术语驱动","自我批判","宏大历史叙事","因果链拆解","警惕叙事陷阱","自传体风格"],"roundtable_role":"反身性理论家与泡沫剖析者","roundtable_tags":["反身性","繁荣-萧条","泡沫","可错性","主流偏见","宏观转折","系统性风险","金融炼金术"],"complements":["carlota-perez","greenspan"],"path":"skills/george-soros"},
+    {"name":"irving-fisher","person":"欧文·费雪(大费雪)","person_en":"Irving Fisher","domain":"monetary-economics","domain_cn":"货币经济学","region":"global","status":"released","frameworks":["债务通缩理论","货币数量方程(MV=PT)","费雪方程","永久性高原","费雪分离定理","跨期选择理论","指数理论"],"style_keywords":["数学化","因果链拆解","公式驱动","承认错误","学术化但通俗"],"roundtable_role":"货币与债务周期理论家","roundtable_tags":["通缩","债务周期","货币数量论","费雪方程","实际利率","名义利率","货币政策","资产负债表衰退"],"complements":["gao-shanwen","greenspan"],"path":"skills/irving-fisher"},
+    {"name":"philip-fisher","person":"菲利普·费雪(小费雪)","person_en":"Philip Fisher","domain":"growth-investing","domain_cn":"成长股投资","region":"global","status":"released","frameworks":["闲聊法(Scuttlebutt)","15点选股清单","成长股投资哲学","长期持有(卖出三原则)","管理层质量评估","集中投资与深度研究"],"style_keywords":["研究导向","定性优先","耐心","坚定自信","娓娓道来"],"roundtable_role":"成长股识别与管理层评估师","roundtable_tags":["成长股","scuttlebutt","15点清单","管理层","研发","长期持有","集中投资","定性分析"],"complements":["warren-buffett","charlie-munger"],"path":"skills/philip-fisher"}
   ],
   "roundtable": {
     "doc": "combos/ROUNDTABLE.md",
     "description": "动态圆桌会议机制——按需组阁，根据问题领域动态组装最合适的专家圆桌",
-    "rules": [
-      "不预设组合：每次根据问题的具体领域动态组装",
-      "最少1人，通常2-3人",
-      "先宏观后微观：严格遵守分析顺序",
-      "分歧必须呈现：不强制统一，标注分歧并做前提审计",
-      "圆桌不替代单一skill：简单问题直接调用单一skill，复杂/跨领域问题启动圆桌"
-    ]
+    "rules": ["不预设组合","最少1人，通常2-3人","先宏观后微观","分歧必须呈现","圆桌不替代单一skill"]
   },
   "roundtable_examples": [
-    {
-      "question": "现在的 AI 板块是不是泡沫？应该怎么办？",
-      "domains": ["泡沫识别", "逆向审视", "估值"],
-      "members": ["greenspan", "charlie-munger"]
-    },
-    {
-      "question": "买入茅台长期持有，这个决策对吗？",
-      "domains": ["中国宏观", "护城河", "估值", "逆向审视"],
-      "members": ["gao-shanwen", "warren-buffett", "charlie-munger"]
-    },
-    {
-      "question": "美联储降息周期，对A股意味着什么？",
-      "domains": ["全球宏观", "中国宏观", "跨境传导"],
-      "members": ["greenspan", "gao-shanwen"]
-    }
+    {"question":"现在的AI板块是不是泡沫？","domains":["泡沫识别","技术周期","逆向审视"],"members":["george-soros","carlota-perez","charlie-munger"]},
+    {"question":"买入茅台长期持有","domains":["中国宏观","护城河","成长性","逆向审视"],"members":["gao-shanwen","warren-buffett","philip-fisher","charlie-munger"]},
+    {"question":"中国经济处于康波哪个阶段？","domains":["经济长周期","中国宏观","债务周期"],"members":["kondratiev","gao-shanwen","irving-fisher"]}
   ],
   "domains": [
-    {
-      "id": "macroeconomics",
-      "name_cn": "宏观经济",
-      "skills": ["gao-shanwen", "greenspan"]
-    },
-    {
-      "id": "investment-decision",
-      "name_cn": "投资决策",
-      "skills": ["charlie-munger"]
-    },
-    {
-      "id": "value-investing",
-      "name_cn": "价值投资",
-      "skills": ["warren-buffett"]
-    }
+    {"id":"macroeconomics","name_cn":"宏观经济","skills":["gao-shanwen","greenspan","irving-fisher"]},
+    {"id":"investment-decision","name_cn":"投资决策","skills":["charlie-munger"]},
+    {"id":"value-investing","name_cn":"价值投资","skills":["warren-buffett"]},
+    {"id":"technology-cycles","name_cn":"技术周期","skills":["carlota-perez","kondratiev"]},
+    {"id":"macro-trading","name_cn":"宏观对冲","skills":["george-soros"]},
+    {"id":"growth-investing","name_cn":"成长股投资","skills":["philip-fisher"]}
   ]
 }

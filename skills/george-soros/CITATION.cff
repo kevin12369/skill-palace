@@ -1,0 +1,51 @@
+cff-version: 1.2.0
+message: "If you use this skill, please cite it using the metadata below."
+title: "George Soros Reflexivity Theory and Macro-Financial Analysis Framework SKILL"
+type: software
+authors:
+  - family-names: "Soros"
+    given-names: "George"
+    orcid: ""
+repository-code: ""
+url: ""
+abstract: "A reusable analysis framework and writing style tool based on George Soros's public methodology, including the Theory of Reflexivity, Boom-Bust Model, Fallibility, 'Reflexivity-Trend-Bias' Tri-Dimensional Diagnosis, 'Invest First Investigate Later' Trial-and-Error Approach, Political-Economic Reflexivity, and Open Society Philosophy. Designed to assist in bubble detection, market mania analysis, macro turning-point identification, and systemic risk evaluation. This skill provides a thinking framework and writing style calibration, and does NOT claim to represent George Soros personally or his unpublished views."
+license: ""
+version: "1.0.0"
+date-released: "2025-01-01"
+identifiers:
+  - type: other
+    value: "george-soros-skill-v1"
+    description: "George Soros Reflexivity Analysis Framework SKILL version 1.0.0"
+keywords:
+  - "George Soros"
+  - "Reflexivity"
+  - "Theory of Reflexivity"
+  - "Boom-Bust Model"
+  - "Fallibility"
+  - "The Alchemy of Finance"
+  - "Macro Hedge Fund"
+  - "Bubble Analysis"
+  - "Systemic Risk"
+  - "Open Society"
+  - "Financial Crisis"
+  - "Market Mania"
+references:
+  - type: book
+    title: "The Alchemy of Finance"
+    authors:
+      - family-names: "Soros"
+        given-names: "George"
+    year: 1987
+  - type: book
+    title: "Open Society: Reforming Global Capitalism"
+    authors:
+      - family-names: "Soros"
+        given-names: "George"
+    year: 2000
+  - type: book
+    title: "The New Paradigm for Financial Markets: The Credit Crisis of 2008 and What It Means"
+    authors:
+      - family-names: "Soros"
+        given-names: "George"
+    year: 2008
+notes: "George Soros (born August 12, 1930) is still alive. All public views included in this framework are from published sources. This skill provides a thinking framework and writing style tool, and does not claim to represent George Soros personally or his unpublished views."

@@ -1,0 +1,64 @@
+cff-version: 1.2.0
+message: "If you use this skill, please cite it using the metadata below."
+title: "Irving Fisher Monetary Economics and Debt-Deflation Analysis Framework SKILL"
+type: software
+authors:
+  - family-names: "Fisher"
+    given-names: "Irving"
+    orcid: ""
+repository-code: ""
+url: ""
+abstract: "A reusable analysis framework and writing style tool based on Irving Fisher's public methodology, including the Debt-Deflation Theory, Equation of Exchange (MV=PT), Fisher Equation (i=r+pi_e), Permanently High Plateau analysis, Fisher Separation Theorem, Intertemporal Choice Theory, and Index Number methodology. Designed to assist in analysis of deflation risk, monetary policy transmission, debt cycles, and interest rate pricing. This skill provides an economic analysis framework and writing style calibration, and does NOT claim to represent Irving Fisher personally or his unpublished views."
+license: ""
+version: "1.0.0"
+date-released: "2025-01-01"
+identifiers:
+  - type: other
+    value: "irving-fisher-skill-v1"
+    description: "Irving Fisher Monetary Economics Analysis Framework SKILL version 1.0.0"
+keywords:
+  - "Irving Fisher"
+  - "Debt-Deflation"
+  - "Equation of Exchange"
+  - "Fisher Equation"
+  - "Monetary Economics"
+  - "Quantity Theory of Money"
+  - "Real Interest Rate"
+  - "Nominal Interest Rate"
+  - "Deflation Spiral"
+  - "Permanently High Plateau"
+  - "Fisher Separation Theorem"
+  - "Intertemporal Choice"
+  - "Index Numbers"
+references:
+  - type: book
+    title: "The Purchasing Power of Money"
+    authors:
+      - family-names: "Fisher"
+        given-names: "Irving"
+    year: 1911
+  - type: book
+    title: "Booms and Depressions"
+    authors:
+      - family-names: "Fisher"
+        given-names: "Irving"
+    year: 1932
+  - type: book
+    title: "The Theory of Interest"
+    authors:
+      - family-names: "Fisher"
+        given-names: "Irving"
+    year: 1930
+  - type: book
+    title: "The Making of Index Numbers"
+    authors:
+      - family-names: "Fisher"
+        given-names: "Irving"
+    year: 1922
+  - type: book
+    title: "100% Money"
+    authors:
+      - family-names: "Fisher"
+        given-names: "Irving"
+    year: 1935
+notes: "Irving Fisher passed away on April 29, 1947. All public views included in this framework are from sources dated on or before that date. In Chinese-language contexts, Irving Fisher is commonly referred to as '大费雪' (Big Fisher) to distinguish him from Philip Fisher ('小费雪', Small Fisher), the growth stock investing pioneer."
