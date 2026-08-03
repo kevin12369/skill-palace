@@ -13,3 +13,6 @@ Thumbs.db
 
 # WorkBuddy local
 .workbuddy/
+
+# 意外生成的嵌套副本（skills/skills/ 为重复目录，勿提交；如需删除请手动清理）
+skills/skills/

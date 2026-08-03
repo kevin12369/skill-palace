@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "如果您在研究中使用了本 SKILL，请按以下格式引用。"
+title: "弗雷德·施韦德 思维框架 SKILL"
+authors:
+  - given-names: "SKILL Palace"
+date-released: "2026-08-02"
+version: "1.0.0"
+keywords:
+  - "AI Agent Skill"
+  - "市场文化与人性"
+  - "弗雷德·施韦德"
+license: MIT
+repository-code: "https://github.com/kevin12369/skill-palace/tree/main/skills/fred-schwed"
+abstract: >-
+  将 弗雷德·施韦德 的思维方法论与表述风格固化为可复用的 AI Agent 技能。
+  本技能是思维框架与文风的工具，不声称代表 弗雷德·施韦德 本人。
