@@ -200,7 +200,7 @@ message: "如果您在研究中使用了本 SKILL，请按以下格式引用。"
 title: "{p['person']} 思维框架 SKILL"
 authors:
   - given-names: "SKILL Palace"
-date-released: "2026-08-02"
+date-released: "2026-08-03"
 version: "1.0.0"
 keywords:
   - "AI Agent Skill"
@@ -225,7 +225,7 @@ def render_changelog(p):
 ### 计划中
 - 扩充 examples/ 示例集
 
-## [1.0.0] - 2026-08-02
+## [1.0.0] - 2026-08-03
 
 ### 新增
 - 初始版本发布
@@ -479,8 +479,8 @@ def update_registry():
             "complements": p["complements"], "path": f"skills/{p['name']}"
         })
         added += 1
-    d["version"] = "2.0.0"
-    d["updated"] = "2026-08-02"
+    d["version"] = "2.1.0"
+    d["updated"] = "2026-08-03"
     json.dump(d, open(REG, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     return added, len(d["skills"])
 
@@ -493,7 +493,8 @@ def rebuild_matrix():
         "theodore-wright":"WR","gartner-hype-cycle":"GT","william-jevons":"JV",
         "howard-marks":"HOM","burton-malkiel":"BM","fred-schwed":"FS","daniel-kahneman":"DK",
         "qiu-guolu":"QG","liu-shunren":"LS","john-gordon":"JG","robert-shiller":"RS",
-        "charles-ellis":"CE","nassim-taleb":"NT","ben-bernanke":"BB"
+        "charles-ellis":"CE","nassim-taleb":"NT","ben-bernanke":"BB",
+        "duan-yongping":"DY","li-daxiao":"LD","hong-hao":"HH","peter-lynch":"PL","fu-peng":"FP"
     }
     stage_map = {
         "gao-shanwen":"宏观定调","greenspan":"宏观定调","kondratiev":"宏观定调","irving-fisher":"宏观定调",
@@ -505,7 +506,9 @@ def rebuild_matrix():
         "howard-marks":"中观筛选","burton-malkiel":"中观筛选","fred-schwed":"中观筛选",
         "daniel-kahneman":"中观筛选","charles-ellis":"中观筛选","nassim-taleb":"中观筛选",
         "qiu-guolu":"微观决策","liu-shunren":"微观决策",
-        "john-gordon":"宏观定调","robert-shiller":"宏观定调","ben-bernanke":"宏观定调"
+        "john-gordon":"宏观定调","robert-shiller":"宏观定调","ben-bernanke":"宏观定调",
+        "duan-yongping":"微观决策","li-daxiao":"宏观定调","hong-hao":"宏观定调",
+        "peter-lynch":"微观决策","fu-peng":"宏观定调"
     }
     experts = {}; tag_index = {}; stages = {"宏观定调":[], "中观筛选":[], "微观决策":[]}
     for s in d["skills"]:
@@ -515,7 +518,7 @@ def rebuild_matrix():
         for t in s["roundtable_tags"]:
             tag_index.setdefault(t, []).append(code)
         stages[stage_map[s["name"]]].append(code)
-    matrix = {"version":"2.0","updated":"2026-08-02","code_map":{v:k for k,v in code_map.items()},
+    matrix = {"version":"2.1","updated":"2026-08-03","code_map":{v:k for k,v in code_map.items()},
               "stages":stages,"experts":experts,"tag_index":tag_index}
     json.dump(matrix, open(MAT, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     return len(d["skills"]), len(experts), len(tag_index)
@@ -545,7 +548,7 @@ def main():
     added, reg_total = update_registry()
     m_total, m_exp, m_tag = rebuild_matrix()
     print(f"\n生成 skill: {total}")
-    print(f"registry: +{added} → 共 {reg_total} 人 (v2.0.0)")
+    print(f"registry: +{added} → 共 {reg_total} 人 (v2.1.0)")
     print(f"matrix: {m_exp} 专家 / {m_tag} 标签")
 
 if __name__ == "__main__":
