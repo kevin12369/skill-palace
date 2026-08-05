@@ -3,7 +3,7 @@ message: "如果您在研究中使用了本 SKILL，请按以下格式引用。"
 title: "查尔斯·埃利斯 思维框架 SKILL"
 authors:
   - given-names: "SKILL Palace"
-date-released: "2026-08-03"
+date-released: "2026-08-05"
 version: "1.0.0"
 keywords:
   - "AI Agent Skill"

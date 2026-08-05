@@ -1,8 +1,8 @@
 {
   "name": "SKILL Palace",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "世界知名人物思维框架的 SKILL 化名人堂",
-  "updated": "2026-08-03",
+  "updated": "2026-08-05",
   "skills": [
     {
       "name": "gao-shanwen",
@@ -1210,6 +1210,90 @@
         "howard-marks"
       ],
       "path": "skills/fu-peng"
+    },
+    {
+      "name": "xu-xiang",
+      "person": "徐翔",
+      "domain": "short-term-trading",
+      "domain_cn": "短线交易与题材博弈",
+      "region": "china",
+      "status": "released",
+      "frameworks": [
+        "涨停板战法",
+        "题材龙头识别",
+        "技术面+基本面共振",
+        "资金面监控",
+        "消息面驱动",
+        "盘感与纪律",
+        "果断止损"
+      ],
+      "style_keywords": [
+        "寡言冷静",
+        "操盘手视角",
+        "量价语言",
+        "实战派"
+      ],
+      "roundtable_role": "短线交易策略与情绪分析师",
+      "roundtable_tags": [
+        "短线交易",
+        "题材龙头",
+        "涨停板",
+        "资金面",
+        "技术面",
+        "市场情绪",
+        "消息面",
+        "止损",
+        "A股",
+        "筹码分析"
+      ],
+      "complements": [
+        "george-soros",
+        "li-daxiao",
+        "hyman-minsky"
+      ],
+      "path": "skills/xu-xiang"
+    },
+    {
+      "name": "beijing-chaojia",
+      "person": "北京炒家",
+      "domain": "short-term-trading",
+      "domain_cn": "短线交易与题材博弈",
+      "region": "china",
+      "status": "released",
+      "frameworks": [
+        "打板(顶板/扫板)",
+        "龙头战法",
+        "题材周期判断",
+        "资金流向识别",
+        "止损纪律",
+        "情绪冰点博弈",
+        "卖在一致"
+      ],
+      "style_keywords": [
+        "直白实战",
+        "语录体",
+        "晒交割单风格",
+        "果断"
+      ],
+      "roundtable_role": "题材博弈与龙头战法分析师",
+      "roundtable_tags": [
+        "打板",
+        "龙头战法",
+        "题材周期",
+        "短线",
+        "资金流",
+        "止损",
+        "A股",
+        "市场情绪",
+        "高换手",
+        "妖股"
+      ],
+      "complements": [
+        "xu-xiang",
+        "charlie-munger",
+        "li-daxiao"
+      ],
+      "path": "skills/beijing-chaojia"
     }
   ],
   "roundtable": {
