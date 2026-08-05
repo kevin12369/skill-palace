@@ -7,6 +7,12 @@ data = {
     "question": "当前 A 股能不能上车？",
     "date": "2026-08-05",
     "source": "westock 实时行情",
+    "kpis": [
+        {"label":"沪深300 PE","value":"14.19","delta":"历史偏低","tone":"ok","note":"价值区间"},
+        {"label":"上证 PE","value":"17.68","delta":"中性","tone":"neutral","note":"历史中位"},
+        {"label":"科创50 PE","value":"200.58","delta":"泡沫警示","tone":"bad","note":"20日 -17.26%"},
+        {"label":"上证 60日","value":"-8.83%","delta":"情绪冰点","tone":"warn","note":"退潮中"},
+    ],
     "assembly": {
         "tags_hit": 25,
         "candidates": 15,
@@ -57,7 +63,7 @@ data = {
 }
 
 html = render_roundtable_html(data)
-out = os.path.join(os.path.dirname(__file__), "demo_render_v2.html")
+out = os.path.join(os.path.dirname(__file__), "demo_render_v3.html")
 with open(out, "w", encoding="utf-8") as f:
     f.write(html)
 print(f"Generated: {out}")
