@@ -24,9 +24,9 @@ data = {
         "headers": ["标的","现价","当日","PE","YTD","60日","备注"],
         "rows": [
             ["上证指数","3,842",{"v":"+0.52%","class":"up"},"17.68",{"v":"-3.19%","class":"down"},{"v":"-8.83%","class":"down"},"20日 -3.24%"],
-            ["<strong>沪深300</strong>","4,613",{"v":"+0.26%","class":"up"},{"v":"14.19","class":"highlight"},{"v":"-0.36%","class":"down"},{"v":"-6.77%","class":"down"},"历史偏低区 ★"],
+            ["<strong>沪深300</strong>","4,613",{"v":"+0.26%","class":"up"},{"v":"14.19","class":"hl"},{"v":"-0.36%","class":"down"},{"v":"-6.77%","class":"down"},"历史偏低区 ★"],
             ["创业板指","3,496",{"v":"+0.19%","class":"up"},"60.83",{"v":"+9.13%","class":"up"},{"v":"-11.17%","class":"down"},"估值偏高"],
-            ["科创50","1,668",{"v":"+3.21%","class":"up"},{"v":"200.58","class":"highlight"},{"v":"+24.1%","class":"up"},{"v":"-3.23%","class":"down"},"20日 -17.26% ⚠"],
+            ["科创50","1,668",{"v":"+3.21%","class":"up"},{"v":"200.58","class":"hl-danger"},{"v":"+24.1%","class":"up"},{"v":"-3.23%","class":"down"},"20日 -17.26% ⚠"],
             ["贵州茅台","1,311",{"v":"-1.33%","class":"down"},"19.81",{"v":"-2.85%","class":"down"},{"v":"-1.2%","class":"down"},"股息 3.97%"],
             ["宁德时代","402",{"v":"+1.86%","class":"up"},"21.91",{"v":"+11.68%","class":"up"},{"v":"-6.68%","class":"down"},"&mdash;"],
             ["腾讯控股","486",{"v":"-0.41%","class":"down"},"16.58",{"v":"-18.21%","class":"down"},{"v":"+4.18%","class":"up"},"便宜"],
@@ -57,7 +57,7 @@ data = {
 }
 
 html = render_roundtable_html(data)
-out = os.path.join(os.path.dirname(__file__), "demo_render_test.html")
+out = os.path.join(os.path.dirname(__file__), "demo_render_v2.html")
 with open(out, "w", encoding="utf-8") as f:
     f.write(html)
 print(f"Generated: {out}")
