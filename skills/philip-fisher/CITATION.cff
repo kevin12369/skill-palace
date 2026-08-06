@@ -1,50 +1,16 @@
 cff-version: 1.2.0
-message: "If you use this skill, please cite it using the metadata below."
-title: "Philip Fisher Growth Stock Investment and Analysis Framework SKILL"
-type: software
+message: "如果您在研究中使用了本 SKILL，请按以下格式引用。"
+title: "菲利普·费雪(小) 思维框架 SKILL"
 authors:
-  - family-names: "Fisher"
-    given-names: "Philip A."
-    orcid: ""
-repository-code: ""
-url: ""
-abstract: "A reusable analysis framework and writing style tool based on Philip Fisher's public methodology, including the Scuttlebutt Method, Fifteen Points checklist, Growth Stock Investment Philosophy, Long-term Holding principles, Management Quality Assessment, and Concentrated Investing approach. Designed to assist in evaluating corporate growth prospects, management quality, R&D innovation, and long-term holding value. This skill provides an investment analysis framework and writing style calibration, and does NOT claim to represent Philip Fisher personally or his unpublished views."
-license: ""
+  - given-names: "SKILL Palace"
+date-released: "2026-08-05"
 version: "1.0.0"
-date-released: "2025-01-01"
-identifiers:
-  - type: other
-    value: "philip-fisher-skill-v1"
-    description: "Philip Fisher Growth Stock Investment Analysis Framework SKILL version 1.0.0"
 keywords:
-  - "Philip Fisher"
-  - "Scuttlebutt Method"
-  - "Fifteen Points"
-  - "Growth Stock Investing"
-  - "Common Stocks and Uncommon Profits"
-  - "Long-term Holding"
-  - "Management Assessment"
-  - "Concentrated Investing"
-  - "Qualitative Analysis"
-  - "R&D Evaluation"
-  - "Investment Philosophy"
-references:
-  - type: book
-    title: "Common Stocks and Uncommon Profits"
-    authors:
-      - family-names: "Fisher"
-        given-names: "Philip A."
-    year: 1958
-  - type: book
-    title: "Conservative Investors Sleep Well"
-    authors:
-      - family-names: "Fisher"
-        given-names: "Philip A."
-    year: 1975
-  - type: book
-    title: "Developing an Investment Philosophy"
-    authors:
-      - family-names: "Fisher"
-        given-names: "Philip A."
-    year: 1980
-notes: "Philip Fisher passed away on March 11, 2004. All public views included in this framework are from sources dated on or before that date. Warren Buffett has stated that his investment philosophy is '85% Graham and 15% Fisher.' In Chinese-language contexts, Philip Fisher is commonly referred to as '小费雪' (Small Fisher) to distinguish him from Irving Fisher ('大费雪', Big Fisher), the monetary economics pioneer."
+  - "AI Agent Skill"
+  - "成长股投资与定性研究"
+  - "菲利普·费雪(小)"
+license: MIT
+repository-code: "https://github.com/kevin12369/skill-palace/tree/main/skills/philip-fisher"
+abstract: >-
+  将 菲利普·费雪(小) 的思维方法论与表述风格固化为可复用的 AI Agent 技能。
+  本技能是思维框架与文风的工具，不声称代表 菲利普·费雪(小) 本人。

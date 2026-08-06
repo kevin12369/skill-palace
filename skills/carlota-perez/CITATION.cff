@@ -1,55 +1,16 @@
 cff-version: 1.2.0
-message: "If you use this skill, please cite it using the metadata below."
-title: "Carlota Perez Techno-Economic Paradigm and Financial Capital Cycle Analysis Framework SKILL"
-type: software
+message: "如果您在研究中使用了本 SKILL，请按以下格式引用。"
+title: "卡洛塔·佩雷斯 思维框架 SKILL"
 authors:
-  - family-names: "Perez"
-    given-names: "Carlota"
-    orcid: ""
-repository-code: ""
-url: ""
-abstract: "A reusable analysis framework and writing style tool based on Carlota Perez's public methodology, including the Techno-Economic Paradigm, Great Surge Cycle (Installation-Turning Point-Deployment), the dialectical relationship between Financial Capital and Production Capital, and the conditions for paradigm transition. Designed to assist in analyzing technological revolutions, industrial transformation, bubble evolution, and institutional change. This skill provides a thinking framework and writing style calibration, and does NOT claim to represent Carlota Perez personally or her unpublished views."
-license: ""
+  - given-names: "SKILL Palace"
+date-released: "2026-08-05"
 version: "1.0.0"
-date-released: "2025-01-01"
-identifiers:
-  - type: other
-    value: "carlota-perez-skill-v1"
-    description: "Carlota Perez Analysis Framework SKILL version 1.0.0"
 keywords:
-  - "Carlota Perez"
-  - "Techno-Economic Paradigm"
-  - "Great Surges"
-  - "Financial Capital"
-  - "Production Capital"
-  - "Technological Revolution"
-  - "Bubble"
-  - "Turning Point"
-  - "Installation Period"
-  - "Deployment Period"
-  - "Innovation"
-  - "Institutional Change"
-  - "Evolutionary Economics"
-references:
-  - type: book
-    title: "Technological Revolutions and Financial Capital: The Dynamics of Bubbles and Golden Ages"
-    authors:
-      - family-names: "Perez"
-        given-names: "Carlota"
-    year: 2002
-    publisher: "Edward Elgar Publishing"
-  - type: article
-    title: "Structural Change and Assimilation of New Technologies in the Economic and Social Systems"
-    authors:
-      - family-names: "Perez"
-        given-names: "Carlota"
-    year: 1983
-    journal: "Futures"
-  - type: article
-    title: "Technological Revolutions and Techno-economic Paradigms"
-    authors:
-      - family-names: "Perez"
-        given-names: "Carlota"
-    year: 2009
-    journal: "TOC/TUT Working Paper Series"
-notes: "Carlota Perez is living (born 1940). This framework is based on her published works and may evolve with new publications."
+  - "AI Agent Skill"
+  - "技术周期与范式转型"
+  - "卡洛塔·佩雷斯"
+license: MIT
+repository-code: "https://github.com/kevin12369/skill-palace/tree/main/skills/carlota-perez"
+abstract: >-
+  将 卡洛塔·佩雷斯 的思维方法论与表述风格固化为可复用的 AI Agent 技能。
+  本技能是思维框架与文风的工具，不声称代表 卡洛塔·佩雷斯 本人。

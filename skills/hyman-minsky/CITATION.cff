@@ -1,53 +1,16 @@
 cff-version: 1.2.0
-message: "If you use this skill, please cite it using the metadata below."
-title: "Hyman Minsky Financial Instability Hypothesis Analysis Framework SKILL"
-type: software
+message: "如果您在研究中使用了本 SKILL，请按以下格式引用。"
+title: "海曼·明斯基 思维框架 SKILL"
 authors:
-  - family-names: "Minsky"
-    given-names: "Hyman"
-    orcid: ""
-repository-code: ""
-url: ""
-abstract: "A reusable analysis framework based on Hyman Minsky's public methodology, including the Financial Instability Hypothesis, Three Financing Positions (Hedge/Speculative/Ponzi), Minsky Moment identification, Big Government/Big Bank stabilizer framework, Two-Price System, and Employer of Last Resort. Designed to assist in systemic financial risk analysis, credit cycle assessment, asset bubble fragility evaluation, and crisis tipping point detection. This skill provides a thinking framework and writing style calibration, and does NOT claim to represent Hyman Minsky personally or his unpublished views."
-license: ""
+  - given-names: "SKILL Palace"
+date-released: "2026-08-05"
 version: "1.0.0"
-date-released: "2025-01-01"
-identifiers:
-  - type: other
-    value: "hyman-minsky-skill-v1"
-    description: "Hyman Minsky Financial Instability Hypothesis Analysis Framework SKILL version 1.0.0"
 keywords:
-  - "Hyman Minsky"
-  - "Financial Instability Hypothesis"
-  - "Minsky Moment"
-  - "Ponzi Finance"
-  - "Speculative Finance"
-  - "Hedge Finance"
-  - "Systemic Risk"
-  - "Credit Cycle"
-  - "Financial Fragility"
-  - "Lender of Last Resort"
-  - "Employer of Last Resort"
-  - "Two-Price System"
-  - "Big Government Stabilizer"
-  - "Post-Keynesian Economics"
-references:
-  - type: book
-    title: "Stabilizing an Unstable Economy"
-    authors:
-      - family-names: "Minsky"
-        given-names: "Hyman"
-    year: 1986
-  - type: book
-    title: "John Maynard Keynes"
-    authors:
-      - family-names: "Minsky"
-        given-names: "Hyman"
-    year: 1975
-  - type: book
-    title: "Can \"It\" Happen Again? Essays on Instability and Finance"
-    authors:
-      - family-names: "Minsky"
-        given-names: "Hyman"
-    year: 1982
-notes: "Hyman Minsky passed away on June 24, 1996. His core framework — the Financial Instability Hypothesis — was widely validated by the 2007-2008 Subprime Crisis. All public views included in this framework are from sources dated on or before that date. Post-1996 event analyses are marked as 'framework-based projections'."
+  - "AI Agent Skill"
+  - "金融不稳定性"
+  - "海曼·明斯基"
+license: MIT
+repository-code: "https://github.com/kevin12369/skill-palace/tree/main/skills/hyman-minsky"
+abstract: >-
+  将 海曼·明斯基 的思维方法论与表述风格固化为可复用的 AI Agent 技能。
+  本技能是思维框架与文风的工具，不声称代表 海曼·明斯基 本人。

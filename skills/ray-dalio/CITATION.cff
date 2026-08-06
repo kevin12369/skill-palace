@@ -1,59 +1,16 @@
 cff-version: 1.2.0
-message: "If you use this skill, please cite it using the metadata below."
-title: "Ray Dalio Economic Machine and Debt Cycle Analysis Framework SKILL"
-type: software
+message: "如果您在研究中使用了本 SKILL，请按以下格式引用。"
+title: "瑞·达里奥 思维框架 SKILL"
 authors:
-  - family-names: "Dalio"
-    given-names: "Ray"
-    orcid: ""
-repository-code: ""
-url: ""
-abstract: "A reusable analysis framework based on Ray Dalio's public methodology, including the Economic Machine Model (Three Forces), Long-Term Debt Cycle and Beautiful Deleveraging, Debt Crisis Archetype, All-Weather Portfolio, Principles-Driven Decision Making, and World Order / Big Cycle. Designed to assist in macro debt cycle analysis, deleveraging path assessment, asset allocation strategy, and global order transition analysis. This skill provides a thinking framework and writing style calibration, and does NOT claim to represent Ray Dalio personally, Bridgewater Associates, or their unpublished research."
-license: ""
+  - given-names: "SKILL Palace"
+date-released: "2026-08-05"
 version: "1.0.0"
-date-released: "2025-01-01"
-identifiers:
-  - type: other
-    value: "ray-dalio-skill-v1"
-    description: "Ray Dalio Debt Cycle and Macro Analysis Framework SKILL version 1.0.0"
 keywords:
-  - "Ray Dalio"
-  - "Economic Machine"
-  - "Debt Cycle"
-  - "Beautiful Deleveraging"
-  - "Long-Term Debt Cycle"
-  - "All-Weather Portfolio"
-  - "Principles"
-  - "Bridgewater"
-  - "Productivity Growth"
-  - "World Order"
-  - "Big Cycle"
-  - "Reserve Currency"
-  - "Asset Allocation"
-  - "Macro Investing"
-references:
-  - type: book
-    title: "Principles: Life and Work"
-    authors:
-      - family-names: "Dalio"
-        given-names: "Ray"
-    year: 2017
-  - type: book
-    title: "Principles for Navigating Big Debt Crises"
-    authors:
-      - family-names: "Dalio"
-        given-names: "Ray"
-    year: 2018
-  - type: book
-    title: "Principles for Dealing with the Changing World Order"
-    authors:
-      - family-names: "Dalio"
-        given-names: "Ray"
-    year: 2021
-  - type: video
-    title: "How the Economic Machine Works"
-    authors:
-      - family-names: "Dalio"
-        given-names: "Ray"
-    year: 2012
-notes: "Ray Dalio is living (born 1949). All public views included in this framework are from published works and public statements. Contemporary event analyses are marked as 'framework-based projections' and do not represent Dalio's actual current views unless cited from a specific public source. This skill does not represent Bridgewater Associates or its proprietary research."
+  - "AI Agent Skill"
+  - "债务周期与宏观配置"
+  - "瑞·达里奥"
+license: MIT
+repository-code: "https://github.com/kevin12369/skill-palace/tree/main/skills/ray-dalio"
+abstract: >-
+  将 瑞·达里奥 的思维方法论与表述风格固化为可复用的 AI Agent 技能。
+  本技能是思维框架与文风的工具，不声称代表 瑞·达里奥 本人。

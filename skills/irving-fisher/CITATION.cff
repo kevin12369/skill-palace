@@ -1,64 +1,16 @@
 cff-version: 1.2.0
-message: "If you use this skill, please cite it using the metadata below."
-title: "Irving Fisher Monetary Economics and Debt-Deflation Analysis Framework SKILL"
-type: software
+message: "如果您在研究中使用了本 SKILL，请按以下格式引用。"
+title: "欧文·费雪(大) 思维框架 SKILL"
 authors:
-  - family-names: "Fisher"
-    given-names: "Irving"
-    orcid: ""
-repository-code: ""
-url: ""
-abstract: "A reusable analysis framework and writing style tool based on Irving Fisher's public methodology, including the Debt-Deflation Theory, Equation of Exchange (MV=PT), Fisher Equation (i=r+pi_e), Permanently High Plateau analysis, Fisher Separation Theorem, Intertemporal Choice Theory, and Index Number methodology. Designed to assist in analysis of deflation risk, monetary policy transmission, debt cycles, and interest rate pricing. This skill provides an economic analysis framework and writing style calibration, and does NOT claim to represent Irving Fisher personally or his unpublished views."
-license: ""
+  - given-names: "SKILL Palace"
+date-released: "2026-08-05"
 version: "1.0.0"
-date-released: "2025-01-01"
-identifiers:
-  - type: other
-    value: "irving-fisher-skill-v1"
-    description: "Irving Fisher Monetary Economics Analysis Framework SKILL version 1.0.0"
 keywords:
-  - "Irving Fisher"
-  - "Debt-Deflation"
-  - "Equation of Exchange"
-  - "Fisher Equation"
-  - "Monetary Economics"
-  - "Quantity Theory of Money"
-  - "Real Interest Rate"
-  - "Nominal Interest Rate"
-  - "Deflation Spiral"
-  - "Permanently High Plateau"
-  - "Fisher Separation Theorem"
-  - "Intertemporal Choice"
-  - "Index Numbers"
-references:
-  - type: book
-    title: "The Purchasing Power of Money"
-    authors:
-      - family-names: "Fisher"
-        given-names: "Irving"
-    year: 1911
-  - type: book
-    title: "Booms and Depressions"
-    authors:
-      - family-names: "Fisher"
-        given-names: "Irving"
-    year: 1932
-  - type: book
-    title: "The Theory of Interest"
-    authors:
-      - family-names: "Fisher"
-        given-names: "Irving"
-    year: 1930
-  - type: book
-    title: "The Making of Index Numbers"
-    authors:
-      - family-names: "Fisher"
-        given-names: "Irving"
-    year: 1922
-  - type: book
-    title: "100% Money"
-    authors:
-      - family-names: "Fisher"
-        given-names: "Irving"
-    year: 1935
-notes: "Irving Fisher passed away on April 29, 1947. All public views included in this framework are from sources dated on or before that date. In Chinese-language contexts, Irving Fisher is commonly referred to as '大费雪' (Big Fisher) to distinguish him from Philip Fisher ('小费雪', Small Fisher), the growth stock investing pioneer."
+  - "AI Agent Skill"
+  - "债务通缩与货币理论"
+  - "欧文·费雪(大)"
+license: MIT
+repository-code: "https://github.com/kevin12369/skill-palace/tree/main/skills/irving-fisher"
+abstract: >-
+  将 欧文·费雪(大) 的思维方法论与表述风格固化为可复用的 AI Agent 技能。
+  本技能是思维框架与文风的工具，不声称代表 欧文·费雪(大) 本人。

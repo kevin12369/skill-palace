@@ -1,44 +1,16 @@
 cff-version: 1.2.0
-message: "If you use this skill, please cite it using the metadata below."
-title: "William Stanley Jevons Paradox and Resource Efficiency Analysis Framework SKILL"
-type: software
+message: "如果您在研究中使用了本 SKILL，请按以下格式引用。"
+title: "威廉·斯坦利·杰文斯 思维框架 SKILL"
 authors:
-  - family-names: "Jevons"
-    given-names: "William Stanley"
-    orcid: ""
-repository-code: ""
-url: ""
-abstract: "A reusable analysis framework and writing style tool based on William Stanley Jevons' public methodology, including the Jevons Paradox, Marginal Utility Theory, Mathematical Economics, the Coal Question, and the Sunspot Theory of Business Cycles. Designed to assist in analyzing the paradoxical relationship between technological progress and resource consumption, the unintended consequences of efficiency improvements, and long-term resource constraints. This skill provides a thinking framework and writing style calibration, and does NOT claim to represent William Stanley Jevons personally or his unpublished views."
-license: ""
+  - given-names: "SKILL Palace"
+date-released: "2026-08-05"
 version: "1.0.0"
-date-released: "2025-01-01"
-identifiers:
-  - type: other
-    value: "william-jevons-skill-v1"
-    description: "William Stanley Jevons Analysis Framework SKILL version 1.0.0"
 keywords:
-  - "William Stanley Jevons"
-  - "Jevons Paradox"
-  - "Efficiency Paradox"
-  - "Marginal Utility"
-  - "Resource Constraints"
-  - "Rebound Effect"
-  - "Energy Transition"
-  - "Mathematical Economics"
-  - "Coal Question"
-  - "Technological Progress"
-  - "Sunspot Theory"
-references:
-  - type: book
-    title: "The Coal Question: An Inquiry Concerning the Progress of the Nation, and the Probable Exhaustion of Our Coal-Mines"
-    authors:
-      - family-names: "Jevons"
-        given-names: "William Stanley"
-    year: 1865
-  - type: book
-    title: "The Theory of Political Economy"
-    authors:
-      - family-names: "Jevons"
-        given-names: "William Stanley"
-    year: 1871
-notes: "William Stanley Jevons passed away on August 13, 1882 (drowned, aged 46). All public views included in this framework are from sources dated on or before that date."
+  - "AI Agent Skill"
+  - "资源效率与杰文斯悖论"
+  - "威廉·斯坦利·杰文斯"
+license: MIT
+repository-code: "https://github.com/kevin12369/skill-palace/tree/main/skills/william-jevons"
+abstract: >-
+  将 威廉·斯坦利·杰文斯 的思维方法论与表述风格固化为可复用的 AI Agent 技能。
+  本技能是思维框架与文风的工具，不声称代表 威廉·斯坦利·杰文斯 本人。

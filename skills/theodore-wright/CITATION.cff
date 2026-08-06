@@ -1,62 +1,16 @@
 cff-version: 1.2.0
-message: "If you use this skill, please cite it using the metadata below."
-title: "Theodore Wright's Wright's Law and Learning Curve Analysis Framework SKILL"
-type: software
+message: "如果您在研究中使用了本 SKILL，请按以下格式引用。"
+title: "西奥多·莱特 思维框架 SKILL"
 authors:
-  - family-names: "Wright"
-    given-names: "Theodore Paul"
-    orcid: ""
-repository-code: ""
-url: ""
-abstract: "A reusable quantitative analysis framework based on Theodore Paul Wright's Wright's Law (1936), Learning Curve theory, and the Boston Consulting Group's Experience Curve extension. Designed to assist in manufacturing cost forecasting, technology cost prediction, and economies of scale analysis. Includes tools for estimating learning rates from historical production data, predicting cost trajectories, and evaluating competitiveness through the market-share-to-cost-advantage logic chain. This skill provides a quantitative framework and writing style calibration, and does NOT claim to represent Wright personally or his unpublished views. Wright passed away in 1970; all subsequent validations (solar PV, lithium-ion batteries, etc.) are the work of later researchers."
-license: ""
+  - given-names: "SKILL Palace"
+date-released: "2026-08-05"
 version: "1.0.0"
-date-released: "2025-08-02"
-identifiers:
-  - type: other
-    value: "theodore-wright-skill-v1"
-    description: "Theodore Wright Wright's Law Analysis Framework SKILL version 1.0.0"
 keywords:
-  - "Theodore Wright"
-  - "Wright's Law"
-  - "Learning Curve"
-  - "Experience Curve"
-  - "Cost Forecasting"
-  - "Manufacturing"
-  - "Economies of Scale"
-  - "Learning by Doing"
-  - "Solar PV"
-  - "Battery Cost"
-  - "Technology Forecasting"
-  - "BCG"
-references:
-  - type: article
-    title: "Factors Affecting the Cost of Airplanes"
-    authors:
-      - family-names: "Wright"
-        given-names: "Theodore P."
-    year: 1936
-    journal: "Journal of the Aeronautical Sciences"
-    volume: 3
-    issue: 4
-    pages: "122-128"
-  - type: book
-    title: "Perspectives on Experience"
-    authors:
-      - family-names: "Henderson"
-        given-names: "Bruce D."
-    year: 1968
-    publisher: "Boston Consulting Group"
-  - type: article
-    title: "How predictable is technological progress?"
-    authors:
-      - family-names: "Farmer"
-        given-names: "J. Doyne"
-      - family-names: "Lafond"
-        given-names: "Francois"
-    year: 2016
-    journal: "Research Policy"
-    volume: 45
-    issue: 3
-    pages: "647-665"
-notes: "Theodore Paul Wright passed away on August 29, 1970. His original research from 1936 focused on aircraft manufacturing costs. All subsequent validations in solar PV, lithium-ion batteries, semiconductors, and other technologies were conducted by later researchers building on his framework."
+  - "AI Agent Skill"
+  - "学习曲线/经验曲线"
+  - "西奥多·莱特"
+license: MIT
+repository-code: "https://github.com/kevin12369/skill-palace/tree/main/skills/theodore-wright"
+abstract: >-
+  将 西奥多·莱特 的思维方法论与表述风格固化为可复用的 AI Agent 技能。
+  本技能是思维框架与文风的工具，不声称代表 西奥多·莱特 本人。

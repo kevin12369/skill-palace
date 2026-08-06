@@ -1,53 +1,16 @@
 cff-version: 1.2.0
-message: "If you use this skill, please cite it using the metadata below."
-title: "Nikolai Kondratiev Long Wave Cycle and Innovation Cluster Analysis Framework SKILL"
-type: software
+message: "如果您在研究中使用了本 SKILL，请按以下格式引用。"
+title: "康德拉季耶夫 思维框架 SKILL"
 authors:
-  - family-names: "Kondratiev"
-    given-names: "Nikolai"
-    orcid: ""
-repository-code: ""
-url: ""
-abstract: "A reusable analysis framework and writing style tool based on Nikolai Kondratiev's public methodology, including the Long Wave Cycle (K-Wave), Four-Season Framework (Spring-Summer-Autumn-Winter), Innovation Cluster theory, Price-Production long wave dynamics, and the cyclical relationship between war and social upheaval. Designed to assist in long-term economic cycle positioning, macro-historical narrative, and geopolitical cycle risk analysis. This skill provides a thinking framework and writing style calibration, and does NOT claim to represent Nikolai Kondratiev personally or his unpublished views. Kondratiev was executed in 1938; his original views end at that date."
-license: ""
+  - given-names: "SKILL Palace"
+date-released: "2026-08-05"
 version: "1.0.0"
-date-released: "2025-01-01"
-identifiers:
-  - type: other
-    value: "kondratiev-skill-v1"
-    description: "Nikolai Kondratiev Analysis Framework SKILL version 1.0.0"
 keywords:
-  - "Nikolai Kondratiev"
-  - "Kondratiev Wave"
-  - "K-Wave"
-  - "Long Wave Cycle"
-  - "Innovation Cluster"
-  - "Economic Cycle"
-  - "Business Cycle"
-  - "Creative Destruction"
-  - "Schumpeter"
-  - "Macro History"
-  - "Geopolitical Cycle"
-  - "Price Wave"
-  - "Production Wave"
-references:
-  - type: book
-    title: "The Long Waves in Economic Life"
-    authors:
-      - family-names: "Kondratiev"
-        given-names: "Nikolai"
-    year: 1925
-  - type: book
-    title: "The Major Economic Cycles"
-    authors:
-      - family-names: "Kondratiev"
-        given-names: "Nikolai"
-    year: 1928
-  - type: book
-    title: "Business Cycles: A Theoretical, Historical, and Statistical Analysis of the Capitalist Process"
-    authors:
-      - family-names: "Schumpeter"
-        given-names: "Joseph"
-    year: 1939
-    notes: "Schumpeter named the long wave after Kondratiev and integrated innovation cluster theory into the K-Wave framework."
-notes: "Nikolai Kondratiev was executed on September 17, 1938. All his original views end at that date. Post-1938 developments of K-Wave theory by subsequent scholars (Schumpeter, Perez, Rostow, etc.) are marked as 'post-Kondratiev evolution' in this framework."
+  - "AI Agent Skill"
+  - "长波/康波周期"
+  - "康德拉季耶夫"
+license: MIT
+repository-code: "https://github.com/kevin12369/skill-palace/tree/main/skills/kondratiev"
+abstract: >-
+  将 康德拉季耶夫 的思维方法论与表述风格固化为可复用的 AI Agent 技能。
+  本技能是思维框架与文风的工具，不声称代表 康德拉季耶夫 本人。

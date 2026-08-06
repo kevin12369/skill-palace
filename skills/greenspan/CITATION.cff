@@ -1,20 +1,16 @@
 cff-version: 1.2.0
-message: "If you use this SKILL in your research, please cite it using the following format."
-title: "Greenspan Global Macro and Monetary Policy Analysis Framework SKILL"
+message: "如果您在研究中使用了本 SKILL，请按以下格式引用。"
+title: "格林斯潘 思维框架 SKILL"
 authors:
-  - given-names: "Skill Palace Contributors"
-date-released: "2026-07-09"
+  - given-names: "SKILL Palace"
+date-released: "2026-08-05"
 version: "1.0.0"
 keywords:
   - "AI Agent Skill"
-  - "macroeconomics"
-  - "Alan Greenspan"
+  - "全球宏观与美联储政策"
+  - "格林斯潘"
 license: MIT
-repository-code: "https://github.com/skill-palace/skill-palace/tree/main/skills/greenspan"
+repository-code: "https://github.com/kevin12369/skill-palace/tree/main/skills/greenspan"
 abstract: >-
-  Encodes Alan Greenspan's thinking methodology and rhetorical style into a
-  reusable AI Agent skill, covering seven core frameworks including
-  productivity-driven growth, global savings glut, irrational exuberance,
-  Greenspan Put, NAIRU variation, data-dependent policy, and Fedspeak.
-  This skill is a framework and stylistic tool and does not claim to
-  represent Alan Greenspan personally.
+  将 格林斯潘 的思维方法论与表述风格固化为可复用的 AI Agent 技能。
+  本技能是思维框架与文风的工具，不声称代表 格林斯潘 本人。

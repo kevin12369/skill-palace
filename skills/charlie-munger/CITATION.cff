@@ -1,53 +1,16 @@
 cff-version: 1.2.0
-message: "If you use this skill, please cite it using the metadata below."
-title: "Charlie Munger Mental Models and Investment Philosophy Analysis Framework SKILL"
-type: software
+message: "如果您在研究中使用了本 SKILL，请按以下格式引用。"
+title: "查理·芒格 思维框架 SKILL"
 authors:
-  - family-names: "Munger"
-    given-names: "Charlie"
-    orcid: ""
-repository-code: ""
-url: ""
-abstract: "A reusable analysis framework and writing style tool based on Charlie Munger's public methodology, including the Latticework of Mental Models, Inversion, Circle of Competence, Margin of Safety, Lollapalooza Effect, and 25 Cognitive Biases. Designed to assist in investment decision analysis, business judgment, corporate quality assessment, and cognitive bias detection. This skill provides a thinking framework and writing style calibration, and does NOT claim to represent Charlie Munger personally or his unpublished views."
-license: ""
+  - given-names: "SKILL Palace"
+date-released: "2026-08-05"
 version: "1.0.0"
-date-released: "2025-01-01"
-identifiers:
-  - type: other
-    value: "charlie-munger-skill-v1"
-    description: "Charlie Munger Analysis Framework SKILL version 1.0.0"
 keywords:
-  - "Charlie Munger"
-  - "Mental Models"
-  - "Investment Philosophy"
-  - "Latticework"
-  - "Inversion"
-  - "Circle of Competence"
-  - "Margin of Safety"
-  - "Lollapalooza Effect"
-  - "Cognitive Biases"
-  - "Value Investing"
-  - "Business Analysis"
-  - "Decision Making"
-references:
-  - type: book
-    title: "Poor Charlie's Almanack"
-    authors:
-      - family-names: "Kaufman"
-        given-names: "Peter D."
-    year: 2005
-  - type: speech
-    title: "Berkshire Hathaway Annual Shareholder Meetings"
-    authors:
-      - family-names: "Munger"
-        given-names: "Charlie"
-      - family-names: "Buffett"
-        given-names: "Warren"
-    year: "1978-2023"
-  - type: speech
-    title: "Daily Journal Annual Meetings"
-    authors:
-      - family-names: "Munger"
-        given-names: "Charlie"
-    year: "2010-2023"
-notes: "Charlie Munger passed away on November 28, 2023. All public views included in this framework are from sources dated on or before that date."
+  - "AI Agent Skill"
+  - "微观决策与商业判断"
+  - "查理·芒格"
+license: MIT
+repository-code: "https://github.com/kevin12369/skill-palace/tree/main/skills/charlie-munger"
+abstract: >-
+  将 查理·芒格 的思维方法论与表述风格固化为可复用的 AI Agent 技能。
+  本技能是思维框架与文风的工具，不声称代表 查理·芒格 本人。

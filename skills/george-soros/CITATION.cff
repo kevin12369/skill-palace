@@ -1,51 +1,16 @@
 cff-version: 1.2.0
-message: "If you use this skill, please cite it using the metadata below."
-title: "George Soros Reflexivity Theory and Macro-Financial Analysis Framework SKILL"
-type: software
+message: "如果您在研究中使用了本 SKILL，请按以下格式引用。"
+title: "乔治·索罗斯 思维框架 SKILL"
 authors:
-  - family-names: "Soros"
-    given-names: "George"
-    orcid: ""
-repository-code: ""
-url: ""
-abstract: "A reusable analysis framework and writing style tool based on George Soros's public methodology, including the Theory of Reflexivity, Boom-Bust Model, Fallibility, 'Reflexivity-Trend-Bias' Tri-Dimensional Diagnosis, 'Invest First Investigate Later' Trial-and-Error Approach, Political-Economic Reflexivity, and Open Society Philosophy. Designed to assist in bubble detection, market mania analysis, macro turning-point identification, and systemic risk evaluation. This skill provides a thinking framework and writing style calibration, and does NOT claim to represent George Soros personally or his unpublished views."
-license: ""
+  - given-names: "SKILL Palace"
+date-released: "2026-08-05"
 version: "1.0.0"
-date-released: "2025-01-01"
-identifiers:
-  - type: other
-    value: "george-soros-skill-v1"
-    description: "George Soros Reflexivity Analysis Framework SKILL version 1.0.0"
 keywords:
-  - "George Soros"
-  - "Reflexivity"
-  - "Theory of Reflexivity"
-  - "Boom-Bust Model"
-  - "Fallibility"
-  - "The Alchemy of Finance"
-  - "Macro Hedge Fund"
-  - "Bubble Analysis"
-  - "Systemic Risk"
-  - "Open Society"
-  - "Financial Crisis"
-  - "Market Mania"
-references:
-  - type: book
-    title: "The Alchemy of Finance"
-    authors:
-      - family-names: "Soros"
-        given-names: "George"
-    year: 1987
-  - type: book
-    title: "Open Society: Reforming Global Capitalism"
-    authors:
-      - family-names: "Soros"
-        given-names: "George"
-    year: 2000
-  - type: book
-    title: "The New Paradigm for Financial Markets: The Credit Crisis of 2008 and What It Means"
-    authors:
-      - family-names: "Soros"
-        given-names: "George"
-    year: 2008
-notes: "George Soros (born August 12, 1930) is still alive. All public views included in this framework are from published sources. This skill provides a thinking framework and writing style tool, and does not claim to represent George Soros personally or his unpublished views."
+  - "AI Agent Skill"
+  - "反身性与金融市场"
+  - "乔治·索罗斯"
+license: MIT
+repository-code: "https://github.com/kevin12369/skill-palace/tree/main/skills/george-soros"
+abstract: >-
+  将 乔治·索罗斯 的思维方法论与表述风格固化为可复用的 AI Agent 技能。
+  本技能是思维框架与文风的工具，不声称代表 乔治·索罗斯 本人。

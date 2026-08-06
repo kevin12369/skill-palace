@@ -1,50 +1,16 @@
 cff-version: 1.2.0
-message: "If you use this skill, please cite it using the metadata below."
-title: "Joseph Schumpeter Creative Destruction and Innovation Evolution Analysis Framework SKILL"
-type: software
+message: "如果您在研究中使用了本 SKILL，请按以下格式引用。"
+title: "约瑟夫·熊彼特 思维框架 SKILL"
 authors:
-  - family-names: "Schumpeter"
-    given-names: "Joseph Alois"
-    orcid: ""
-repository-code: ""
-url: ""
-abstract: "A reusable analysis framework and writing style tool based on Joseph Schumpeter's public methodology, including Creative Destruction, Entrepreneur as Innovator, Five Types of Innovation, Innovation Clusters and Long Waves, Evolutionary Economics, and the Capitalism-Socialism-Democracy thesis. Designed to assist in analyzing technological innovation, industrial disruption, corporate rise and fall, and capitalist evolution. This skill provides a thinking framework and writing style calibration, and does NOT claim to represent Joseph Schumpeter personally or his unpublished views."
-license: ""
+  - given-names: "SKILL Palace"
+date-released: "2026-08-05"
 version: "1.0.0"
-date-released: "2025-01-01"
-identifiers:
-  - type: other
-    value: "joseph-schumpeter-skill-v1"
-    description: "Joseph Schumpeter Innovation Evolution Analysis Framework SKILL version 1.0.0"
 keywords:
-  - "Joseph Schumpeter"
-  - "Creative Destruction"
-  - "Entrepreneurship"
-  - "Innovation Clusters"
-  - "Evolutionary Economics"
-  - "Industrial Mutation"
-  - "New Combinations"
-  - "Long Waves"
-  - "Capitalism Evolution"
-  - "Technological Disruption"
-  - "Innovation Theory"
-references:
-  - type: book
-    title: "The Theory of Economic Development"
-    authors:
-      - family-names: "Schumpeter"
-        given-names: "Joseph A."
-    year: 1911
-  - type: book
-    title: "Business Cycles: A Theoretical, Historical, and Statistical Analysis of the Capitalist Process"
-    authors:
-      - family-names: "Schumpeter"
-        given-names: "Joseph A."
-    year: 1939
-  - type: book
-    title: "Capitalism, Socialism and Democracy"
-    authors:
-      - family-names: "Schumpeter"
-        given-names: "Joseph A."
-    year: 1942
-notes: "Joseph Schumpeter passed away on January 8, 1950. All public views included in this framework are from sources dated on or before that date."
+  - "AI Agent Skill"
+  - "创新与产业演化"
+  - "约瑟夫·熊彼特"
+license: MIT
+repository-code: "https://github.com/kevin12369/skill-palace/tree/main/skills/joseph-schumpeter"
+abstract: >-
+  将 约瑟夫·熊彼特 的思维方法论与表述风格固化为可复用的 AI Agent 技能。
+  本技能是思维框架与文风的工具，不声称代表 约瑟夫·熊彼特 本人。
