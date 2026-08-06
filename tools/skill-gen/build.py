@@ -464,6 +464,46 @@ def render_ref08(p):
 
 # ---------- registry & matrix ----------
 
+# 单一来源的 slug → 短代码 映射。slug（如 gao-shanwen）才是唯一主键；
+# 短代码（如 GS）仅为「展示别名」，集中在此处维护，避免跨 4 个文件手动同步。
+# 新增人物时在此追加一行即可；build 会自动做冲突检测。
+CODE_MAP = {
+    "gao-shanwen":"GS","greenspan":"GP","warren-buffett":"WB","charlie-munger":"CM",
+    "carlota-perez":"CP","kondratiev":"KN","george-soros":"SZ","irving-fisher":"IF",
+    "philip-fisher":"PF","hyman-minsky":"HM","ray-dalio":"RD","joseph-schumpeter":"SP",
+    "theodore-wright":"WR","gartner-hype-cycle":"GT","william-jevons":"JV",
+    "howard-marks":"HOM","burton-malkiel":"BM","fred-schwed":"FS","daniel-kahneman":"DK",
+    "qiu-guolu":"QG","liu-shunren":"LS","john-gordon":"JG","robert-shiller":"RS",
+    "charles-ellis":"CE","nassim-taleb":"NT","ben-bernanke":"BB",
+    "duan-yongping":"DY","li-daxiao":"LD","hong-hao":"HH","peter-lynch":"PL","fu-peng":"FP","xu-xiang":"XX","beijing-chaojia":"BC",
+    "jesse-livermore":"JL","william-gann":"WG","michael-steinhardt":"SH",
+    "martin-schwartz":"MZ","larry-williams":"LW","joseph-granville":"GR",
+    "richard-wyckoff":"RW","george-douglas-taylor":"GD","jeff-cooper":"JC",
+    "yeshan-zhangwenhua":"YS","junshan-jushi":"JS","xu-wenming":"XW",
+    "qin-guoan":"QA","long-qitian":"LQ","yang-jiyuan":"YJ",
+    "james-simons":"JM"
+}
+STAGE_MAP = {
+    "gao-shanwen":"宏观定调","greenspan":"宏观定调","kondratiev":"宏观定调","irving-fisher":"宏观定调",
+    "ray-dalio":"宏观定调","george-soros":"宏观定调",
+    "carlota-perez":"中观筛选","hyman-minsky":"中观筛选","joseph-schumpeter":"中观筛选",
+    "gartner-hype-cycle":"中观筛选","theodore-wright":"中观筛选","william-jevons":"中观筛选",
+    "charlie-munger":"中观筛选",
+    "warren-buffett":"微观决策","philip-fisher":"微观决策",
+    "howard-marks":"中观筛选","burton-malkiel":"中观筛选","fred-schwed":"中观筛选",
+    "daniel-kahneman":"中观筛选","charles-ellis":"中观筛选","nassim-taleb":"中观筛选",
+    "qiu-guolu":"微观决策","liu-shunren":"微观决策",
+    "john-gordon":"宏观定调","robert-shiller":"宏观定调","ben-bernanke":"宏观定调",
+    "duan-yongping":"微观决策","li-daxiao":"宏观定调","hong-hao":"宏观定调",
+    "peter-lynch":"微观决策","fu-peng":"宏观定调","xu-xiang":"中观筛选","beijing-chaojia":"中观筛选",
+    "jesse-livermore":"中观筛选","william-gann":"中观筛选","michael-steinhardt":"宏观定调",
+    "martin-schwartz":"中观筛选","larry-williams":"中观筛选","joseph-granville":"中观筛选",
+    "richard-wyckoff":"中观筛选","george-douglas-taylor":"中观筛选","jeff-cooper":"中观筛选",
+    "yeshan-zhangwenhua":"中观筛选","junshan-jushi":"中观筛选","xu-wenming":"中观筛选",
+    "qin-guoan":"中观筛选","long-qitian":"中观筛选","yang-jiyuan":"中观筛选",
+    "james-simons":"中观筛选"
+}
+
 def update_registry():
     d = json.load(open(REG, encoding="utf-8"))
     existing = {s["name"] for s in d["skills"]}
@@ -474,63 +514,40 @@ def update_registry():
         d["skills"].append({
             "name": p["name"], "person": p["person"], "domain": p["domain"],
             "domain_cn": p["domain_cn"], "region": p["region"], "status": "released",
+            "code": CODE_MAP.get(p["name"], ""),
             "frameworks": p["frameworks"], "style_keywords": p["style_keywords"],
             "roundtable_role": p["roundtable_role"], "roundtable_tags": p["roundtable_tags"],
             "complements": p["complements"], "path": f"skills/{p['name']}"
         })
         added += 1
-    d["version"] = "2.4.0"
+    # 回填空 code 字段：即便已存在的 skill 也确保带有短代码别名
+    for s in d["skills"]:
+        s["code"] = CODE_MAP.get(s["name"], "")
+    d["version"] = "2.5.0"
     d["updated"] = "2026-08-06"
     json.dump(d, open(REG, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     return added, len(d["skills"])
 
 def rebuild_matrix():
     d = json.load(open(REG, encoding="utf-8"))
-    code_map = {
-        "gao-shanwen":"GS","greenspan":"GP","warren-buffett":"WB","charlie-munger":"CM",
-        "carlota-perez":"CP","kondratiev":"KN","george-soros":"SZ","irving-fisher":"IF",
-        "philip-fisher":"PF","hyman-minsky":"HM","ray-dalio":"RD","joseph-schumpeter":"SP",
-        "theodore-wright":"WR","gartner-hype-cycle":"GT","william-jevons":"JV",
-        "howard-marks":"HOM","burton-malkiel":"BM","fred-schwed":"FS","daniel-kahneman":"DK",
-        "qiu-guolu":"QG","liu-shunren":"LS","john-gordon":"JG","robert-shiller":"RS",
-        "charles-ellis":"CE","nassim-taleb":"NT","ben-bernanke":"BB",
-        "duan-yongping":"DY","li-daxiao":"LD","hong-hao":"HH","peter-lynch":"PL","fu-peng":"FP","xu-xiang":"XX","beijing-chaojia":"BC",
-        "jesse-livermore":"JL","william-gann":"WG","michael-steinhardt":"SH",
-        "martin-schwartz":"MZ","larry-williams":"LW","joseph-granville":"GR",
-        "richard-wyckoff":"RW","george-douglas-taylor":"GD","jeff-cooper":"JC",
-        "yeshan-zhangwenhua":"YS","junshan-jushi":"JS","xu-wenming":"XW",
-        "qin-guoan":"QA","long-qitian":"LQ","yang-jiyuan":"YJ",
-        "james-simons":"JM"
-    }
-    stage_map = {
-        "gao-shanwen":"宏观定调","greenspan":"宏观定调","kondratiev":"宏观定调","irving-fisher":"宏观定调",
-        "ray-dalio":"宏观定调","george-soros":"宏观定调",
-        "carlota-perez":"中观筛选","hyman-minsky":"中观筛选","joseph-schumpeter":"中观筛选",
-        "gartner-hype-cycle":"中观筛选","theodore-wright":"中观筛选","william-jevons":"中观筛选",
-        "charlie-munger":"中观筛选",
-        "warren-buffett":"微观决策","philip-fisher":"微观决策",
-        "howard-marks":"中观筛选","burton-malkiel":"中观筛选","fred-schwed":"中观筛选",
-        "daniel-kahneman":"中观筛选","charles-ellis":"中观筛选","nassim-taleb":"中观筛选",
-        "qiu-guolu":"微观决策","liu-shunren":"微观决策",
-        "john-gordon":"宏观定调","robert-shiller":"宏观定调","ben-bernanke":"宏观定调",
-        "duan-yongping":"微观决策","li-daxiao":"宏观定调","hong-hao":"宏观定调",
-        "peter-lynch":"微观决策","fu-peng":"宏观定调","xu-xiang":"中观筛选","beijing-chaojia":"中观筛选",
-        "jesse-livermore":"中观筛选","william-gann":"中观筛选","michael-steinhardt":"宏观定调",
-        "martin-schwartz":"中观筛选","larry-williams":"中观筛选","joseph-granville":"中观筛选",
-        "richard-wyckoff":"中观筛选","george-douglas-taylor":"中观筛选","jeff-cooper":"中观筛选",
-        "yeshan-zhangwenhua":"中观筛选","junshan-jushi":"中观筛选","xu-wenming":"中观筛选",
-        "qin-guoan":"中观筛选","long-qitian":"中观筛选","yang-jiyuan":"中观筛选",
-        "james-simons":"中观筛选"
-    }
+    # 冲突检测：短代码必须唯一，否则构建即报错（防止 JS/JM 类静默冲突再次发生）
+    _codes = list(CODE_MAP.values())
+    if len(_codes) != len(set(_codes)):
+        from collections import Counter
+        _dup = [c for c, n in Counter(_codes).items() if n > 1]
+        raise SystemExit(f"[CODE COLLISION] 短代码冲突：{_dup} —— 请修改 CODE_MAP 后重试")
+    code_map, stage_map = CODE_MAP, STAGE_MAP
     experts = {}; tag_index = {}; stages = {"宏观定调":[], "中观筛选":[], "微观决策":[]}
     for s in d["skills"]:
-        code = code_map[s["name"]]
-        experts[code] = {"name": s["name"], "person": s["person"], "role": s["roundtable_role"],
-                         "tags": s["roundtable_tags"], "stage": stage_map[s["name"]], "path": s["path"]}
+        slug = s["name"]
+        code = code_map.get(slug, "")
+        # slug 是主键；code 仅为展示别名，存入对象便于 assemble 显示
+        experts[slug] = {"code": code, "person": s["person"], "role": s["roundtable_role"],
+                         "tags": s["roundtable_tags"], "stage": stage_map[slug], "path": s["path"]}
         for t in s["roundtable_tags"]:
-            tag_index.setdefault(t, []).append(code)
-        stages[stage_map[s["name"]]].append(code)
-    matrix = {"version":"2.4","updated":"2026-08-06","code_map":{v:k for k,v in code_map.items()},
+            tag_index.setdefault(t, []).append(slug)
+        stages[stage_map[slug]].append(slug)
+    matrix = {"version":"2.5","updated":"2026-08-06","alias_map":code_map,
               "stages":stages,"experts":experts,"tag_index":tag_index}
     json.dump(matrix, open(MAT, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     return len(d["skills"]), len(experts), len(tag_index)
@@ -556,11 +573,11 @@ def main():
         w(os.path.join(base, "references", "07-checklist.md"), render_ref07(p))
         w(os.path.join(base, "references", "08-style-anti-patterns.md"), render_ref08(p))
         total += 1
-        print(f"  ✓ {p['person']} ({p['name']}) 14 files")
+        print(f"  [ok] {p['person']} ({p['name']}) 14 files")
     added, reg_total = update_registry()
     m_total, m_exp, m_tag = rebuild_matrix()
     print(f"\n生成 skill: {total}")
-    print(f"registry: +{added} → 共 {reg_total} 人 (v2.4.0)")
+    print(f"registry: +{added} → 共 {reg_total} 人 (v2.5.0)")
     print(f"matrix: {m_exp} 专家 / {m_tag} 标签")
 
 if __name__ == "__main__":

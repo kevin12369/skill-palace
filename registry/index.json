@@ -1,6 +1,6 @@
 {
   "name": "SKILL Palace",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "description": "世界知名人物思维框架的 SKILL 化名人堂",
   "updated": "2026-08-06",
   "skills": [
@@ -34,7 +34,8 @@
       "complements": [
         "greenspan"
       ],
-      "path": "skills/gao-shanwen"
+      "path": "skills/gao-shanwen",
+      "code": "GS"
     },
     {
       "name": "greenspan",
@@ -70,7 +71,8 @@
       "complements": [
         "gao-shanwen"
       ],
-      "path": "skills/greenspan"
+      "path": "skills/greenspan",
+      "code": "GP"
     },
     {
       "name": "charlie-munger",
@@ -109,7 +111,8 @@
         "gao-shanwen",
         "greenspan"
       ],
-      "path": "skills/charlie-munger"
+      "path": "skills/charlie-munger",
+      "code": "CM"
     },
     {
       "name": "warren-buffett",
@@ -153,7 +156,8 @@
         "charlie-munger",
         "greenspan"
       ],
-      "path": "skills/warren-buffett"
+      "path": "skills/warren-buffett",
+      "code": "WB"
     },
     {
       "name": "carlota-perez",
@@ -192,7 +196,8 @@
         "kondratiev",
         "george-soros"
       ],
-      "path": "skills/carlota-perez"
+      "path": "skills/carlota-perez",
+      "code": "CP"
     },
     {
       "name": "kondratiev",
@@ -229,7 +234,8 @@
       "complements": [
         "carlota-perez"
       ],
-      "path": "skills/kondratiev"
+      "path": "skills/kondratiev",
+      "code": "KN"
     },
     {
       "name": "george-soros",
@@ -270,7 +276,8 @@
         "carlota-perez",
         "greenspan"
       ],
-      "path": "skills/george-soros"
+      "path": "skills/george-soros",
+      "code": "SZ"
     },
     {
       "name": "irving-fisher",
@@ -310,7 +317,8 @@
         "gao-shanwen",
         "greenspan"
       ],
-      "path": "skills/irving-fisher"
+      "path": "skills/irving-fisher",
+      "code": "IF"
     },
     {
       "name": "philip-fisher",
@@ -349,7 +357,8 @@
         "warren-buffett",
         "charlie-munger"
       ],
-      "path": "skills/philip-fisher"
+      "path": "skills/philip-fisher",
+      "code": "PF"
     },
     {
       "name": "hyman-minsky",
@@ -388,7 +397,8 @@
         "irving-fisher",
         "ray-dalio"
       ],
-      "path": "skills/hyman-minsky"
+      "path": "skills/hyman-minsky",
+      "code": "HM"
     },
     {
       "name": "ray-dalio",
@@ -427,7 +437,8 @@
         "hyman-minsky",
         "greenspan"
       ],
-      "path": "skills/ray-dalio"
+      "path": "skills/ray-dalio",
+      "code": "RD"
     },
     {
       "name": "joseph-schumpeter",
@@ -466,7 +477,8 @@
         "carlota-perez",
         "kondratiev"
       ],
-      "path": "skills/joseph-schumpeter"
+      "path": "skills/joseph-schumpeter",
+      "code": "SP"
     },
     {
       "name": "william-jevons",
@@ -504,7 +516,8 @@
         "joseph-schumpeter",
         "theodore-wright"
       ],
-      "path": "skills/william-jevons"
+      "path": "skills/william-jevons",
+      "code": "JV"
     },
     {
       "name": "theodore-wright",
@@ -543,7 +556,8 @@
         "carlota-perez",
         "william-jevons"
       ],
-      "path": "skills/theodore-wright"
+      "path": "skills/theodore-wright",
+      "code": "WR"
     },
     {
       "name": "gartner-hype-cycle",
@@ -581,7 +595,8 @@
         "carlota-perez",
         "theodore-wright"
       ],
-      "path": "skills/gartner-hype-cycle"
+      "path": "skills/gartner-hype-cycle",
+      "code": "GT"
     },
     {
       "name": "howard-marks",
@@ -620,7 +635,8 @@
         "warren-buffett",
         "charlie-munger"
       ],
-      "path": "skills/howard-marks"
+      "path": "skills/howard-marks",
+      "code": "HOM"
     },
     {
       "name": "burton-malkiel",
@@ -657,7 +673,8 @@
         "charles-ellis",
         "warren-buffett"
       ],
-      "path": "skills/burton-malkiel"
+      "path": "skills/burton-malkiel",
+      "code": "BM"
     },
     {
       "name": "fred-schwed",
@@ -694,7 +711,8 @@
         "charlie-munger",
         "daniel-kahneman"
       ],
-      "path": "skills/fred-schwed"
+      "path": "skills/fred-schwed",
+      "code": "FS"
     },
     {
       "name": "daniel-kahneman",
@@ -732,7 +750,8 @@
         "charlie-munger",
         "fred-schwed"
       ],
-      "path": "skills/daniel-kahneman"
+      "path": "skills/daniel-kahneman",
+      "code": "DK"
     },
     {
       "name": "qiu-guolu",
@@ -770,7 +789,8 @@
         "warren-buffett",
         "gao-shanwen"
       ],
-      "path": "skills/qiu-guolu"
+      "path": "skills/qiu-guolu",
+      "code": "QG"
     },
     {
       "name": "liu-shunren",
@@ -808,7 +828,8 @@
         "qiu-guolu",
         "warren-buffett"
       ],
-      "path": "skills/liu-shunren"
+      "path": "skills/liu-shunren",
+      "code": "LS"
     },
     {
       "name": "john-gordon",
@@ -845,7 +866,8 @@
         "kondratiev",
         "ben-bernanke"
       ],
-      "path": "skills/john-gordon"
+      "path": "skills/john-gordon",
+      "code": "JG"
     },
     {
       "name": "robert-shiller",
@@ -884,7 +906,8 @@
         "charlie-munger",
         "george-soros"
       ],
-      "path": "skills/robert-shiller"
+      "path": "skills/robert-shiller",
+      "code": "RS"
     },
     {
       "name": "charles-ellis",
@@ -921,7 +944,8 @@
         "burton-malkiel",
         "warren-buffett"
       ],
-      "path": "skills/charles-ellis"
+      "path": "skills/charles-ellis",
+      "code": "CE"
     },
     {
       "name": "nassim-taleb",
@@ -961,7 +985,8 @@
         "howard-marks",
         "charlie-munger"
       ],
-      "path": "skills/nassim-taleb"
+      "path": "skills/nassim-taleb",
+      "code": "NT"
     },
     {
       "name": "ben-bernanke",
@@ -1001,7 +1026,8 @@
         "irving-fisher",
         "hyman-minsky"
       ],
-      "path": "skills/ben-bernanke"
+      "path": "skills/ben-bernanke",
+      "code": "BB"
     },
     {
       "name": "duan-yongping",
@@ -1044,7 +1070,8 @@
         "qiu-guolu",
         "charlie-munger"
       ],
-      "path": "skills/duan-yongping"
+      "path": "skills/duan-yongping",
+      "code": "DY"
     },
     {
       "name": "li-daxiao",
@@ -1084,7 +1111,8 @@
         "gao-shanwen",
         "qiu-guolu"
       ],
-      "path": "skills/li-daxiao"
+      "path": "skills/li-daxiao",
+      "code": "LD"
     },
     {
       "name": "hong-hao",
@@ -1125,7 +1153,8 @@
         "gao-shanwen",
         "greenspan"
       ],
-      "path": "skills/hong-hao"
+      "path": "skills/hong-hao",
+      "code": "HH"
     },
     {
       "name": "peter-lynch",
@@ -1167,7 +1196,8 @@
         "philip-fisher",
         "warren-buffett"
       ],
-      "path": "skills/peter-lynch"
+      "path": "skills/peter-lynch",
+      "code": "PL"
     },
     {
       "name": "fu-peng",
@@ -1209,7 +1239,8 @@
         "ben-bernanke",
         "howard-marks"
       ],
-      "path": "skills/fu-peng"
+      "path": "skills/fu-peng",
+      "code": "FP"
     },
     {
       "name": "xu-xiang",
@@ -1251,7 +1282,8 @@
         "li-daxiao",
         "hyman-minsky"
       ],
-      "path": "skills/xu-xiang"
+      "path": "skills/xu-xiang",
+      "code": "XX"
     },
     {
       "name": "beijing-chaojia",
@@ -1293,7 +1325,8 @@
         "charlie-munger",
         "li-daxiao"
       ],
-      "path": "skills/beijing-chaojia"
+      "path": "skills/beijing-chaojia",
+      "code": "BC"
     },
     {
       "name": "jesse-livermore",
@@ -1335,7 +1368,8 @@
         "nassim-taleb",
         "xu-xiang"
       ],
-      "path": "skills/jesse-livermore"
+      "path": "skills/jesse-livermore",
+      "code": "JL"
     },
     {
       "name": "william-gann",
@@ -1377,7 +1411,8 @@
         "kondratiev",
         "richard-wyckoff"
       ],
-      "path": "skills/william-gann"
+      "path": "skills/william-gann",
+      "code": "WG"
     },
     {
       "name": "michael-steinhardt",
@@ -1418,7 +1453,8 @@
         "greenspan",
         "fu-peng"
       ],
-      "path": "skills/michael-steinhardt"
+      "path": "skills/michael-steinhardt",
+      "code": "SH"
     },
     {
       "name": "martin-schwartz",
@@ -1459,7 +1495,8 @@
         "jesse-livermore",
         "larry-williams"
       ],
-      "path": "skills/martin-schwartz"
+      "path": "skills/martin-schwartz",
+      "code": "MZ"
     },
     {
       "name": "larry-williams",
@@ -1499,7 +1536,8 @@
         "xu-xiang",
         "jesse-livermore"
       ],
-      "path": "skills/larry-williams"
+      "path": "skills/larry-williams",
+      "code": "LW"
     },
     {
       "name": "joseph-granville",
@@ -1541,7 +1579,8 @@
         "richard-wyckoff",
         "martin-schwartz"
       ],
-      "path": "skills/joseph-granville"
+      "path": "skills/joseph-granville",
+      "code": "GR"
     },
     {
       "name": "richard-wyckoff",
@@ -1583,7 +1622,8 @@
         "jesse-livermore",
         "howard-marks"
       ],
-      "path": "skills/richard-wyckoff"
+      "path": "skills/richard-wyckoff",
+      "code": "RW"
     },
     {
       "name": "george-douglas-taylor",
@@ -1622,7 +1662,8 @@
         "richard-wyckoff",
         "martin-schwartz"
       ],
-      "path": "skills/george-douglas-taylor"
+      "path": "skills/george-douglas-taylor",
+      "code": "GD"
     },
     {
       "name": "jeff-cooper",
@@ -1664,7 +1705,8 @@
         "martin-schwartz",
         "xu-xiang"
       ],
-      "path": "skills/jeff-cooper"
+      "path": "skills/jeff-cooper",
+      "code": "JC"
     },
     {
       "name": "yeshan-zhangwenhua",
@@ -1706,7 +1748,8 @@
         "beijing-chaojia",
         "qin-guoan"
       ],
-      "path": "skills/yeshan-zhangwenhua"
+      "path": "skills/yeshan-zhangwenhua",
+      "code": "YS"
     },
     {
       "name": "junshan-jushi",
@@ -1747,7 +1790,8 @@
         "qin-guoan",
         "xu-xiang"
       ],
-      "path": "skills/junshan-jushi"
+      "path": "skills/junshan-jushi",
+      "code": "JS"
     },
     {
       "name": "xu-wenming",
@@ -1789,7 +1833,8 @@
         "junshan-jushi",
         "xu-xiang"
       ],
-      "path": "skills/xu-wenming"
+      "path": "skills/xu-wenming",
+      "code": "XW"
     },
     {
       "name": "qin-guoan",
@@ -1830,7 +1875,8 @@
         "richard-wyckoff",
         "junshan-jushi"
       ],
-      "path": "skills/qin-guoan"
+      "path": "skills/qin-guoan",
+      "code": "QA"
     },
     {
       "name": "long-qitian",
@@ -1870,7 +1916,8 @@
         "qin-guoan",
         "xu-wenming"
       ],
-      "path": "skills/long-qitian"
+      "path": "skills/long-qitian",
+      "code": "LQ"
     },
     {
       "name": "yang-jiyuan",
@@ -1912,7 +1959,8 @@
         "xu-wenming",
         "daniel-kahneman"
       ],
-      "path": "skills/yang-jiyuan"
+      "path": "skills/yang-jiyuan",
+      "code": "YJ"
     },
     {
       "name": "james-simons",
@@ -1960,7 +2008,8 @@
         "howard-marks",
         "nassim-taleb"
       ],
-      "path": "skills/james-simons"
+      "path": "skills/james-simons",
+      "code": "JM"
     }
   ],
   "roundtable": {

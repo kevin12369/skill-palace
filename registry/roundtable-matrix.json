@@ -1,117 +1,117 @@
 {
-  "version": "2.4",
+  "version": "2.5",
   "updated": "2026-08-06",
-  "code_map": {
-    "GS": "gao-shanwen",
-    "GP": "greenspan",
-    "WB": "warren-buffett",
-    "CM": "charlie-munger",
-    "CP": "carlota-perez",
-    "KN": "kondratiev",
-    "SZ": "george-soros",
-    "IF": "irving-fisher",
-    "PF": "philip-fisher",
-    "HM": "hyman-minsky",
-    "RD": "ray-dalio",
-    "SP": "joseph-schumpeter",
-    "WR": "theodore-wright",
-    "GT": "gartner-hype-cycle",
-    "JV": "william-jevons",
-    "HOM": "howard-marks",
-    "BM": "burton-malkiel",
-    "FS": "fred-schwed",
-    "DK": "daniel-kahneman",
-    "QG": "qiu-guolu",
-    "LS": "liu-shunren",
-    "JG": "john-gordon",
-    "RS": "robert-shiller",
-    "CE": "charles-ellis",
-    "NT": "nassim-taleb",
-    "BB": "ben-bernanke",
-    "DY": "duan-yongping",
-    "LD": "li-daxiao",
-    "HH": "hong-hao",
-    "PL": "peter-lynch",
-    "FP": "fu-peng",
-    "XX": "xu-xiang",
-    "BC": "beijing-chaojia",
-    "JL": "jesse-livermore",
-    "WG": "william-gann",
-    "SH": "michael-steinhardt",
-    "MZ": "martin-schwartz",
-    "LW": "larry-williams",
-    "GR": "joseph-granville",
-    "RW": "richard-wyckoff",
-    "GD": "george-douglas-taylor",
-    "JC": "jeff-cooper",
-    "YS": "yeshan-zhangwenhua",
-    "JS": "junshan-jushi",
-    "XW": "xu-wenming",
-    "QA": "qin-guoan",
-    "LQ": "long-qitian",
-    "YJ": "yang-jiyuan",
-    "JM": "james-simons"
+  "alias_map": {
+    "gao-shanwen": "GS",
+    "greenspan": "GP",
+    "warren-buffett": "WB",
+    "charlie-munger": "CM",
+    "carlota-perez": "CP",
+    "kondratiev": "KN",
+    "george-soros": "SZ",
+    "irving-fisher": "IF",
+    "philip-fisher": "PF",
+    "hyman-minsky": "HM",
+    "ray-dalio": "RD",
+    "joseph-schumpeter": "SP",
+    "theodore-wright": "WR",
+    "gartner-hype-cycle": "GT",
+    "william-jevons": "JV",
+    "howard-marks": "HOM",
+    "burton-malkiel": "BM",
+    "fred-schwed": "FS",
+    "daniel-kahneman": "DK",
+    "qiu-guolu": "QG",
+    "liu-shunren": "LS",
+    "john-gordon": "JG",
+    "robert-shiller": "RS",
+    "charles-ellis": "CE",
+    "nassim-taleb": "NT",
+    "ben-bernanke": "BB",
+    "duan-yongping": "DY",
+    "li-daxiao": "LD",
+    "hong-hao": "HH",
+    "peter-lynch": "PL",
+    "fu-peng": "FP",
+    "xu-xiang": "XX",
+    "beijing-chaojia": "BC",
+    "jesse-livermore": "JL",
+    "william-gann": "WG",
+    "michael-steinhardt": "SH",
+    "martin-schwartz": "MZ",
+    "larry-williams": "LW",
+    "joseph-granville": "GR",
+    "richard-wyckoff": "RW",
+    "george-douglas-taylor": "GD",
+    "jeff-cooper": "JC",
+    "yeshan-zhangwenhua": "YS",
+    "junshan-jushi": "JS",
+    "xu-wenming": "XW",
+    "qin-guoan": "QA",
+    "long-qitian": "LQ",
+    "yang-jiyuan": "YJ",
+    "james-simons": "JM"
   },
   "stages": {
     "宏观定调": [
-      "GS",
-      "GP",
-      "KN",
-      "SZ",
-      "IF",
-      "RD",
-      "JG",
-      "RS",
-      "BB",
-      "LD",
-      "HH",
-      "FP",
-      "SH"
+      "gao-shanwen",
+      "greenspan",
+      "kondratiev",
+      "george-soros",
+      "irving-fisher",
+      "ray-dalio",
+      "john-gordon",
+      "robert-shiller",
+      "ben-bernanke",
+      "li-daxiao",
+      "hong-hao",
+      "fu-peng",
+      "michael-steinhardt"
     ],
     "中观筛选": [
-      "CM",
-      "CP",
-      "HM",
-      "SP",
-      "JV",
-      "WR",
-      "GT",
-      "HOM",
-      "BM",
-      "FS",
-      "DK",
-      "CE",
-      "NT",
-      "XX",
-      "BC",
-      "JL",
-      "WG",
-      "MZ",
-      "LW",
-      "GR",
-      "RW",
-      "GD",
-      "JC",
-      "YS",
-      "JS",
-      "XW",
-      "QA",
-      "LQ",
-      "YJ",
-      "JM"
+      "charlie-munger",
+      "carlota-perez",
+      "hyman-minsky",
+      "joseph-schumpeter",
+      "william-jevons",
+      "theodore-wright",
+      "gartner-hype-cycle",
+      "howard-marks",
+      "burton-malkiel",
+      "fred-schwed",
+      "daniel-kahneman",
+      "charles-ellis",
+      "nassim-taleb",
+      "xu-xiang",
+      "beijing-chaojia",
+      "jesse-livermore",
+      "william-gann",
+      "martin-schwartz",
+      "larry-williams",
+      "joseph-granville",
+      "richard-wyckoff",
+      "george-douglas-taylor",
+      "jeff-cooper",
+      "yeshan-zhangwenhua",
+      "junshan-jushi",
+      "xu-wenming",
+      "qin-guoan",
+      "long-qitian",
+      "yang-jiyuan",
+      "james-simons"
     ],
     "微观决策": [
-      "WB",
-      "PF",
-      "QG",
-      "LS",
-      "DY",
-      "PL"
+      "warren-buffett",
+      "philip-fisher",
+      "qiu-guolu",
+      "liu-shunren",
+      "duan-yongping",
+      "peter-lynch"
     ]
   },
   "experts": {
-    "GS": {
-      "name": "gao-shanwen",
+    "gao-shanwen": {
+      "code": "GS",
       "person": "高善文",
       "role": "中国宏观背景提供者",
       "tags": [
@@ -125,8 +125,8 @@
       "stage": "宏观定调",
       "path": "skills/gao-shanwen"
     },
-    "GP": {
-      "name": "greenspan",
+    "greenspan": {
+      "code": "GP",
       "person": "格林斯潘",
       "role": "全球宏观背景提供者",
       "tags": [
@@ -141,8 +141,8 @@
       "stage": "宏观定调",
       "path": "skills/greenspan"
     },
-    "CM": {
-      "name": "charlie-munger",
+    "charlie-munger": {
+      "code": "CM",
       "person": "查理·芒格",
       "role": "首席逆向质疑者",
       "tags": [
@@ -157,8 +157,8 @@
       "stage": "中观筛选",
       "path": "skills/charlie-munger"
     },
-    "WB": {
-      "name": "warren-buffett",
+    "warren-buffett": {
+      "code": "WB",
       "person": "沃伦·巴菲特",
       "role": "估值与最终决策者",
       "tags": [
@@ -173,8 +173,8 @@
       "stage": "微观决策",
       "path": "skills/warren-buffett"
     },
-    "CP": {
-      "name": "carlota-perez",
+    "carlota-perez": {
+      "code": "CP",
       "person": "卡洛塔·佩雷斯",
       "role": "技术周期分析师",
       "tags": [
@@ -190,8 +190,8 @@
       "stage": "中观筛选",
       "path": "skills/carlota-perez"
     },
-    "KN": {
-      "name": "kondratiev",
+    "kondratiev": {
+      "code": "KN",
       "person": "康德拉季耶夫",
       "role": "长周期分析师",
       "tags": [
@@ -207,8 +207,8 @@
       "stage": "宏观定调",
       "path": "skills/kondratiev"
     },
-    "SZ": {
-      "name": "george-soros",
+    "george-soros": {
+      "code": "SZ",
       "person": "乔治·索罗斯",
       "role": "反身性理论家与泡沫剖析者",
       "tags": [
@@ -224,8 +224,8 @@
       "stage": "宏观定调",
       "path": "skills/george-soros"
     },
-    "IF": {
-      "name": "irving-fisher",
+    "irving-fisher": {
+      "code": "IF",
       "person": "欧文·费雪(大)",
       "role": "货币与债务周期理论家",
       "tags": [
@@ -241,8 +241,8 @@
       "stage": "宏观定调",
       "path": "skills/irving-fisher"
     },
-    "PF": {
-      "name": "philip-fisher",
+    "philip-fisher": {
+      "code": "PF",
       "person": "菲利普·费雪(小)",
       "role": "成长股识别与管理层评估师",
       "tags": [
@@ -258,8 +258,8 @@
       "stage": "微观决策",
       "path": "skills/philip-fisher"
     },
-    "HM": {
-      "name": "hyman-minsky",
+    "hyman-minsky": {
+      "code": "HM",
       "person": "海曼·明斯基",
       "role": "金融不稳定分析师",
       "tags": [
@@ -275,8 +275,8 @@
       "stage": "中观筛选",
       "path": "skills/hyman-minsky"
     },
-    "RD": {
-      "name": "ray-dalio",
+    "ray-dalio": {
+      "code": "RD",
       "person": "瑞·达里奥",
       "role": "债务周期分析师与宏观配置师",
       "tags": [
@@ -292,8 +292,8 @@
       "stage": "宏观定调",
       "path": "skills/ray-dalio"
     },
-    "SP": {
-      "name": "joseph-schumpeter",
+    "joseph-schumpeter": {
+      "code": "SP",
       "person": "约瑟夫·熊彼特",
       "role": "创新与产业演化理论家",
       "tags": [
@@ -309,8 +309,8 @@
       "stage": "中观筛选",
       "path": "skills/joseph-schumpeter"
     },
-    "JV": {
-      "name": "william-jevons",
+    "william-jevons": {
+      "code": "JV",
       "person": "威廉·斯坦利·杰文斯",
       "role": "资源效率悖论分析师",
       "tags": [
@@ -326,8 +326,8 @@
       "stage": "中观筛选",
       "path": "skills/william-jevons"
     },
-    "WR": {
-      "name": "theodore-wright",
+    "theodore-wright": {
+      "code": "WR",
       "person": "西奥多·莱特",
       "role": "技术成本曲线分析师",
       "tags": [
@@ -344,8 +344,8 @@
       "stage": "中观筛选",
       "path": "skills/theodore-wright"
     },
-    "GT": {
-      "name": "gartner-hype-cycle",
+    "gartner-hype-cycle": {
+      "code": "GT",
       "person": "加特纳Hype Cycle",
       "role": "技术成熟度定位分析师",
       "tags": [
@@ -361,8 +361,8 @@
       "stage": "中观筛选",
       "path": "skills/gartner-hype-cycle"
     },
-    "HOM": {
-      "name": "howard-marks",
+    "howard-marks": {
+      "code": "HOM",
       "person": "霍华德·马克斯",
       "role": "周期定位与风险感知者",
       "tags": [
@@ -379,8 +379,8 @@
       "stage": "中观筛选",
       "path": "skills/howard-marks"
     },
-    "BM": {
-      "name": "burton-malkiel",
+    "burton-malkiel": {
+      "code": "BM",
       "person": "伯顿·马尔基尔",
       "role": "有效市场与被动投资倡导者",
       "tags": [
@@ -395,8 +395,8 @@
       "stage": "中观筛选",
       "path": "skills/burton-malkiel"
     },
-    "FS": {
-      "name": "fred-schwed",
+    "fred-schwed": {
+      "code": "FS",
       "person": "弗雷德·施韦德",
       "role": "市场荒诞与人性审视者",
       "tags": [
@@ -411,8 +411,8 @@
       "stage": "中观筛选",
       "path": "skills/fred-schwed"
     },
-    "DK": {
-      "name": "daniel-kahneman",
+    "daniel-kahneman": {
+      "code": "DK",
       "person": "丹尼尔·卡尼曼",
       "role": "行为偏差与决策心理剖析者",
       "tags": [
@@ -427,8 +427,8 @@
       "stage": "中观筛选",
       "path": "skills/daniel-kahneman"
     },
-    "QG": {
-      "name": "qiu-guolu",
+    "qiu-guolu": {
+      "code": "QG",
       "person": "邱国鹭",
       "role": "中国价值投资实务派",
       "tags": [
@@ -444,8 +444,8 @@
       "stage": "微观决策",
       "path": "skills/qiu-guolu"
     },
-    "LS": {
-      "name": "liu-shunren",
+    "liu-shunren": {
+      "code": "LS",
       "person": "刘顺仁",
       "role": "财报质量与战略剖析者",
       "tags": [
@@ -461,8 +461,8 @@
       "stage": "微观决策",
       "path": "skills/liu-shunren"
     },
-    "JG": {
-      "name": "john-gordon",
+    "john-gordon": {
+      "code": "JG",
       "person": "约翰·戈登",
       "role": "金融史与制度演进观察者",
       "tags": [
@@ -477,8 +477,8 @@
       "stage": "宏观定调",
       "path": "skills/john-gordon"
     },
-    "RS": {
-      "name": "robert-shiller",
+    "robert-shiller": {
+      "code": "RS",
       "person": "罗伯特·席勒",
       "role": "行为泡沫与叙事经济学剖析者",
       "tags": [
@@ -494,8 +494,8 @@
       "stage": "宏观定调",
       "path": "skills/robert-shiller"
     },
-    "CE": {
-      "name": "charles-ellis",
+    "charles-ellis": {
+      "code": "CE",
       "person": "查尔斯·埃利斯",
       "role": "投资政策与长期纪律设计者",
       "tags": [
@@ -510,8 +510,8 @@
       "stage": "中观筛选",
       "path": "skills/charles-ellis"
     },
-    "NT": {
-      "name": "nassim-taleb",
+    "nassim-taleb": {
+      "code": "NT",
       "person": "纳西姆·塔勒布",
       "role": "尾部风险与反脆弱剖析者",
       "tags": [
@@ -527,8 +527,8 @@
       "stage": "中观筛选",
       "path": "skills/nassim-taleb"
     },
-    "BB": {
-      "name": "ben-bernanke",
+    "ben-bernanke": {
+      "code": "BB",
       "person": "本·伯南克",
       "role": "货币政策与危机传导分析师",
       "tags": [
@@ -544,8 +544,8 @@
       "stage": "宏观定调",
       "path": "skills/ben-bernanke"
     },
-    "DY": {
-      "name": "duan-yongping",
+    "duan-yongping": {
+      "code": "DY",
       "person": "段永平",
       "role": "中国价值投资与企业质量评估师",
       "tags": [
@@ -563,8 +563,8 @@
       "stage": "微观决策",
       "path": "skills/duan-yongping"
     },
-    "LD": {
-      "name": "li-daxiao",
+    "li-daxiao": {
+      "code": "LD",
       "person": "李大霄",
       "role": "A股市场整体判断者",
       "tags": [
@@ -581,8 +581,8 @@
       "stage": "宏观定调",
       "path": "skills/li-daxiao"
     },
-    "HH": {
-      "name": "hong-hao",
+    "hong-hao": {
+      "code": "HH",
       "person": "洪灏",
       "role": "宏观策略与周期定位分析师",
       "tags": [
@@ -600,8 +600,8 @@
       "stage": "宏观定调",
       "path": "skills/hong-hao"
     },
-    "PL": {
-      "name": "peter-lynch",
+    "peter-lynch": {
+      "code": "PL",
       "person": "彼得·林奇",
       "role": "成长股识别与选股实操派",
       "tags": [
@@ -619,8 +619,8 @@
       "stage": "微观决策",
       "path": "skills/peter-lynch"
     },
-    "FP": {
-      "name": "fu-peng",
+    "fu-peng": {
+      "code": "FP",
       "person": "付鹏",
       "role": "宏观对冲与利率汇率分析师",
       "tags": [
@@ -638,8 +638,8 @@
       "stage": "宏观定调",
       "path": "skills/fu-peng"
     },
-    "XX": {
-      "name": "xu-xiang",
+    "xu-xiang": {
+      "code": "XX",
       "person": "徐翔",
       "role": "短线交易策略与情绪分析师",
       "tags": [
@@ -657,8 +657,8 @@
       "stage": "中观筛选",
       "path": "skills/xu-xiang"
     },
-    "BC": {
-      "name": "beijing-chaojia",
+    "beijing-chaojia": {
+      "code": "BC",
       "person": "北京炒家",
       "role": "题材博弈与龙头战法分析师",
       "tags": [
@@ -676,8 +676,8 @@
       "stage": "中观筛选",
       "path": "skills/beijing-chaojia"
     },
-    "JL": {
-      "name": "jesse-livermore",
+    "jesse-livermore": {
+      "code": "JL",
       "person": "杰西·利弗莫尔",
       "role": "趋势交易与市场心理大师",
       "tags": [
@@ -695,8 +695,8 @@
       "stage": "中观筛选",
       "path": "skills/jesse-livermore"
     },
-    "WG": {
-      "name": "william-gann",
+    "william-gann": {
+      "code": "WG",
       "person": "威廉·江恩",
       "role": "时间周期与几何分析大师",
       "tags": [
@@ -714,8 +714,8 @@
       "stage": "中观筛选",
       "path": "skills/william-gann"
     },
-    "SH": {
-      "name": "michael-steinhardt",
+    "michael-steinhardt": {
+      "code": "SH",
       "person": "迈克尔·斯坦哈特",
       "role": "宏观催化剂与灵活交易大师",
       "tags": [
@@ -732,8 +732,8 @@
       "stage": "宏观定调",
       "path": "skills/michael-steinhardt"
     },
-    "MZ": {
-      "name": "martin-schwartz",
+    "martin-schwartz": {
+      "code": "MZ",
       "person": "马丁·舒华兹",
       "role": "动量交易与交易纪律大师",
       "tags": [
@@ -750,8 +750,8 @@
       "stage": "中观筛选",
       "path": "skills/martin-schwartz"
     },
-    "LW": {
-      "name": "larry-williams",
+    "larry-williams": {
+      "code": "LW",
       "person": "拉瑞·威廉姆斯",
       "role": "短线择时与资金管理大师",
       "tags": [
@@ -767,8 +767,8 @@
       "stage": "中观筛选",
       "path": "skills/larry-williams"
     },
-    "GR": {
-      "name": "joseph-granville",
+    "joseph-granville": {
+      "code": "GR",
       "person": "约瑟夫·格伦维尔",
       "role": "量价分析与择时大师",
       "tags": [
@@ -786,8 +786,8 @@
       "stage": "中观筛选",
       "path": "skills/joseph-granville"
     },
-    "RW": {
-      "name": "richard-wyckoff",
+    "richard-wyckoff": {
+      "code": "RW",
       "person": "理查德·威科夫",
       "role": "量价结构与主力意图解读者",
       "tags": [
@@ -805,8 +805,8 @@
       "stage": "中观筛选",
       "path": "skills/richard-wyckoff"
     },
-    "GD": {
-      "name": "george-douglas-taylor",
+    "george-douglas-taylor": {
+      "code": "GD",
       "person": "乔治·道格拉斯·泰勒",
       "role": "日内周期与泰勒交易法大师",
       "tags": [
@@ -822,8 +822,8 @@
       "stage": "中观筛选",
       "path": "skills/george-douglas-taylor"
     },
-    "JC": {
-      "name": "jeff-cooper",
+    "jeff-cooper": {
+      "code": "JC",
       "person": "杰夫·库珀",
       "role": "摆动交易与短线模式大师",
       "tags": [
@@ -841,8 +841,8 @@
       "stage": "中观筛选",
       "path": "skills/jeff-cooper"
     },
-    "YS": {
-      "name": "yeshan-zhangwenhua",
+    "yeshan-zhangwenhua": {
+      "code": "YS",
       "person": "野山（张文华）",
       "role": "A股技术派波段分析师",
       "tags": [
@@ -860,8 +860,8 @@
       "stage": "中观筛选",
       "path": "skills/yeshan-zhangwenhua"
     },
-    "JS": {
-      "name": "junshan-jushi",
+    "junshan-jushi": {
+      "code": "JS",
       "person": "君山居士（康会民）",
       "role": "A股趋势与均线系统分析师",
       "tags": [
@@ -878,8 +878,8 @@
       "stage": "中观筛选",
       "path": "skills/junshan-jushi"
     },
-    "XW": {
-      "name": "xu-wenming",
+    "xu-wenming": {
+      "code": "XW",
       "person": "徐文明",
       "role": "A股散户短线技术分析师",
       "tags": [
@@ -897,8 +897,8 @@
       "stage": "中观筛选",
       "path": "skills/xu-wenming"
     },
-    "QA": {
-      "name": "qin-guoan",
+    "qin-guoan": {
+      "code": "QA",
       "person": "秦国安",
       "role": "A股量价与主力行为分析师",
       "tags": [
@@ -915,8 +915,8 @@
       "stage": "中观筛选",
       "path": "skills/qin-guoan"
     },
-    "LQ": {
-      "name": "long-qitian",
+    "long-qitian": {
+      "code": "LQ",
       "person": "龙祺天",
       "role": "A股系统化技术分析师",
       "tags": [
@@ -932,8 +932,8 @@
       "stage": "中观筛选",
       "path": "skills/long-qitian"
     },
-    "YJ": {
-      "name": "yang-jiyuan",
+    "yang-jiyuan": {
+      "code": "YJ",
       "person": "杨济源",
       "role": "A股交易心理与风险分析师",
       "tags": [
@@ -951,8 +951,8 @@
       "stage": "中观筛选",
       "path": "skills/yang-jiyuan"
     },
-    "JM": {
-      "name": "james-simons",
+    "james-simons": {
+      "code": "JM",
       "person": "詹姆斯·西蒙斯",
       "role": "量化投资与统计套利大师",
       "tags": [
@@ -978,1092 +978,1092 @@
   },
   "tag_index": {
     "中国宏观": [
-      "GS"
+      "gao-shanwen"
     ],
     "资产定价": [
-      "GS"
+      "gao-shanwen"
     ],
     "房地产": [
-      "GS"
+      "gao-shanwen"
     ],
     "人口": [
-      "GS"
+      "gao-shanwen"
     ],
     "货币政策": [
-      "GS",
-      "IF",
-      "BB"
+      "gao-shanwen",
+      "irving-fisher",
+      "ben-bernanke"
     ],
     "汇率": [
-      "GS",
-      "FP"
+      "gao-shanwen",
+      "fu-peng"
     ],
     "全球宏观": [
-      "GP",
-      "FP"
+      "greenspan",
+      "fu-peng"
     ],
     "美联储": [
-      "GP",
-      "BB"
+      "greenspan",
+      "ben-bernanke"
     ],
     "利率": [
-      "GP",
-      "FP"
+      "greenspan",
+      "fu-peng"
     ],
     "美元": [
-      "GP"
+      "greenspan"
     ],
     "跨境资本": [
-      "GP"
+      "greenspan"
     ],
     "泡沫识别": [
-      "GP"
+      "greenspan"
     ],
     "非理性繁荣": [
-      "GP",
-      "RS"
+      "greenspan",
+      "robert-shiller"
     ],
     "微观决策": [
-      "CM"
+      "charlie-munger"
     ],
     "逆向思考": [
-      "CM"
+      "charlie-munger"
     ],
     "偏误扫描": [
-      "CM"
+      "charlie-munger"
     ],
     "Lollapalooza": [
-      "CM"
+      "charlie-munger"
     ],
     "商业判断": [
-      "CM"
+      "charlie-munger"
     ],
     "企业质量": [
-      "CM"
+      "charlie-munger"
     ],
     "风险识别": [
-      "CM"
+      "charlie-munger"
     ],
     "价值投资": [
-      "WB",
-      "QG",
-      "DY",
-      "LD"
+      "warren-buffett",
+      "qiu-guolu",
+      "duan-yongping",
+      "li-daxiao"
     ],
     "护城河": [
-      "WB",
-      "QG"
+      "warren-buffett",
+      "qiu-guolu"
     ],
     "估值": [
-      "WB",
-      "RS",
-      "LD",
-      "HH"
+      "warren-buffett",
+      "robert-shiller",
+      "li-daxiao",
+      "hong-hao"
     ],
     "安全边际": [
-      "WB",
-      "DY"
+      "warren-buffett",
+      "duan-yongping"
     ],
     "管理层": [
-      "WB",
-      "PF"
+      "warren-buffett",
+      "philip-fisher"
     ],
     "资本配置": [
-      "WB"
+      "warren-buffett"
     ],
     "长期持有": [
-      "WB",
-      "PF",
-      "QG",
-      "DY",
-      "PL"
+      "warren-buffett",
+      "philip-fisher",
+      "qiu-guolu",
+      "duan-yongping",
+      "peter-lynch"
     ],
     "技术革命": [
-      "CP"
+      "carlota-perez"
     ],
     "范式转型": [
-      "CP"
+      "carlota-perez"
     ],
     "导入期": [
-      "CP"
+      "carlota-perez"
     ],
     "展开期": [
-      "CP"
+      "carlota-perez"
     ],
     "金融资本": [
-      "CP"
+      "carlota-perez"
     ],
     "生产资本": [
-      "CP"
+      "carlota-perez"
     ],
     "泡沫": [
-      "CP",
-      "SZ",
-      "RS"
+      "carlota-perez",
+      "george-soros",
+      "robert-shiller"
     ],
     "转折点": [
-      "CP"
+      "carlota-perez"
     ],
     "长波": [
-      "KN"
+      "kondratiev"
     ],
     "康波": [
-      "KN"
+      "kondratiev"
     ],
     "创新集群": [
-      "KN",
-      "SP"
+      "kondratiev",
+      "joseph-schumpeter"
     ],
     "周期": [
-      "KN",
-      "HOM"
+      "kondratiev",
+      "howard-marks"
     ],
     "价格长波": [
-      "KN"
+      "kondratiev"
     ],
     "萧条": [
-      "KN"
+      "kondratiev"
     ],
     "创造性毁灭": [
-      "KN"
+      "kondratiev"
     ],
     "地缘政治周期": [
-      "KN"
+      "kondratiev"
     ],
     "反身性": [
-      "SZ"
+      "george-soros"
     ],
     "繁荣-萧条": [
-      "SZ"
+      "george-soros"
     ],
     "可错性": [
-      "SZ"
+      "george-soros"
     ],
     "主流偏见": [
-      "SZ"
+      "george-soros"
     ],
     "宏观转折": [
-      "SZ"
+      "george-soros"
     ],
     "系统性风险": [
-      "SZ",
-      "HM"
+      "george-soros",
+      "hyman-minsky"
     ],
     "金融炼金术": [
-      "SZ"
+      "george-soros"
     ],
     "通缩": [
-      "IF"
+      "irving-fisher"
     ],
     "债务周期": [
-      "IF",
-      "RD"
+      "irving-fisher",
+      "ray-dalio"
     ],
     "货币数量论": [
-      "IF"
+      "irving-fisher"
     ],
     "费雪方程": [
-      "IF"
+      "irving-fisher"
     ],
     "实际利率": [
-      "IF"
+      "irving-fisher"
     ],
     "名义利率": [
-      "IF"
+      "irving-fisher"
     ],
     "资产负债表衰退": [
-      "IF"
+      "irving-fisher"
     ],
     "成长股": [
-      "PF",
-      "PL"
+      "philip-fisher",
+      "peter-lynch"
     ],
     "scuttlebutt": [
-      "PF"
+      "philip-fisher"
     ],
     "15点清单": [
-      "PF"
+      "philip-fisher"
     ],
     "研发": [
-      "PF"
+      "philip-fisher"
     ],
     "集中投资": [
-      "PF",
-      "DY"
+      "philip-fisher",
+      "duan-yongping"
     ],
     "定性分析": [
-      "PF"
+      "philip-fisher"
     ],
     "金融不稳定": [
-      "HM"
+      "hyman-minsky"
     ],
     "明斯基时刻": [
-      "HM"
+      "hyman-minsky"
     ],
     "庞氏融资": [
-      "HM"
+      "hyman-minsky"
     ],
     "信贷周期": [
-      "HM"
+      "hyman-minsky"
     ],
     "脆弱性": [
-      "HM"
+      "hyman-minsky"
     ],
     "去杠杆": [
-      "HM",
-      "RD"
+      "hyman-minsky",
+      "ray-dalio"
     ],
     "最后贷款人": [
-      "HM"
+      "hyman-minsky"
     ],
     "经济机器": [
-      "RD"
+      "ray-dalio"
     ],
     "全天候": [
-      "RD"
+      "ray-dalio"
     ],
     "生产率": [
-      "RD"
+      "ray-dalio"
     ],
     "大国兴衰": [
-      "RD"
+      "ray-dalio"
     ],
     "资产配置": [
-      "RD",
-      "HOM",
-      "BM",
-      "CE"
+      "ray-dalio",
+      "howard-marks",
+      "burton-malkiel",
+      "charles-ellis"
     ],
     "原则决策": [
-      "RD"
+      "ray-dalio"
     ],
     "创造性破坏": [
-      "SP"
+      "joseph-schumpeter"
     ],
     "企业家精神": [
-      "SP"
+      "joseph-schumpeter"
     ],
     "演化经济学": [
-      "SP"
+      "joseph-schumpeter"
     ],
     "产业突变": [
-      "SP"
+      "joseph-schumpeter"
     ],
     "新组合": [
-      "SP"
+      "joseph-schumpeter"
     ],
     "技术颠覆": [
-      "SP"
+      "joseph-schumpeter"
     ],
     "资本主义演化": [
-      "SP"
+      "joseph-schumpeter"
     ],
     "杰文斯悖论": [
-      "JV"
+      "william-jevons"
     ],
     "效率悖论": [
-      "JV"
+      "william-jevons"
     ],
     "边际效用": [
-      "JV"
+      "william-jevons"
     ],
     "资源约束": [
-      "JV"
+      "william-jevons"
     ],
     "反弹效应": [
-      "JV"
+      "william-jevons"
     ],
     "能源转型": [
-      "JV"
+      "william-jevons"
     ],
     "技术进步": [
-      "JV"
+      "william-jevons"
     ],
     "数学经济": [
-      "JV"
+      "william-jevons"
     ],
     "莱特定律": [
-      "WR"
+      "theodore-wright"
     ],
     "学习曲线": [
-      "WR"
+      "theodore-wright"
     ],
     "经验曲线": [
-      "WR"
+      "theodore-wright"
     ],
     "成本预测": [
-      "WR"
+      "theodore-wright"
     ],
     "制造业": [
-      "WR"
+      "theodore-wright"
     ],
     "规模化": [
-      "WR"
+      "theodore-wright"
     ],
     "光伏": [
-      "WR"
+      "theodore-wright"
     ],
     "电池": [
-      "WR"
+      "theodore-wright"
     ],
     "干中学": [
-      "WR"
+      "theodore-wright"
     ],
     "Hype Cycle": [
-      "GT"
+      "gartner-hype-cycle"
     ],
     "技术成熟度": [
-      "GT"
+      "gartner-hype-cycle"
     ],
     "期望膨胀": [
-      "GT"
+      "gartner-hype-cycle"
     ],
     "幻灭低谷": [
-      "GT"
+      "gartner-hype-cycle"
     ],
     "炒作周期": [
-      "GT"
+      "gartner-hype-cycle"
     ],
     "跨越鸿沟": [
-      "GT"
+      "gartner-hype-cycle"
     ],
     "技术采纳": [
-      "GT"
+      "gartner-hype-cycle"
     ],
     "创新扩散": [
-      "GT"
+      "gartner-hype-cycle"
     ],
     "风险控制": [
-      "HOM",
-      "YJ"
+      "howard-marks",
+      "yang-jiyuan"
     ],
     "逆向": [
-      "HOM",
-      "QG"
+      "howard-marks",
+      "qiu-guolu"
     ],
     "市场情绪": [
-      "HOM",
-      "LD",
-      "XX",
-      "BC",
-      "YS"
+      "howard-marks",
+      "li-daxiao",
+      "xu-xiang",
+      "beijing-chaojia",
+      "yeshan-zhangwenhua"
     ],
     "信用": [
-      "HOM"
+      "howard-marks"
     ],
     "第二层次思维": [
-      "HOM"
+      "howard-marks"
     ],
     "价格与价值": [
-      "HOM"
+      "howard-marks"
     ],
     "防御性投资": [
-      "HOM"
+      "howard-marks"
     ],
     "有效市场假说": [
-      "BM"
+      "burton-malkiel"
     ],
     "指数投资": [
-      "BM",
-      "CE"
+      "burton-malkiel",
+      "charles-ellis"
     ],
     "行为偏差": [
-      "BM"
+      "burton-malkiel"
     ],
     "长期投资": [
-      "BM",
-      "CE"
+      "burton-malkiel",
+      "charles-ellis"
     ],
     "随机漫步": [
-      "BM"
+      "burton-malkiel"
     ],
     "投资组合": [
-      "BM"
+      "burton-malkiel"
     ],
     "人性": [
-      "FS"
+      "fred-schwed"
     ],
     "市场结构": [
-      "FS"
+      "fred-schwed"
     ],
     "投资者行为": [
-      "FS",
-      "CE"
+      "fred-schwed",
+      "charles-ellis"
     ],
     "幽默批判": [
-      "FS"
+      "fred-schwed"
     ],
     "金融荒诞": [
-      "FS"
+      "fred-schwed"
     ],
     "佣金激励": [
-      "FS"
+      "fred-schwed"
     ],
     "客户利益": [
-      "FS"
+      "fred-schwed"
     ],
     "行为金融": [
-      "DK",
-      "RS"
+      "daniel-kahneman",
+      "robert-shiller"
     ],
     "认知偏差": [
-      "DK"
+      "daniel-kahneman"
     ],
     "前景理论": [
-      "DK"
+      "daniel-kahneman"
     ],
     "决策心理": [
-      "DK"
+      "daniel-kahneman"
     ],
     "损失厌恶": [
-      "DK"
+      "daniel-kahneman"
     ],
     "过度自信": [
-      "DK"
+      "daniel-kahneman"
     ],
     "启发式": [
-      "DK"
+      "daniel-kahneman"
     ],
     "中国股市": [
-      "QG",
-      "DY"
+      "qiu-guolu",
+      "duan-yongping"
     ],
     "行业格局": [
-      "QG"
+      "qiu-guolu"
     ],
     "便宜是硬道理": [
-      "QG"
+      "qiu-guolu"
     ],
     "品质-估值-时机": [
-      "QG"
+      "qiu-guolu"
     ],
     "财务分析": [
-      "LS"
+      "liu-shunren"
     ],
     "财报质量": [
-      "LS"
+      "liu-shunren"
     ],
     "会计": [
-      "LS"
+      "liu-shunren"
     ],
     "战略": [
-      "LS"
+      "liu-shunren"
     ],
     "公司治理": [
-      "LS"
+      "liu-shunren"
     ],
     "现金流": [
-      "LS"
+      "liu-shunren"
     ],
     "竞争力": [
-      "LS"
+      "liu-shunren"
     ],
     "数字故事": [
-      "LS"
+      "liu-shunren"
     ],
     "金融史": [
-      "JG"
+      "john-gordon"
     ],
     "市场制度": [
-      "JG"
+      "john-gordon"
     ],
     "长期视角": [
-      "JG"
+      "john-gordon"
     ],
     "危机史": [
-      "JG"
+      "john-gordon"
     ],
     "资本市场演进": [
-      "JG"
+      "john-gordon"
     ],
     "华尔街史": [
-      "JG"
+      "john-gordon"
     ],
     "周期记忆": [
-      "JG"
+      "john-gordon"
     ],
     "叙事经济学": [
-      "RS"
+      "robert-shiller"
     ],
     "CAPE": [
-      "RS"
+      "robert-shiller"
     ],
     "市场心理": [
-      "RS",
-      "JL"
+      "robert-shiller",
+      "jesse-livermore"
     ],
     "住房": [
-      "RS"
+      "robert-shiller"
     ],
     "投资政策": [
-      "CE"
+      "charles-ellis"
     ],
     "再平衡": [
-      "CE"
+      "charles-ellis"
     ],
     "机构视角": [
-      "CE"
+      "charles-ellis"
     ],
     "黑天鹅": [
-      "NT"
+      "nassim-taleb"
     ],
     "尾部风险": [
-      "NT"
+      "nassim-taleb"
     ],
     "反脆弱": [
-      "NT"
+      "nassim-taleb"
     ],
     "期权": [
-      "NT"
+      "nassim-taleb"
     ],
     "不确定性": [
-      "NT"
+      "nassim-taleb"
     ],
     "凸性": [
-      "NT"
+      "nassim-taleb"
     ],
     "杠铃策略": [
-      "NT"
+      "nassim-taleb"
     ],
     "skin in the game": [
-      "NT"
+      "nassim-taleb"
     ],
     "金融危机": [
-      "BB"
+      "ben-bernanke"
     ],
     "信用传导": [
-      "BB"
+      "ben-bernanke"
     ],
     "流动性": [
-      "BB",
-      "HH",
-      "FP",
-      "SH"
+      "ben-bernanke",
+      "hong-hao",
+      "fu-peng",
+      "michael-steinhardt"
     ],
     "宏观审慎": [
-      "BB"
+      "ben-bernanke"
     ],
     "大萧条": [
-      "BB"
+      "ben-bernanke"
     ],
     "债务通缩": [
-      "BB"
+      "ben-bernanke"
     ],
     "商业模式": [
-      "DY"
+      "duan-yongping"
     ],
     "企业文化": [
-      "DY"
+      "duan-yongping"
     ],
     "能力圈": [
-      "DY"
+      "duan-yongping"
     ],
     "本分": [
-      "DY"
+      "duan-yongping"
     ],
     "买股票即买公司": [
-      "DY"
+      "duan-yongping"
     ],
     "A股": [
-      "LD",
-      "XX",
-      "BC"
+      "li-daxiao",
+      "xu-xiang",
+      "beijing-chaojia"
     ],
     "政策市": [
-      "LD"
+      "li-daxiao"
     ],
     "牛熊判断": [
-      "LD"
+      "li-daxiao"
     ],
     "市场底部": [
-      "LD"
+      "li-daxiao"
     ],
     "蓝筹": [
-      "LD"
+      "li-daxiao"
     ],
     "风险警示": [
-      "LD"
+      "li-daxiao"
     ],
     "A股策略": [
-      "HH"
+      "hong-hao"
     ],
     "港股": [
-      "HH"
+      "hong-hao"
     ],
     "信用周期": [
-      "HH"
+      "hong-hao"
     ],
     "资金流": [
-      "HH",
-      "BC"
+      "hong-hao",
+      "beijing-chaojia"
     ],
     "大类资产": [
-      "HH",
-      "FP"
+      "hong-hao",
+      "fu-peng"
     ],
     "中美宏观": [
-      "HH"
+      "hong-hao"
     ],
     "均值回归": [
-      "HH",
-      "JM"
+      "hong-hao",
+      "james-simons"
     ],
     "周期定位": [
-      "HH"
+      "hong-hao"
     ],
     "GARP": [
-      "PL"
+      "peter-lynch"
     ],
     "PEG": [
-      "PL"
+      "peter-lynch"
     ],
     "十倍股": [
-      "PL"
+      "peter-lynch"
     ],
     "六类股票": [
-      "PL"
+      "peter-lynch"
     ],
     "选股": [
-      "PL",
-      "LW",
-      "YS"
+      "peter-lynch",
+      "larry-williams",
+      "yeshan-zhangwenhua"
     ],
     "分散投资": [
-      "PL"
+      "peter-lynch"
     ],
     "生活经验选股": [
-      "PL"
+      "peter-lynch"
     ],
     "tenbagger": [
-      "PL"
+      "peter-lynch"
     ],
     "宏观对冲": [
-      "FP",
-      "SH"
+      "fu-peng",
+      "michael-steinhardt"
     ],
     "债券": [
-      "FP"
+      "fu-peng"
     ],
     "风险定价": [
-      "FP"
+      "fu-peng"
     ],
     "交易视角": [
-      "FP"
+      "fu-peng"
     ],
     "数据拆解": [
-      "FP"
+      "fu-peng"
     ],
     "短线交易": [
-      "XX",
-      "LW"
+      "xu-xiang",
+      "larry-williams"
     ],
     "题材龙头": [
-      "XX"
+      "xu-xiang"
     ],
     "涨停板": [
-      "XX"
+      "xu-xiang"
     ],
     "资金面": [
-      "XX"
+      "xu-xiang"
     ],
     "技术面": [
-      "XX",
-      "JM"
+      "xu-xiang",
+      "james-simons"
     ],
     "消息面": [
-      "XX"
+      "xu-xiang"
     ],
     "止损": [
-      "XX",
-      "BC",
-      "JL",
-      "WG",
-      "MZ",
-      "XW",
-      "YJ"
+      "xu-xiang",
+      "beijing-chaojia",
+      "jesse-livermore",
+      "william-gann",
+      "martin-schwartz",
+      "xu-wenming",
+      "yang-jiyuan"
     ],
     "筹码分析": [
-      "XX"
+      "xu-xiang"
     ],
     "打板": [
-      "BC"
+      "beijing-chaojia"
     ],
     "龙头战法": [
-      "BC"
+      "beijing-chaojia"
     ],
     "题材周期": [
-      "BC"
+      "beijing-chaojia"
     ],
     "短线": [
-      "BC",
-      "XW"
+      "beijing-chaojia",
+      "xu-wenming"
     ],
     "高换手": [
-      "BC"
+      "beijing-chaojia"
     ],
     "妖股": [
-      "BC"
+      "beijing-chaojia"
     ],
     "趋势交易": [
-      "JL",
-      "JS"
+      "jesse-livermore",
+      "junshan-jushi"
     ],
     "关键点": [
-      "JL"
+      "jesse-livermore"
     ],
     "做空": [
-      "JL"
+      "jesse-livermore"
     ],
     "最小阻力": [
-      "JL"
+      "jesse-livermore"
     ],
     "投机": [
-      "JL"
+      "jesse-livermore"
     ],
     "金字塔": [
-      "JL"
+      "jesse-livermore"
     ],
     "情绪周期": [
-      "JL"
+      "jesse-livermore"
     ],
     "坐等": [
-      "JL"
+      "jesse-livermore"
     ],
     "江恩理论": [
-      "WG"
+      "william-gann"
     ],
     "时间周期": [
-      "WG"
+      "william-gann"
     ],
     "角度线": [
-      "WG"
+      "william-gann"
     ],
     "几何分析": [
-      "WG"
+      "william-gann"
     ],
     "方形图": [
-      "WG"
+      "william-gann"
     ],
     "循环": [
-      "WG"
+      "william-gann"
     ],
     "斐波那契": [
-      "WG",
-      "MZ"
+      "william-gann",
+      "martin-schwartz"
     ],
     "天文学": [
-      "WG"
+      "william-gann"
     ],
     "三分法则": [
-      "WG"
+      "william-gann"
     ],
     "信息优势": [
-      "SH"
+      "michael-steinhardt"
     ],
     "催化剂": [
-      "SH"
+      "michael-steinhardt"
     ],
     "短线灵活": [
-      "SH"
+      "michael-steinhardt"
     ],
     "做多与做空": [
-      "SH"
+      "michael-steinhardt"
     ],
     "风险套利": [
-      "SH"
+      "michael-steinhardt"
     ],
     "事件驱动": [
-      "SH"
+      "michael-steinhardt"
     ],
     "情绪博弈": [
-      "SH"
+      "michael-steinhardt"
     ],
     "动量交易": [
-      "MZ"
+      "martin-schwartz"
     ],
     "超短线": [
-      "MZ"
+      "martin-schwartz"
     ],
     "技术指标": [
-      "MZ"
+      "martin-schwartz"
     ],
     "自律": [
-      "MZ"
+      "martin-schwartz"
     ],
     "资金管理": [
-      "MZ",
-      "LW",
-      "LQ",
-      "YJ"
+      "martin-schwartz",
+      "larry-williams",
+      "long-qitian",
+      "yang-jiyuan"
     ],
     "MACD": [
-      "MZ",
-      "JS",
-      "XW"
+      "martin-schwartz",
+      "junshan-jushi",
+      "xu-wenming"
     ],
     "RSI": [
-      "MZ"
+      "martin-schwartz"
     ],
     "威廉指标": [
-      "LW"
+      "larry-williams"
     ],
     "季节性": [
-      "LW"
+      "larry-williams"
     ],
     "市场广度": [
-      "LW"
+      "larry-williams"
     ],
     "持仓量": [
-      "LW"
+      "larry-williams"
     ],
     "波动率": [
-      "LW"
+      "larry-williams"
     ],
     "量价分析": [
-      "GR",
-      "RW",
-      "QA",
-      "YJ"
+      "joseph-granville",
+      "richard-wyckoff",
+      "qin-guoan",
+      "yang-jiyuan"
     ],
     "OBV": [
-      "GR"
+      "joseph-granville"
     ],
     "格伦维尔法则": [
-      "GR"
+      "joseph-granville"
     ],
     "移动平均线": [
-      "GR"
+      "joseph-granville"
     ],
     "择时": [
-      "GR"
+      "joseph-granville"
     ],
     "成交量": [
-      "GR",
-      "JS"
+      "joseph-granville",
+      "junshan-jushi"
     ],
     "背离": [
-      "GR",
-      "JS"
+      "joseph-granville",
+      "junshan-jushi"
     ],
     "反转": [
-      "GR",
-      "JC"
+      "joseph-granville",
+      "jeff-cooper"
     ],
     "趋势": [
-      "GR",
-      "QA",
-      "LQ"
+      "joseph-granville",
+      "qin-guoan",
+      "long-qitian"
     ],
     "动量": [
-      "GR",
-      "JC"
+      "joseph-granville",
+      "jeff-cooper"
     ],
     "威科夫操盘法": [
-      "RW"
+      "richard-wyckoff"
     ],
     "吸筹": [
-      "RW"
+      "richard-wyckoff"
     ],
     "派发": [
-      "RW"
+      "richard-wyckoff"
     ],
     "供求关系": [
-      "RW"
+      "richard-wyckoff"
     ],
     "买卖测试": [
-      "RW"
+      "richard-wyckoff"
     ],
     "主力意图": [
-      "RW"
+      "richard-wyckoff"
     ],
     "支撑阻力": [
-      "RW",
-      "GD",
-      "JS",
-      "LQ"
+      "richard-wyckoff",
+      "george-douglas-taylor",
+      "junshan-jushi",
+      "long-qitian"
     ],
     "弹簧效应": [
-      "RW"
+      "richard-wyckoff"
     ],
     "综合人": [
-      "RW"
+      "richard-wyckoff"
     ],
     "泰勒交易法": [
-      "GD"
+      "george-douglas-taylor"
     ],
     "三日子": [
-      "GD"
+      "george-douglas-taylor"
     ],
     "买入日": [
-      "GD"
+      "george-douglas-taylor"
     ],
     "卖出日": [
-      "GD"
+      "george-douglas-taylor"
     ],
     "短线周期": [
-      "GD"
+      "george-douglas-taylor"
     ],
     "日内": [
-      "GD"
+      "george-douglas-taylor"
     ],
     "高低点": [
-      "GD"
+      "george-douglas-taylor"
     ],
     "摆动交易": [
-      "JC"
+      "jeff-cooper"
     ],
     "Hit and Run": [
-      "JC"
+      "jeff-cooper"
     ],
     "TBF": [
-      "JC"
+      "jeff-cooper"
     ],
     "序列": [
-      "JC"
+      "jeff-cooper"
     ],
     "一字板": [
-      "JC"
+      "jeff-cooper"
     ],
     "扩张": [
-      "JC"
+      "jeff-cooper"
     ],
     "缺口": [
-      "JC"
+      "jeff-cooper"
     ],
     "五分钟": [
-      "JC"
+      "jeff-cooper"
     ],
     "波段操作": [
-      "YS"
+      "yeshan-zhangwenhua"
     ],
     "A股技术分析": [
-      "YS",
-      "JS",
-      "XW",
-      "QA",
-      "LQ"
+      "yeshan-zhangwenhua",
+      "junshan-jushi",
+      "xu-wenming",
+      "qin-guoan",
+      "long-qitian"
     ],
     "量价": [
-      "YS",
-      "XW"
+      "yeshan-zhangwenhua",
+      "xu-wenming"
     ],
     "均线": [
-      "YS",
-      "XW"
+      "yeshan-zhangwenhua",
+      "xu-wenming"
     ],
     "形态": [
-      "YS"
+      "yeshan-zhangwenhua"
     ],
     "主力": [
-      "YS"
+      "yeshan-zhangwenhua"
     ],
     "短期节奏": [
-      "YS"
+      "yeshan-zhangwenhua"
     ],
     "低吸高抛": [
-      "YS"
+      "yeshan-zhangwenhua"
     ],
     "均线系统": [
-      "JS"
+      "junshan-jushi"
     ],
     "多周期": [
-      "JS"
+      "junshan-jushi"
     ],
     "筹码": [
-      "JS"
+      "junshan-jushi"
     ],
     "KDJ": [
-      "XW"
+      "xu-wenming"
     ],
     "纪律": [
-      "XW",
-      "YJ"
+      "xu-wenming",
+      "yang-jiyuan"
     ],
     "散户策略": [
-      "XW"
+      "xu-wenming"
     ],
     "波段": [
-      "XW"
+      "xu-wenming"
     ],
     "主力行为": [
-      "QA"
+      "qin-guoan"
     ],
     "资金": [
-      "QA"
+      "qin-guoan"
     ],
     "突破": [
-      "QA"
+      "qin-guoan"
     ],
     "回调": [
-      "QA"
+      "qin-guoan"
     ],
     "止盈止损": [
-      "QA",
-      "LQ"
+      "qin-guoan",
+      "long-qitian"
     ],
     "K线": [
-      "QA"
+      "qin-guoan"
     ],
     "系统化交易": [
-      "LQ"
+      "long-qitian"
     ],
     "形态识别": [
-      "LQ"
+      "long-qitian"
     ],
     "操作纪律": [
-      "LQ"
+      "long-qitian"
     ],
     "交易心理学": [
-      "YJ"
+      "yang-jiyuan"
     ],
     "A股实战": [
-      "YJ"
+      "yang-jiyuan"
     ],
     "情绪": [
-      "YJ"
+      "yang-jiyuan"
     ],
     "自控": [
-      "YJ"
+      "yang-jiyuan"
     ],
     "系统化": [
-      "YJ",
-      "JM"
+      "yang-jiyuan",
+      "james-simons"
     ],
     "量化投资": [
-      "JM"
+      "james-simons"
     ],
     "统计套利": [
-      "JM"
+      "james-simons"
     ],
     "高频交易": [
-      "JM"
+      "james-simons"
     ],
     "多策略": [
-      "JM"
+      "james-simons"
     ],
     "壁虎式": [
-      "JM"
+      "james-simons"
     ],
     "数学模型": [
-      "JM"
+      "james-simons"
     ],
     "因子": [
-      "JM"
+      "james-simons"
     ],
     "风险管理": [
-      "JM"
+      "james-simons"
     ],
     "大奖章": [
-      "JM"
+      "james-simons"
     ],
     "分散化": [
-      "JM"
+      "james-simons"
     ],
     "算法": [
-      "JM"
+      "james-simons"
     ],
     "数据挖掘": [
-      "JM"
+      "james-simons"
     ]
   }
 }
