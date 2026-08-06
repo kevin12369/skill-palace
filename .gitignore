@@ -10,6 +10,7 @@ Thumbs.db
 *.tmp
 *.swp
 *.swo
+__pycache__/
 
 # WorkBuddy local
 .workbuddy/
