@@ -1,6 +1,6 @@
 {
   "name": "SKILL Palace",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "世界知名人物思维框架的 SKILL 化名人堂",
   "updated": "2026-08-06",
   "skills": [
@@ -1913,6 +1913,54 @@
         "daniel-kahneman"
       ],
       "path": "skills/yang-jiyuan"
+    },
+    {
+      "name": "james-simons",
+      "person": "詹姆斯·西蒙斯",
+      "domain": "quant-trading",
+      "domain_cn": "量化投资与统计套利",
+      "region": "global",
+      "status": "released",
+      "frameworks": [
+        "壁虎式投资(Lizard Approach)",
+        "统计套利与均值回归",
+        "多策略组合",
+        "雇佣科学家而非交易员",
+        "因子模型与数据挖掘",
+        "严格风险控制(分散化)",
+        "短期预测(高频)"
+      ],
+      "style_keywords": [
+        "数学家理性",
+        "数据驱动",
+        "系统化",
+        "低调神秘"
+      ],
+      "roundtable_role": "量化投资与统计套利大师",
+      "roundtable_tags": [
+        "量化投资",
+        "统计套利",
+        "均值回归",
+        "高频交易",
+        "多策略",
+        "壁虎式",
+        "数学模型",
+        "因子",
+        "风险管理",
+        "大奖章",
+        "分散化",
+        "技术面",
+        "系统化",
+        "算法",
+        "数据挖掘"
+      ],
+      "complements": [
+        "xu-xiang",
+        "martin-schwartz",
+        "howard-marks",
+        "nassim-taleb"
+      ],
+      "path": "skills/james-simons"
     }
   ],
   "roundtable": {
