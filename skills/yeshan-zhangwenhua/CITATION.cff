@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "如果您在研究中使用了本 SKILL，请按以下格式引用。"
+title: "野山（张文华） 思维框架 SKILL"
+authors:
+  - given-names: "SKILL Palace"
+date-released: "2026-08-05"
+version: "1.0.0"
+keywords:
+  - "AI Agent Skill"
+  - "中国技术分析与波段交易"
+  - "野山（张文华）"
+license: MIT
+repository-code: "https://github.com/kevin12369/skill-palace/tree/main/skills/yeshan-zhangwenhua"
+abstract: >-
+  将 野山（张文华） 的思维方法论与表述风格固化为可复用的 AI Agent 技能。
+  本技能是思维框架与文风的工具，不声称代表 野山（张文华） 本人。

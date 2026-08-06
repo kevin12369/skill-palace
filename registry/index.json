@@ -1,8 +1,8 @@
 {
   "name": "SKILL Palace",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "世界知名人物思维框架的 SKILL 化名人堂",
-  "updated": "2026-08-05",
+  "updated": "2026-08-06",
   "skills": [
     {
       "name": "gao-shanwen",
@@ -1294,6 +1294,625 @@
         "li-daxiao"
       ],
       "path": "skills/beijing-chaojia"
+    },
+    {
+      "name": "jesse-livermore",
+      "person": "杰西·利弗莫尔",
+      "domain": "speculation-psychology",
+      "domain_cn": "投机与市场心理",
+      "region": "global",
+      "status": "released",
+      "frameworks": [
+        "关键点战法",
+        "最小阻力线",
+        "投机不是猜测",
+        "坐等哲学",
+        "情绪周期",
+        "金字塔加仓",
+        "做空思维"
+      ],
+      "style_keywords": [
+        "老派投机者语调",
+        "回忆录叙事",
+        "反直觉",
+        "冷峻克制"
+      ],
+      "roundtable_role": "趋势交易与市场心理大师",
+      "roundtable_tags": [
+        "趋势交易",
+        "关键点",
+        "市场心理",
+        "做空",
+        "止损",
+        "最小阻力",
+        "投机",
+        "金字塔",
+        "情绪周期",
+        "坐等"
+      ],
+      "complements": [
+        "george-soros",
+        "nassim-taleb",
+        "xu-xiang"
+      ],
+      "path": "skills/jesse-livermore"
+    },
+    {
+      "name": "william-gann",
+      "person": "威廉·江恩",
+      "domain": "technical-analysis",
+      "domain_cn": "技术分析与时间周期",
+      "region": "global",
+      "status": "released",
+      "frameworks": [
+        "时间因素(周期循环)",
+        "江恩角度线(Gann Fan)",
+        "江恩方图",
+        "价格与时间平衡",
+        "三分与八分法则",
+        "周年纪念日",
+        "止损至上"
+      ],
+      "style_keywords": [
+        "神秘主义色彩",
+        "数学几何",
+        "绝对纪律",
+        "精准精确"
+      ],
+      "roundtable_role": "时间周期与几何分析大师",
+      "roundtable_tags": [
+        "江恩理论",
+        "时间周期",
+        "角度线",
+        "几何分析",
+        "方形图",
+        "循环",
+        "斐波那契",
+        "止损",
+        "天文学",
+        "三分法则"
+      ],
+      "complements": [
+        "william-jevons",
+        "kondratiev",
+        "richard-wyckoff"
+      ],
+      "path": "skills/william-gann"
+    },
+    {
+      "name": "michael-steinhardt",
+      "person": "迈克尔·斯坦哈特",
+      "domain": "macro-hedge",
+      "domain_cn": "宏观对冲与短线博弈",
+      "region": "global",
+      "status": "released",
+      "frameworks": [
+        "信息优势挖掘",
+        "催化剂事件驱动",
+        "宏观广度+微观锐度",
+        "灵活多空",
+        "情绪博弈",
+        "极致集中",
+        "流动性格斗"
+      ],
+      "style_keywords": [
+        "嗅觉敏锐",
+        "信息驱动",
+        "灵活、果断",
+        "博弈思维"
+      ],
+      "roundtable_role": "宏观催化剂与灵活交易大师",
+      "roundtable_tags": [
+        "宏观对冲",
+        "信息优势",
+        "催化剂",
+        "短线灵活",
+        "做多与做空",
+        "流动性",
+        "风险套利",
+        "事件驱动",
+        "情绪博弈"
+      ],
+      "complements": [
+        "george-soros",
+        "greenspan",
+        "fu-peng"
+      ],
+      "path": "skills/michael-steinhardt"
+    },
+    {
+      "name": "martin-schwartz",
+      "person": "马丁·舒华兹",
+      "domain": "short-term-trading",
+      "domain_cn": "短线交易与动量",
+      "region": "global",
+      "status": "released",
+      "frameworks": [
+        "动量突破(Momentum Breakout)",
+        "技术指标共振",
+        "严格止损(5%)",
+        "资金管理",
+        "情绪控制",
+        "盘后复盘",
+        "赢家心态"
+      ],
+      "style_keywords": [
+        "军人纪律",
+        "直白实战",
+        "指标语言",
+        "果断"
+      ],
+      "roundtable_role": "动量交易与交易纪律大师",
+      "roundtable_tags": [
+        "动量交易",
+        "超短线",
+        "技术指标",
+        "自律",
+        "止损",
+        "资金管理",
+        "MACD",
+        "RSI",
+        "斐波那契"
+      ],
+      "complements": [
+        "xu-xiang",
+        "jesse-livermore",
+        "larry-williams"
+      ],
+      "path": "skills/martin-schwartz"
+    },
+    {
+      "name": "larry-williams",
+      "person": "拉瑞·威廉姆斯",
+      "domain": "short-term-trading",
+      "domain_cn": "短线交易与资金管理",
+      "region": "global",
+      "status": "released",
+      "frameworks": [
+        "威廉%R(Williams %R)",
+        "季节性选股",
+        "市场广度(Advance/Decline)",
+        "成交量分析",
+        "资金管理(凯利公式改进)",
+        "持仓量/未平仓分析",
+        "区间突破"
+      ],
+      "style_keywords": [
+        "精密系统化",
+        "资金管理优先",
+        "数学精确",
+        "实战派"
+      ],
+      "roundtable_role": "短线择时与资金管理大师",
+      "roundtable_tags": [
+        "短线交易",
+        "威廉指标",
+        "资金管理",
+        "季节性",
+        "市场广度",
+        "持仓量",
+        "选股",
+        "波动率"
+      ],
+      "complements": [
+        "martin-schwartz",
+        "xu-xiang",
+        "jesse-livermore"
+      ],
+      "path": "skills/larry-williams"
+    },
+    {
+      "name": "joseph-granville",
+      "person": "约瑟夫·格伦维尔",
+      "domain": "technical-analysis",
+      "domain_cn": "量价分析与技术择时",
+      "region": "global",
+      "status": "released",
+      "frameworks": [
+        "OBV(On-Balance Volume)",
+        "格伦维尔八大买卖法则",
+        "成交量确认",
+        "均线择时",
+        "背离分析",
+        "量在价先",
+        "市场宽度"
+      ],
+      "style_keywords": [
+        "量价派",
+        "系统化",
+        "先验数据",
+        "反直觉"
+      ],
+      "roundtable_role": "量价分析与择时大师",
+      "roundtable_tags": [
+        "量价分析",
+        "OBV",
+        "格伦维尔法则",
+        "移动平均线",
+        "择时",
+        "成交量",
+        "背离",
+        "反转",
+        "趋势",
+        "动量"
+      ],
+      "complements": [
+        "william-gann",
+        "richard-wyckoff",
+        "martin-schwartz"
+      ],
+      "path": "skills/joseph-granville"
+    },
+    {
+      "name": "richard-wyckoff",
+      "person": "理查德·威科夫",
+      "domain": "volume-price-analysis",
+      "domain_cn": "量价分析与威科夫操盘法",
+      "region": "global",
+      "status": "released",
+      "frameworks": [
+        "吸筹/派发循环",
+        "供求法则(Supply/Demand)",
+        "买卖测试",
+        "Creek回测与弹簧效应",
+        "三点法(Upthrust/Spring)",
+        "综合人(Composite Man)",
+        "K线故事"
+      ],
+      "style_keywords": [
+        "量价解剖学",
+        "主力博弈",
+        "结构派",
+        "逻辑严密"
+      ],
+      "roundtable_role": "量价结构与主力意图解读者",
+      "roundtable_tags": [
+        "威科夫操盘法",
+        "吸筹",
+        "派发",
+        "供求关系",
+        "量价分析",
+        "买卖测试",
+        "主力意图",
+        "支撑阻力",
+        "弹簧效应",
+        "综合人"
+      ],
+      "complements": [
+        "joseph-granville",
+        "jesse-livermore",
+        "howard-marks"
+      ],
+      "path": "skills/richard-wyckoff"
+    },
+    {
+      "name": "george-douglas-taylor",
+      "person": "乔治·道格拉斯·泰勒",
+      "domain": "technical-analysis",
+      "domain_cn": "泰勒交易法与短线周期",
+      "region": "global",
+      "status": "released",
+      "frameworks": [
+        "泰勒三日子(买入日/卖出日/卖空日)",
+        "前日高低点框架",
+        "节奏周期",
+        "反趋势交易",
+        "区间支撑与阻力",
+        "日内择时"
+      ],
+      "style_keywords": [
+        "机械节奏",
+        "简单重复",
+        "周期直觉",
+        "精准"
+      ],
+      "roundtable_role": "日内周期与泰勒交易法大师",
+      "roundtable_tags": [
+        "泰勒交易法",
+        "三日子",
+        "买入日",
+        "卖出日",
+        "短线周期",
+        "日内",
+        "支撑阻力",
+        "高低点"
+      ],
+      "complements": [
+        "jesse-livermore",
+        "richard-wyckoff",
+        "martin-schwartz"
+      ],
+      "path": "skills/george-douglas-taylor"
+    },
+    {
+      "name": "jeff-cooper",
+      "person": "杰夫·库珀",
+      "domain": "technical-analysis",
+      "domain_cn": "摆动交易与Hit and Run",
+      "region": "global",
+      "status": "released",
+      "frameworks": [
+        "Hit and Run(一击即走)",
+        "TBF(Three Bar Flip)",
+        "扩张序列(Expansion Sequence)",
+        "缺口策略",
+        "1-2-3反转",
+        "Lizard/Bullseye Setup",
+        "5分钟动量"
+      ],
+      "style_keywords": [
+        "机械化",
+        "Setup导向",
+        "精准时段",
+        "果断"
+      ],
+      "roundtable_role": "摆动交易与短线模式大师",
+      "roundtable_tags": [
+        "摆动交易",
+        "Hit and Run",
+        "TBF",
+        "序列",
+        "反转",
+        "动量",
+        "一字板",
+        "扩张",
+        "缺口",
+        "五分钟"
+      ],
+      "complements": [
+        "jesse-livermore",
+        "martin-schwartz",
+        "xu-xiang"
+      ],
+      "path": "skills/jeff-cooper"
+    },
+    {
+      "name": "yeshan-zhangwenhua",
+      "person": "野山（张文华）",
+      "domain": "technical-analysis",
+      "domain_cn": "中国技术分析与波段交易",
+      "region": "china",
+      "status": "released",
+      "frameworks": [
+        "波段操作(买在起涨、卖在高潮)",
+        "量价形态识别",
+        "均线系统(MA5/10/20/60)",
+        "主力资金痕迹分析",
+        "市场情绪节奏",
+        "选股三要素(趋势+量+位置)",
+        "回踩低吸"
+      ],
+      "style_keywords": [
+        "接地气",
+        "通俗比喻",
+        "A股实战",
+        "波段思维"
+      ],
+      "roundtable_role": "A股技术派波段分析师",
+      "roundtable_tags": [
+        "波段操作",
+        "A股技术分析",
+        "量价",
+        "均线",
+        "形态",
+        "主力",
+        "市场情绪",
+        "短期节奏",
+        "选股",
+        "低吸高抛"
+      ],
+      "complements": [
+        "xu-xiang",
+        "beijing-chaojia",
+        "qin-guoan"
+      ],
+      "path": "skills/yeshan-zhangwenhua"
+    },
+    {
+      "name": "junshan-jushi",
+      "person": "君山居士（康会民）",
+      "domain": "technical-analysis",
+      "domain_cn": "中国技术分析与趋势",
+      "region": "china",
+      "status": "released",
+      "frameworks": [
+        "多周期均线共振",
+        "趋势线+通道",
+        "MACD背离",
+        "筹码分布分析",
+        "成交量验证",
+        "支撑阻力互换",
+        "多空判据"
+      ],
+      "style_keywords": [
+        "系统教学",
+        "均线派",
+        "逻辑清晰",
+        "A股实战"
+      ],
+      "roundtable_role": "A股趋势与均线系统分析师",
+      "roundtable_tags": [
+        "均线系统",
+        "趋势交易",
+        "A股技术分析",
+        "多周期",
+        "背离",
+        "MACD",
+        "支撑阻力",
+        "筹码",
+        "成交量"
+      ],
+      "complements": [
+        "yeshan-zhangwenhua",
+        "qin-guoan",
+        "xu-xiang"
+      ],
+      "path": "skills/junshan-jushi"
+    },
+    {
+      "name": "xu-wenming",
+      "person": "徐文明",
+      "domain": "technical-analysis",
+      "domain_cn": "中国技术分析短线",
+      "region": "china",
+      "status": "released",
+      "frameworks": [
+        "KDJ+MACD双指标",
+        "均线短线战法",
+        "涨停板次日",
+        "量比选股",
+        "严格止损纪律",
+        "选时重于选股",
+        "尾盘交易法"
+      ],
+      "style_keywords": [
+        "散户视角",
+        "通俗易懂",
+        "纪律导向",
+        "实战派"
+      ],
+      "roundtable_role": "A股散户短线技术分析师",
+      "roundtable_tags": [
+        "短线",
+        "A股技术分析",
+        "KDJ",
+        "MACD",
+        "均线",
+        "止损",
+        "纪律",
+        "散户策略",
+        "量价",
+        "波段"
+      ],
+      "complements": [
+        "yeshan-zhangwenhua",
+        "junshan-jushi",
+        "xu-xiang"
+      ],
+      "path": "skills/xu-wenming"
+    },
+    {
+      "name": "qin-guoan",
+      "person": "秦国安",
+      "domain": "technical-analysis",
+      "domain_cn": "中国量价分析",
+      "region": "china",
+      "status": "released",
+      "frameworks": [
+        "量价关系九式",
+        "主力行为痕迹",
+        "突破确认(真/假)",
+        "回调到位策略",
+        "涨停板解读",
+        "资金语言",
+        "止盈止损系统"
+      ],
+      "style_keywords": [
+        "量价派",
+        "主力博弈",
+        "实战经验",
+        "清晰系统"
+      ],
+      "roundtable_role": "A股量价与主力行为分析师",
+      "roundtable_tags": [
+        "量价分析",
+        "主力行为",
+        "A股技术分析",
+        "资金",
+        "突破",
+        "回调",
+        "止盈止损",
+        "K线",
+        "趋势"
+      ],
+      "complements": [
+        "yeshan-zhangwenhua",
+        "richard-wyckoff",
+        "junshan-jushi"
+      ],
+      "path": "skills/qin-guoan"
+    },
+    {
+      "name": "long-qitian",
+      "person": "龙祺天",
+      "domain": "technical-analysis",
+      "domain_cn": "中国技术分析与实战",
+      "region": "china",
+      "status": "released",
+      "frameworks": [
+        "形态识别(头肩/双底/三角形等)",
+        "趋势跟踪系统",
+        "支撑阻力转换",
+        "资金管理(仓位分步)",
+        "止盈止损机械化",
+        "大盘定仓位",
+        "K线组合信号"
+      ],
+      "style_keywords": [
+        "系统化",
+        "实战",
+        "纪律",
+        "清晰"
+      ],
+      "roundtable_role": "A股系统化技术分析师",
+      "roundtable_tags": [
+        "系统化交易",
+        "A股技术分析",
+        "形态识别",
+        "资金管理",
+        "趋势",
+        "支撑阻力",
+        "止盈止损",
+        "操作纪律"
+      ],
+      "complements": [
+        "yeshan-zhangwenhua",
+        "qin-guoan",
+        "xu-wenming"
+      ],
+      "path": "skills/long-qitian"
+    },
+    {
+      "name": "yang-jiyuan",
+      "person": "杨济源",
+      "domain": "technical-analysis",
+      "domain_cn": "中国技术分析与交易心理",
+      "region": "china",
+      "status": "released",
+      "frameworks": [
+        "交易心理学(自控与心态)",
+        "风险优先级(Risk First)",
+        "量价实战",
+        "仓位分步管理",
+        "交易日志复盘",
+        "系统化风控",
+        "自我认知与能力圈"
+      ],
+      "style_keywords": [
+        "心理层面",
+        "实战派",
+        "风控至上",
+        "自省"
+      ],
+      "roundtable_role": "A股交易心理与风险分析师",
+      "roundtable_tags": [
+        "交易心理学",
+        "风险控制",
+        "量价分析",
+        "A股实战",
+        "止损",
+        "资金管理",
+        "情绪",
+        "自控",
+        "纪律",
+        "系统化"
+      ],
+      "complements": [
+        "qin-guoan",
+        "xu-wenming",
+        "daniel-kahneman"
+      ],
+      "path": "skills/yang-jiyuan"
     }
   ],
   "roundtable": {
