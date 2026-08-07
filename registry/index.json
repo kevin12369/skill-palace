@@ -2051,6 +2051,47 @@
         "ray-dalio"
       ],
       "path": "skills/stanley-druckenmiller"
+    },
+    {
+      "name": "william-oneil",
+      "person": "威廉·欧奈尔",
+      "domain": "canslim",
+      "domain_cn": "CAN SLIM选股与成长股突破",
+      "region": "global",
+      "status": "released",
+      "code": "",
+      "frameworks": [
+        "CAN SLIM七字母系统",
+        "杯柄形态(Cup with Handle)",
+        "带量突破(Volume Breakout)",
+        "相对强度(RS Rating)",
+        "大盘方向(Market Direction)",
+        "止损纪律(7-8% Max Loss)",
+        "龙头股集中"
+      ],
+      "style_keywords": [
+        "系统化选股",
+        "图表与技术结合",
+        "规则至上",
+        "纪律严格"
+      ],
+      "roundtable_role": "CAN SLIM选股与突破交易系统分析师",
+      "roundtable_tags": [
+        "选股系统",
+        "CANSLIM",
+        "杯柄形态",
+        "带量突破",
+        "相对强度",
+        "止损纪律",
+        "龙头股",
+        "市场方向"
+      ],
+      "complements": [
+        "jesse-livermore",
+        "philip-fisher",
+        "peter-lynch"
+      ],
+      "path": "skills/william-oneil"
     }
   ],
   "roundtable": {

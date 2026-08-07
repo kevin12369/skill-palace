@@ -502,6 +502,7 @@ STAGE_MAP = {
     "yeshan-zhangwenhua":"中观筛选","junshan-jushi":"中观筛选","xu-wenming":"中观筛选",
     "qin-guoan":"中观筛选","long-qitian":"中观筛选","yang-jiyuan":"中观筛选",
     "james-simons":"中观筛选",
+    "william-oneil":"中观筛选",
     "stanley-druckenmiller":"宏观定调"
 }
 

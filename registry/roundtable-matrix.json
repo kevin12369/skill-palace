@@ -99,7 +99,8 @@
       "qin-guoan",
       "long-qitian",
       "yang-jiyuan",
-      "james-simons"
+      "james-simons",
+      "william-oneil"
     ],
     "微观决策": [
       "warren-buffett",
@@ -992,6 +993,23 @@
       ],
       "stage": "宏观定调",
       "path": "skills/stanley-druckenmiller"
+    },
+    "william-oneil": {
+      "code": "",
+      "person": "威廉·欧奈尔",
+      "role": "CAN SLIM选股与突破交易系统分析师",
+      "tags": [
+        "选股系统",
+        "CANSLIM",
+        "杯柄形态",
+        "带量突破",
+        "相对强度",
+        "止损纪律",
+        "龙头股",
+        "市场方向"
+      ],
+      "stage": "中观筛选",
+      "path": "skills/william-oneil"
     }
   },
   "tag_index": {
@@ -2100,6 +2118,30 @@
     ],
     "联储政策": [
       "stanley-druckenmiller"
+    ],
+    "选股系统": [
+      "william-oneil"
+    ],
+    "CANSLIM": [
+      "william-oneil"
+    ],
+    "杯柄形态": [
+      "william-oneil"
+    ],
+    "带量突破": [
+      "william-oneil"
+    ],
+    "相对强度": [
+      "william-oneil"
+    ],
+    "止损纪律": [
+      "william-oneil"
+    ],
+    "龙头股": [
+      "william-oneil"
+    ],
+    "市场方向": [
+      "william-oneil"
     ]
   }
 }

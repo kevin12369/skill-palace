@@ -44,7 +44,7 @@
 | **yeshan-zhangwenhua** | YS | 野山（张文华） | **junshan-jushi** | JS | 君山居士（康会民） |
 | **xu-wenming** | XW | 徐文明 | **qin-guoan** | QA | 秦国安 |
 | **long-qitian** | LQ | 龙祺天 | **yang-jiyuan** | YJ | 杨济源 |
-| **james-simons** | JM | 詹姆斯·西蒙斯 | **stanley-druckenmiller** | SD | 斯坦利·德鲁肯米勒 |
+| **james-simons** | JM | 詹姆斯·西蒙斯 | **stanley-druckenmiller** | SD | 斯坦利·德鲁肯米勒 | **william-oneil** | WO | 威廉·欧奈尔 |
 
 ### 2. 领域标签 → 专家 slug 映射（代码为展示别名）
 
@@ -74,9 +74,9 @@
 | 威科夫操盘法 / 吸筹 / 派发 / 弹簧效应 | **richard-wyckoff (RW)** | 泰勒交易法 / 三日子 / 日内周期 | **george-douglas-taylor (GD)** |
 | 摆动交易 / Hit and Run / Setup / 扩张序列 | **jeff-cooper (JC)** | 中国技术分析 / 波段 / 均线 / 主力行为 | **yeshan-zhangwenhua (YS), junshan-jushi (JS), xu-wenming (XW), qin-guoan (QA)** |
 | 交易心理学 / 风险控制 / 系统化交易 | **yang-jiyuan (YJ), long-qitian (LQ), martin-schwartz (MZ)** | | |
-| 量化投资 / 统计套利 / 因子模型 / 高频 / 壁虎式 / 多策略 / 算法 | **james-simons (JM)** | 宏观投资 / 非对称风险收益 / 资本保全 / 增长动量 / 流动性 / 联储政策 / 集中投资 | **stanley-druckenmiller (SD)** |
+| 量化投资 / 统计套利 / 因子模型 / 高频 / 壁虎式 / 多策略 / 算法 | **james-simons (JM)** | 宏观投资 / 非对称风险收益 / 资本保全 / 增长动量 / 流动性 / 联储政策 / 集中投资 | **stanley-druckenmiller (SD)** | CANSLIM / 杯柄形态 / 带量突破 / 相对强度 / 止损纪律 / 龙头股 / 市场方向 | **william-oneil (WO)** |
 
-> 完整标签索引（337 个）见 `registry/roundtable-matrix.json` 的 `tag_index`，此处仅列高频入口。
+> 完整标签索引（345 个）见 `registry/roundtable-matrix.json` 的 `tag_index`，此处仅列高频入口。
 
 ### 3. 确定性排序与候选收敛
 
@@ -159,7 +159,7 @@
 
 ---
 
-## 专家清单（50 人，slug 主键）
+## 专家清单（51 人，slug 主键）
 
 | slug（主键） | 代码 | 人物 | 领域标签（roundtable_tags） | 圆桌角色 | 阶段 | 风格 |
 |------|------|------|---------|---------|------|------|
@@ -213,6 +213,7 @@
 | **yang-jiyuan** | YJ | 杨济源 | 交易心理学、风险控制、量价分析、A股实战、止损、资金管理、情绪、自控、纪律、系统化 | A股交易心理与风险分析师 | 中观筛选 | 心理层面、实战派、风控至上、自省 |
 | **james-simons** | JM | 詹姆斯·西蒙斯 | 量化投资、统计套利、均值回归、高频交易、多策略、壁虎式、数学模型、因子、风险管理、大奖章、分散化、技术面、系统化、算法、数据挖掘 | 量化投资与统计套利大师 | 中观筛选 | 数学化、系统化、数据驱动、低调神秘 |
 | **stanley-druckenmiller** | SD | 斯坦利·德鲁肯米勒 | 宏观投资、非对称风险收益、资本保全、增长动量、市场情绪、流动性、集中投资、联储政策 | 宏观投资与资本保全大师 | 宏观定调 | 果断出击、纪律严明、宏观敏感、保本至上 |
+| **william-oneil** | WO | 威廉·欧奈尔 | CANSLIM、杯柄形态、带量突破、相对强度、止损纪律、龙头股、市场方向、选股系统 | CAN SLIM选股与突破交易系统分析师 | 中观筛选 | 系统化选股、图表与技术结合、规则至上、纪律严格 |
 
 > 阶段为默认归位，非硬约束：george-soros 可作中观筛选（繁荣-萧条定位），charlie-munger 可作微观决策（Too Hard 筐判定）。组阁时以问题语义为准微调。
 
@@ -223,7 +224,7 @@
 圆桌遵循"宏观定调 → 中观筛选 → 微观决策"的固定分析顺序：
 
 1. **宏观定调**（gao-shanwen / greenspan / kondratiev / irving-fisher / ray-dalio / george-soros / stanley-druckenmiller / john-gordon / robert-shiller / ben-bernanke / li-daxiao / hong-hao / fu-peng / michael-steinhardt）：当前宏观环境对问题的影响，结构性变量判断。
-2. **中观筛选**（charlie-munger / george-soros / hyman-minsky / carlota-perez / joseph-schumpeter / gartner-hype-cycle / theodore-wright / william-jevons / howard-marks / burton-malkiel / fred-schwed / daniel-kahneman / charles-ellis / nassim-taleb / xu-xiang / beijing-chaojia / jesse-livermore / william-gann / martin-schwartz / larry-williams / joseph-granville / richard-wyckoff / george-douglas-taylor / jeff-cooper / yeshan-zhangwenhua / junshan-jushi / xu-wenming / qin-guoan / long-qitian / yang-jiyuan / james-simons）：逆向审视 + 偏误扫描 + Lollapalooza 风险识别 + 周期/泡沫/脆弱性/行为定位 + 量价/趋势/形态/交易心理/量化统计套利分析。在此阶段判定是否进入 Too Hard 筐。
+2. **中观筛选**（charlie-munger / george-soros / hyman-minsky / carlota-perez / joseph-schumpeter / gartner-hype-cycle / theodore-wright / william-jevons / howard-marks / burton-malkiel / fred-schwed / daniel-kahneman / charles-ellis / nassim-taleb / xu-xiang / beijing-chaojia / jesse-livermore / william-gann / martin-schwartz / larry-williams / joseph-granville / richard-wyckoff / george-douglas-taylor / jeff-cooper / yeshan-zhangwenhua / junshan-jushi / xu-wenming / qin-guoan / long-qitian / yang-jiyuan / james-simons / william-oneil）：逆向审视 + 偏误扫描 + Lollapalooza 风险识别 + 周期/泡沫/脆弱性/行为定位 + 量价/趋势/形态/交易心理/量化统计套利/CAN SLIM选股分析。在此阶段判定是否进入 Too Hard 筐。
 3. **微观决策**（warren-buffett / philip-fisher / charlie-munger / qiu-guolu / liu-shunren / duan-yongping / peter-lynch）：估值、护城河、安全边际、管理层、财报质量、商业模式。给出 Yes / No / Too Hard 的最终判断。
 
 ---
