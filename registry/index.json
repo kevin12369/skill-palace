@@ -2010,6 +2010,47 @@
       ],
       "path": "skills/james-simons",
       "code": "JM"
+    },
+    {
+      "name": "stanley-druckenmiller",
+      "person": "斯坦利·德鲁肯米勒",
+      "domain": "macro-investing",
+      "domain_cn": "宏观投资与资本保全",
+      "region": "global",
+      "status": "released",
+      "code": "",
+      "frameworks": [
+        "非对称风险收益",
+        "自上而下宏观到行业到个股",
+        "资本保全第一",
+        "增长动量与估值",
+        "联储与流动性分析",
+        "集中高信念下注",
+        "知道何时卖出"
+      ],
+      "style_keywords": [
+        "果断出击",
+        "纪律严明",
+        "宏观敏感",
+        "保本至上"
+      ],
+      "roundtable_role": "宏观投资与资本保全大师",
+      "roundtable_tags": [
+        "宏观投资",
+        "非对称风险收益",
+        "资本保全",
+        "增长动量",
+        "市场情绪",
+        "流动性",
+        "集中投资",
+        "联储政策"
+      ],
+      "complements": [
+        "george-soros",
+        "greenspan",
+        "ray-dalio"
+      ],
+      "path": "skills/stanley-druckenmiller"
     }
   ],
   "roundtable": {

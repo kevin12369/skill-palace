@@ -66,7 +66,8 @@
       "li-daxiao",
       "hong-hao",
       "fu-peng",
-      "michael-steinhardt"
+      "michael-steinhardt",
+      "stanley-druckenmiller"
     ],
     "中观筛选": [
       "charlie-munger",
@@ -974,6 +975,23 @@
       ],
       "stage": "中观筛选",
       "path": "skills/james-simons"
+    },
+    "stanley-druckenmiller": {
+      "code": "",
+      "person": "斯坦利·德鲁肯米勒",
+      "role": "宏观投资与资本保全大师",
+      "tags": [
+        "宏观投资",
+        "非对称风险收益",
+        "资本保全",
+        "增长动量",
+        "市场情绪",
+        "流动性",
+        "集中投资",
+        "联储政策"
+      ],
+      "stage": "宏观定调",
+      "path": "skills/stanley-druckenmiller"
     }
   },
   "tag_index": {
@@ -1189,7 +1207,8 @@
     ],
     "集中投资": [
       "philip-fisher",
-      "duan-yongping"
+      "duan-yongping",
+      "stanley-druckenmiller"
     ],
     "定性分析": [
       "philip-fisher"
@@ -1346,7 +1365,8 @@
       "li-daxiao",
       "xu-xiang",
       "beijing-chaojia",
-      "yeshan-zhangwenhua"
+      "yeshan-zhangwenhua",
+      "stanley-druckenmiller"
     ],
     "信用": [
       "howard-marks"
@@ -1538,7 +1558,8 @@
       "ben-bernanke",
       "hong-hao",
       "fu-peng",
-      "michael-steinhardt"
+      "michael-steinhardt",
+      "stanley-druckenmiller"
     ],
     "宏观审慎": [
       "ben-bernanke"
@@ -2064,6 +2085,21 @@
     ],
     "数据挖掘": [
       "james-simons"
+    ],
+    "宏观投资": [
+      "stanley-druckenmiller"
+    ],
+    "非对称风险收益": [
+      "stanley-druckenmiller"
+    ],
+    "资本保全": [
+      "stanley-druckenmiller"
+    ],
+    "增长动量": [
+      "stanley-druckenmiller"
+    ],
+    "联储政策": [
+      "stanley-druckenmiller"
     ]
   }
 }
