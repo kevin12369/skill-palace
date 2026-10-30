@@ -890,6 +890,7 @@ cp /tmp/skill-palace/skills/charlie-munger/SKILL-condensed.md <skills路径>/cha
 - [常见问题（FAQ）](FAQ.md)——是否冒充名人、如何触发、变体怎么选、支持哪些平台、组合怎么用
 - [机器可读索引](registry/index.json)——程序化发现与安装
 - [引用信息](CITATION.cff)——仓库级 CFF；每个 skill 目录下另有自己的 `CITATION.cff`
+- [第三方版权与知识来源](THIRD-PARTY-NOTICES.md)——上游版权声明、人物框架出处、AI 参与说明
 
 三个校验脚本（均在 CI 中运行，也可本地手动执行）：
 
@@ -902,3 +903,7 @@ cp /tmp/skill-palace/skills/charlie-munger/SKILL-condensed.md <skills路径>/cha
 ## License
 
 [MIT](LICENSE)。可自由使用、修改、商用，保留版权声明即可。
+
+版权归属与知识来源的完整说明见 [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md)：其中
+`skills/gao-shanwen/` 的知识框架来自同账号下的 [gaoshanwen-skill](https://github.com/kevin12369/gaoshanwen-skill)，
+按 MIT 要求保留其上游版权声明 `Copyright (c) 2026 mavis (Mavis Agent)`。
