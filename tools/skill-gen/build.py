@@ -51,6 +51,7 @@ agent_created: true
 
 > 说明：本技能是**思维框架与文风的工具**，用于辅助用户自行研判。它不声称代表 {p['person']} 本人，也不引用或复制任何未公开的专有研究。所有数据判断应以实时信息为准。
 
+{status_block(p)}
 ## 何时使用
 
 - 用户明确要求"{p['person']}的框架""像{p['person']}那样""{'、'.join(p['roundtable_tags'][:3])}"等表述；
@@ -107,7 +108,7 @@ agent_created: true
 - 纯 {p['domain_cn']} → 用本技能
 - 涉及互补领域 → 优先用 `{p['complements'][0]}` 等
 - 需要多视角会诊 → 参见 `combos/` 下的圆桌会议方案
-"""
+{ethics_block(p)}"""
 
 def render_condensed(p):
     cm = fmt_list([f"**{n}**——{d}" for n, d in p["core_models"]])
@@ -162,6 +163,42 @@ agent_created: true
 安装时将所需变体重命名为 SKILL.md 即可。
 """
 
+def lifespan(p):
+    """生卒行。living: True=在世 / False=已故 / None=待考或非人物（机构方法论）。"""
+    if p.get("kind") == "methodology":
+        return f"{p['born']} 年提出／持续更新"
+    born = p.get("born") or ""
+    living, died = p.get("living"), p.get("died")
+    if living is True:
+        return f"{born} / 在世（截至 {REPO_UPDATED}）"
+    if living is False:
+        return f"{born}–{died}"
+    return "生年与卒年待考"
+
+
+def status_block(p):
+    """人物状态声明：已故者给纪念与伦理说明，在世者声明不代表当前观点。"""
+    person = p["person"]
+    if p.get("kind") == "methodology":
+        by = p.get("by", "相关机构")
+        return (f"> **条目性质**：本条目整理的是 {by}的方法论，"
+                f"不是一位具体人物的思想档案，故不标注生卒。\n")
+    living, died = p.get("living"), p.get("died")
+    if living is False:
+        return (f"> **人物状态**：{person} 已于 {died} 逝世（{p.get('born')}–{died}）。"
+                f"本档案整理其生前公开发表的方法论与表述风格，其观点止于最后公开表达之时；"
+                f"本档案为其方法的记录与致意，不声称代表其本人或其家属立场。\n")
+    if living is None:
+        return f"> **人物状态**：生年与卒年待考，本档案不对其做任何推断。\n"
+    return (f"> **人物状态**：截至 {REPO_UPDATED}，{person} 在世。其观点会随时间变化，"
+            f"本档案不代表其当前观点。\n")
+
+
+def ethics_block(p):
+    note = p.get("ethics_note")
+    return f"\n> **使用限定**：{note}\n" if note else ""
+
+
 def render_profile(p):
     src = fmt_list([f"- 《{t}》——框架提炼来源：{s}" for t, s in p["bio_sources"]])
     comp = fmt_list([f"- 与 `{c}` 互补：覆盖 {p['domain_cn']} 视角的不同侧面" for c in p["complements"]])
@@ -170,7 +207,7 @@ def render_profile(p):
 ## 基本信息
 
 - **姓名**：{p['person']} / {p['person_en']}
-- **生卒**：{p['born']} / {p['alive']}
+- **生卒**：{lifespan(p)}
 - **国籍**：{p['nationality']}
 - **领域**：{p['domain_cn']}
 - **身份**：{p['identity']}
@@ -181,8 +218,9 @@ def render_profile(p):
 
 ## 框架来源声明
 
-本 skill 的思维框架提炼自上述公开材料中的方法论与表述风格。不引用任何未公开的专有研究，不声称代表人物本人或其当前观点。如人物已故，其观点止于最后公开表达之时；所有数据判断应以实时信息为准。
+本 skill 的思维框架提炼自上述公开材料中的方法论与表述风格。不引用任何未公开的专有研究，不声称代表人物本人或其当前观点。所有数据判断应以实时信息为准。
 
+{status_block(p)}{ethics_block(p)}
 ## 互补关系
 
 {comp}
@@ -575,14 +613,20 @@ def update_registry():
             "name": p["name"], "person": p["person"], "domain": p["domain"],
             "domain_cn": p["domain_cn"], "region": p["region"], "status": "released",
             "code": CODE_MAP.get(p["name"], ""),
+            "living": p.get("living"), "died": p.get("died"),
             "frameworks": p["frameworks"], "style_keywords": p["style_keywords"],
             "roundtable_role": p["roundtable_role"], "roundtable_tags": p["roundtable_tags"],
             "complements": p["complements"], "path": f"skills/{p['name']}"
         })
         added += 1
-    # 回填空 code 字段：即便已存在的 skill 也确保带有短代码别名
+    # 回填 code / living / died：即便已存在的 skill 也确保字段与 people.py 同步
+    people_by_slug = {p["name"]: p for p in PEOPLE}
     for s in d["skills"]:
         s["code"] = CODE_MAP.get(s["name"], "")
+        p = people_by_slug.get(s["name"])
+        if p:
+            s["living"] = p.get("living")
+            s["died"] = p.get("died")
     d["version"] = REPO_VERSION
     d["updated"] = REPO_UPDATED
     json.dump(d, open(REG, "w", encoding="utf-8"), ensure_ascii=False, indent=2)

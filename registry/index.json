@@ -35,7 +35,9 @@
         "greenspan"
       ],
       "path": "skills/gao-shanwen",
-      "code": "GS"
+      "code": "GS",
+      "living": false,
+      "died": "2026-07-07"
     },
     {
       "name": "greenspan",
@@ -72,7 +74,9 @@
         "gao-shanwen"
       ],
       "path": "skills/greenspan",
-      "code": "GP"
+      "code": "GP",
+      "living": false,
+      "died": "2026-06-22"
     },
     {
       "name": "charlie-munger",
@@ -112,7 +116,9 @@
         "greenspan"
       ],
       "path": "skills/charlie-munger",
-      "code": "CM"
+      "code": "CM",
+      "living": false,
+      "died": "2023"
     },
     {
       "name": "warren-buffett",
@@ -157,7 +163,9 @@
         "greenspan"
       ],
       "path": "skills/warren-buffett",
-      "code": "WB"
+      "code": "WB",
+      "living": true,
+      "died": null
     },
     {
       "name": "carlota-perez",
@@ -197,7 +205,9 @@
         "george-soros"
       ],
       "path": "skills/carlota-perez",
-      "code": "CP"
+      "code": "CP",
+      "living": true,
+      "died": null
     },
     {
       "name": "kondratiev",
@@ -235,7 +245,9 @@
         "carlota-perez"
       ],
       "path": "skills/kondratiev",
-      "code": "KN"
+      "code": "KN",
+      "living": false,
+      "died": "1938"
     },
     {
       "name": "george-soros",
@@ -277,7 +289,9 @@
         "greenspan"
       ],
       "path": "skills/george-soros",
-      "code": "SZ"
+      "code": "SZ",
+      "living": true,
+      "died": null
     },
     {
       "name": "irving-fisher",
@@ -318,7 +332,9 @@
         "greenspan"
       ],
       "path": "skills/irving-fisher",
-      "code": "IF"
+      "code": "IF",
+      "living": false,
+      "died": "1947"
     },
     {
       "name": "philip-fisher",
@@ -358,7 +374,9 @@
         "charlie-munger"
       ],
       "path": "skills/philip-fisher",
-      "code": "PF"
+      "code": "PF",
+      "living": false,
+      "died": "2004"
     },
     {
       "name": "hyman-minsky",
@@ -398,7 +416,9 @@
         "ray-dalio"
       ],
       "path": "skills/hyman-minsky",
-      "code": "HM"
+      "code": "HM",
+      "living": false,
+      "died": "1996"
     },
     {
       "name": "ray-dalio",
@@ -438,7 +458,9 @@
         "greenspan"
       ],
       "path": "skills/ray-dalio",
-      "code": "RD"
+      "code": "RD",
+      "living": true,
+      "died": null
     },
     {
       "name": "joseph-schumpeter",
@@ -478,7 +500,9 @@
         "kondratiev"
       ],
       "path": "skills/joseph-schumpeter",
-      "code": "SP"
+      "code": "SP",
+      "living": false,
+      "died": "1950"
     },
     {
       "name": "william-jevons",
@@ -517,7 +541,9 @@
         "theodore-wright"
       ],
       "path": "skills/william-jevons",
-      "code": "JV"
+      "code": "JV",
+      "living": false,
+      "died": "1882"
     },
     {
       "name": "theodore-wright",
@@ -557,7 +583,9 @@
         "william-jevons"
       ],
       "path": "skills/theodore-wright",
-      "code": "WR"
+      "code": "WR",
+      "living": null,
+      "died": null
     },
     {
       "name": "gartner-hype-cycle",
@@ -596,7 +624,9 @@
         "theodore-wright"
       ],
       "path": "skills/gartner-hype-cycle",
-      "code": "GT"
+      "code": "GT",
+      "living": null,
+      "died": null
     },
     {
       "name": "howard-marks",
@@ -636,7 +666,9 @@
         "charlie-munger"
       ],
       "path": "skills/howard-marks",
-      "code": "HOM"
+      "code": "HOM",
+      "living": true,
+      "died": null
     },
     {
       "name": "burton-malkiel",
@@ -674,7 +706,9 @@
         "warren-buffett"
       ],
       "path": "skills/burton-malkiel",
-      "code": "BM"
+      "code": "BM",
+      "living": true,
+      "died": null
     },
     {
       "name": "fred-schwed",
@@ -712,7 +746,9 @@
         "daniel-kahneman"
       ],
       "path": "skills/fred-schwed",
-      "code": "FS"
+      "code": "FS",
+      "living": false,
+      "died": "1992"
     },
     {
       "name": "daniel-kahneman",
@@ -751,7 +787,9 @@
         "fred-schwed"
       ],
       "path": "skills/daniel-kahneman",
-      "code": "DK"
+      "code": "DK",
+      "living": false,
+      "died": "2024"
     },
     {
       "name": "qiu-guolu",
@@ -790,7 +828,9 @@
         "gao-shanwen"
       ],
       "path": "skills/qiu-guolu",
-      "code": "QG"
+      "code": "QG",
+      "living": true,
+      "died": null
     },
     {
       "name": "liu-shunren",
@@ -829,7 +869,9 @@
         "warren-buffett"
       ],
       "path": "skills/liu-shunren",
-      "code": "LS"
+      "code": "LS",
+      "living": true,
+      "died": null
     },
     {
       "name": "john-gordon",
@@ -867,7 +909,9 @@
         "ben-bernanke"
       ],
       "path": "skills/john-gordon",
-      "code": "JG"
+      "code": "JG",
+      "living": true,
+      "died": null
     },
     {
       "name": "robert-shiller",
@@ -907,7 +951,9 @@
         "george-soros"
       ],
       "path": "skills/robert-shiller",
-      "code": "RS"
+      "code": "RS",
+      "living": true,
+      "died": null
     },
     {
       "name": "charles-ellis",
@@ -945,7 +991,9 @@
         "warren-buffett"
       ],
       "path": "skills/charles-ellis",
-      "code": "CE"
+      "code": "CE",
+      "living": true,
+      "died": null
     },
     {
       "name": "nassim-taleb",
@@ -986,7 +1034,9 @@
         "charlie-munger"
       ],
       "path": "skills/nassim-taleb",
-      "code": "NT"
+      "code": "NT",
+      "living": true,
+      "died": null
     },
     {
       "name": "ben-bernanke",
@@ -1027,7 +1077,9 @@
         "hyman-minsky"
       ],
       "path": "skills/ben-bernanke",
-      "code": "BB"
+      "code": "BB",
+      "living": true,
+      "died": null
     },
     {
       "name": "duan-yongping",
@@ -1071,7 +1123,9 @@
         "charlie-munger"
       ],
       "path": "skills/duan-yongping",
-      "code": "DY"
+      "code": "DY",
+      "living": true,
+      "died": null
     },
     {
       "name": "li-daxiao",
@@ -1112,7 +1166,9 @@
         "qiu-guolu"
       ],
       "path": "skills/li-daxiao",
-      "code": "LD"
+      "code": "LD",
+      "living": true,
+      "died": null
     },
     {
       "name": "hong-hao",
@@ -1154,7 +1210,9 @@
         "greenspan"
       ],
       "path": "skills/hong-hao",
-      "code": "HH"
+      "code": "HH",
+      "living": true,
+      "died": null
     },
     {
       "name": "peter-lynch",
@@ -1197,7 +1255,9 @@
         "warren-buffett"
       ],
       "path": "skills/peter-lynch",
-      "code": "PL"
+      "code": "PL",
+      "living": true,
+      "died": null
     },
     {
       "name": "fu-peng",
@@ -1240,7 +1300,9 @@
         "howard-marks"
       ],
       "path": "skills/fu-peng",
-      "code": "FP"
+      "code": "FP",
+      "living": true,
+      "died": null
     },
     {
       "name": "xu-xiang",
@@ -1283,7 +1345,9 @@
         "hyman-minsky"
       ],
       "path": "skills/xu-xiang",
-      "code": "XX"
+      "code": "XX",
+      "living": true,
+      "died": null
     },
     {
       "name": "beijing-chaojia",
@@ -1326,7 +1390,9 @@
         "li-daxiao"
       ],
       "path": "skills/beijing-chaojia",
-      "code": "BC"
+      "code": "BC",
+      "living": true,
+      "died": null
     },
     {
       "name": "jesse-livermore",
@@ -1369,7 +1435,9 @@
         "xu-xiang"
       ],
       "path": "skills/jesse-livermore",
-      "code": "JL"
+      "code": "JL",
+      "living": false,
+      "died": "1940"
     },
     {
       "name": "william-gann",
@@ -1412,7 +1480,9 @@
         "richard-wyckoff"
       ],
       "path": "skills/william-gann",
-      "code": "WG"
+      "code": "WG",
+      "living": false,
+      "died": "1955"
     },
     {
       "name": "michael-steinhardt",
@@ -1454,7 +1524,9 @@
         "fu-peng"
       ],
       "path": "skills/michael-steinhardt",
-      "code": "SH"
+      "code": "SH",
+      "living": true,
+      "died": null
     },
     {
       "name": "martin-schwartz",
@@ -1496,7 +1568,9 @@
         "larry-williams"
       ],
       "path": "skills/martin-schwartz",
-      "code": "MZ"
+      "code": "MZ",
+      "living": true,
+      "died": null
     },
     {
       "name": "larry-williams",
@@ -1537,7 +1611,9 @@
         "jesse-livermore"
       ],
       "path": "skills/larry-williams",
-      "code": "LW"
+      "code": "LW",
+      "living": true,
+      "died": null
     },
     {
       "name": "joseph-granville",
@@ -1580,7 +1656,9 @@
         "martin-schwartz"
       ],
       "path": "skills/joseph-granville",
-      "code": "GR"
+      "code": "GR",
+      "living": false,
+      "died": "2013"
     },
     {
       "name": "richard-wyckoff",
@@ -1623,7 +1701,9 @@
         "howard-marks"
       ],
       "path": "skills/richard-wyckoff",
-      "code": "RW"
+      "code": "RW",
+      "living": false,
+      "died": "1934"
     },
     {
       "name": "george-douglas-taylor",
@@ -1663,7 +1743,9 @@
         "martin-schwartz"
       ],
       "path": "skills/george-douglas-taylor",
-      "code": "GD"
+      "code": "GD",
+      "living": false,
+      "died": "1976"
     },
     {
       "name": "jeff-cooper",
@@ -1706,7 +1788,9 @@
         "xu-xiang"
       ],
       "path": "skills/jeff-cooper",
-      "code": "JC"
+      "code": "JC",
+      "living": true,
+      "died": null
     },
     {
       "name": "yeshan-zhangwenhua",
@@ -1749,7 +1833,9 @@
         "qin-guoan"
       ],
       "path": "skills/yeshan-zhangwenhua",
-      "code": "YS"
+      "code": "YS",
+      "living": true,
+      "died": null
     },
     {
       "name": "junshan-jushi",
@@ -1791,7 +1877,9 @@
         "xu-xiang"
       ],
       "path": "skills/junshan-jushi",
-      "code": "JS"
+      "code": "JS",
+      "living": true,
+      "died": null
     },
     {
       "name": "xu-wenming",
@@ -1834,7 +1922,9 @@
         "xu-xiang"
       ],
       "path": "skills/xu-wenming",
-      "code": "XW"
+      "code": "XW",
+      "living": true,
+      "died": null
     },
     {
       "name": "qin-guoan",
@@ -1876,7 +1966,9 @@
         "junshan-jushi"
       ],
       "path": "skills/qin-guoan",
-      "code": "QA"
+      "code": "QA",
+      "living": true,
+      "died": null
     },
     {
       "name": "long-qitian",
@@ -1917,7 +2009,9 @@
         "xu-wenming"
       ],
       "path": "skills/long-qitian",
-      "code": "LQ"
+      "code": "LQ",
+      "living": true,
+      "died": null
     },
     {
       "name": "yang-jiyuan",
@@ -1960,7 +2054,9 @@
         "daniel-kahneman"
       ],
       "path": "skills/yang-jiyuan",
-      "code": "YJ"
+      "code": "YJ",
+      "living": true,
+      "died": null
     },
     {
       "name": "james-simons",
@@ -2009,7 +2105,9 @@
         "nassim-taleb"
       ],
       "path": "skills/james-simons",
-      "code": "JM"
+      "code": "JM",
+      "living": false,
+      "died": "2024"
     },
     {
       "name": "stanley-druckenmiller",
@@ -2050,7 +2148,9 @@
         "greenspan",
         "ray-dalio"
       ],
-      "path": "skills/stanley-druckenmiller"
+      "path": "skills/stanley-druckenmiller",
+      "living": true,
+      "died": null
     },
     {
       "name": "william-oneil",
@@ -2091,7 +2191,9 @@
         "philip-fisher",
         "peter-lynch"
       ],
-      "path": "skills/william-oneil"
+      "path": "skills/william-oneil",
+      "living": false,
+      "died": "2023"
     }
   ],
   "roundtable": {
