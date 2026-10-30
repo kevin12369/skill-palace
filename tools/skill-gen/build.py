@@ -481,7 +481,8 @@ CODE_MAP = {
     "richard-wyckoff":"RW","george-douglas-taylor":"GD","jeff-cooper":"JC",
     "yeshan-zhangwenhua":"YS","junshan-jushi":"JS","xu-wenming":"XW",
     "qin-guoan":"QA","long-qitian":"LQ","yang-jiyuan":"YJ",
-    "james-simons":"JM"
+    "james-simons":"JM",
+    "stanley-druckenmiller":"SD","william-oneil":"WO"
 }
 STAGE_MAP = {
     "gao-shanwen":"宏观定调","greenspan":"宏观定调","kondratiev":"宏观定调","irving-fisher":"宏观定调",
@@ -505,6 +506,39 @@ STAGE_MAP = {
     "william-oneil":"中观筛选",
     "stanley-druckenmiller":"宏观定调"
 }
+
+def validate_maps():
+    """建图前的守卫：两位映射表必须覆盖全部人物，短代码必须非空且唯一。
+
+    历史教训：CODE_MAP 曾漏登记 stanley-druckenmiller / william-oneil，两人的 code
+    变成空字符串，而「重复检测」只比较值是否重复，空字符串互不重复因而静默通过，
+    最终表现为 alias_map 少人、前端缺别名。此函数把空值/缺项/孤儿项一并拦下。
+    """
+    from collections import Counter
+    slugs = [p["name"] for p in PEOPLE]
+
+    missing_stage = [s for s in slugs if s not in STAGE_MAP]
+    if missing_stage:
+        raise SystemExit(f"[STAGE MISSING] STAGE_MAP 未登记：{missing_stage} —— 新增人物时需补一行")
+
+    missing_code = [s for s in slugs if s not in CODE_MAP]
+    if missing_code:
+        raise SystemExit(f"[CODE MISSING] CODE_MAP 未登记：{missing_code} —— 新增人物时需补一行")
+
+    invalid = [(s, c) for s, c in CODE_MAP.items()
+               if not (isinstance(c, str) and 2 <= len(c) <= 3 and c.isupper() and c.isalpha())]
+    if invalid:
+        raise SystemExit(f"[CODE INVALID] 短代码必须是 2–3 位大写字母（如 GS / HOM）：{invalid}")
+
+    dup = [c for c, n in Counter(CODE_MAP.values()).items() if n > 1]
+    if dup:
+        raise SystemExit(f"[CODE COLLISION] 短代码冲突：{dup} —— 请修改 CODE_MAP 后重试")
+
+    orphan = [s for s in CODE_MAP if s not in slugs]
+    if orphan:
+        raise SystemExit(f"[CODE ORPHAN] CODE_MAP 含不存在的人物：{orphan}")
+
+    return len(slugs)
 
 def update_registry():
     d = json.load(open(REG, encoding="utf-8"))
@@ -558,6 +592,7 @@ def rebuild_matrix():
 
 def main():
     total = 0
+    validate_maps()  # 先守卫再写盘，避免写到一半才发现映射表缺人
     for p in PEOPLE:
         base = os.path.join(SKILLS, p["name"])
         w(os.path.join(base, "SKILL.md"), render_skill_md(p))

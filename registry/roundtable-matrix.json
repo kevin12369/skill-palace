@@ -50,7 +50,9 @@
     "qin-guoan": "QA",
     "long-qitian": "LQ",
     "yang-jiyuan": "YJ",
-    "james-simons": "JM"
+    "james-simons": "JM",
+    "stanley-druckenmiller": "SD",
+    "william-oneil": "WO"
   },
   "stages": {
     "宏观定调": [
@@ -978,7 +980,7 @@
       "path": "skills/james-simons"
     },
     "stanley-druckenmiller": {
-      "code": "",
+      "code": "SD",
       "person": "斯坦利·德鲁肯米勒",
       "role": "宏观投资与资本保全大师",
       "tags": [
@@ -995,7 +997,7 @@
       "path": "skills/stanley-druckenmiller"
     },
     "william-oneil": {
-      "code": "",
+      "code": "WO",
       "person": "威廉·欧奈尔",
       "role": "CAN SLIM选股与突破交易系统分析师",
       "tags": [

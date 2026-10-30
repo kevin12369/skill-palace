@@ -2018,7 +2018,7 @@
       "domain_cn": "宏观投资与资本保全",
       "region": "global",
       "status": "released",
-      "code": "",
+      "code": "SD",
       "frameworks": [
         "非对称风险收益",
         "自上而下宏观到行业到个股",
@@ -2059,7 +2059,7 @@
       "domain_cn": "CAN SLIM选股与成长股突破",
       "region": "global",
       "status": "released",
-      "code": "",
+      "code": "WO",
       "frameworks": [
         "CAN SLIM七字母系统",
         "杯柄形态(Cup with Handle)",
