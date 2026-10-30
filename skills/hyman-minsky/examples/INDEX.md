@@ -4,11 +4,15 @@
 
 ## 当前状态
 
-本目录当前**没有**任何示例正文（此结论由构建脚本扫描目录得出，非手写）。
+本目录当前有 **3 个**示例正文（由构建脚本扫描目录得出）：
 
-> 下节「规划选题」只是选题清单，**没有对应的示例文件**，请勿当作已落地内容引用或链接。
+| 文件 | 大小 |
+|------|------|
+| [example-01-minsky-moment.md](example-01-minsky-moment.md) | 3194 B |
+| [example-02-stability-destabilizing.md](example-02-stability-destabilizing.md) | 3238 B |
+| [example-03-anti-pattern.md](example-03-anti-pattern.md) | 2360 B |
 
-## 规划选题（未落地）
+## 选题参考（历史规划；某条是否已落地，以上表实际文件为准）
 
 - **明斯基时刻预警** —— 用融资结构诊断当前系统性风险
 - **稳定孕不稳定** —— 识别长期低波动环境下的脆弱性积累

@@ -4,11 +4,15 @@
 
 ## 当前状态
 
-本目录当前**没有**任何示例正文（此结论由构建脚本扫描目录得出，非手写）。
+本目录当前有 **3 个**示例正文（由构建脚本扫描目录得出）：
 
-> 下节「规划选题」只是选题清单，**没有对应的示例文件**，请勿当作已落地内容引用或链接。
+| 文件 | 大小 |
+|------|------|
+| [example-01-creative-destruction.md](example-01-creative-destruction.md) | 3334 B |
+| [example-02-innovation-cluster.md](example-02-innovation-cluster.md) | 3367 B |
+| [example-03-anti-pattern.md](example-03-anti-pattern.md) | 2277 B |
 
-## 规划选题（未落地）
+## 选题参考（历史规划；某条是否已落地，以上表实际文件为准）
 
 - **创造性破坏扫描** —— 识别哪些行业正在经历范式级创新冲击
 - **创新集群判断** —— 判断当前是否处于创新集群爆发期

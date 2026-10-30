@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """渲染 11 位新名人 skill（14 文件/人），并同步 registry 与 roundtable-matrix。"""
-import os, json
+import os, json, re
 from people import PEOPLE
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -200,6 +200,182 @@ def status_block(p):
 def ethics_block(p):
     note = p.get("ethics_note")
     return f"\n> **使用限定**：{note}\n" if note else ""
+
+
+# ---------- 示例正文（只在文件缺失时生成） ----------
+# 边界说明：`skills/*/examples/example-*.md` 属于内容而非模板。本模块只在文件**不存在**时
+# 生成一篇，已经存在的文件（包括 5 个旗舰 skill 手写的 15 篇）一律不覆盖。生成内容全部取自
+# 该条目自己的 theories / anti_patterns / output_format / style_* 字段，属于框架演练，
+# 不含任何具体数值、点位或标的，文末统一带 AI 生成声明。
+
+def ai_notice(p):
+    return ("> **AI 生成声明**：本篇示例由 AI 依据公开资料撰写、经人工校对，用于演示本框架的用法。"
+            f"文中的观点与判断均为框架演练产物，不代表 {p['person']} 本人的观点，也不构成任何投资建议。")
+
+
+def _steps_list(steps):
+    return "\n".join(f"{i}. **{s}**" for i, s in enumerate(steps, 1))
+
+
+def _clean(s):
+    """去掉句末标点再嵌进句子，避免出现「某某风险。」这种引号里带句号的别扭写法。"""
+    return (s or "").rstrip("。．.")
+
+
+def _bigrams(s):
+    s = re.sub(r"[\s，。、；：（）()「」《》\-—…·]+", "", s or "")
+    return {s[i:i + 2] for i in range(len(s) - 1)}
+
+
+def _best_theory_for(p, text):
+    """挑与给定文字最相关的理论块：用字符二元组重合度打分。
+
+    反例篇要「用对这个反例最相关的那套框架去检验它」，不能随手取最后一条——
+    否则会出现「反例讲名义利率、检验步骤却在讲资产负债表衰退」这种错配。
+    """
+    probe = _bigrams(text)
+    best, best_score = p["theories"][-1], -1
+    for t in p["theories"]:
+        bag = _bigrams(t["name"] + t["def"] + "".join(t["steps"]))
+        score = len(probe & bag)
+        if score > best_score:
+            best, best_score = t, score
+    return best
+
+
+def render_example_framework(p, n):
+    """第 n 篇框架应用示例（n = 1 / 2），选题与主框架都来自 people.py。"""
+    _fname, title, topic = p["examples_index"][n - 1]
+    t = p["theories"][n - 1]
+    aux = p["theories"][n] if len(p["theories"]) > n else p["theories"][-1]
+    rules = fmt_list(p["output_format"], numbered=True)
+    return f"""# 示例 {n:02d}：{title}
+
+## 输入
+
+> {topic}
+
+## 框架选择
+
+- **主框架**：{t['name']}——{_clean(t['scenario'])}
+- **辅助框架**：{aux['name']}——{_clean(aux['scenario'])}
+- **不采用**：先做横向排名与增速外推。它们是结果指标，不能替代框架判断
+
+## 完整输出
+
+先说这套框架的判断逻辑：{t['def']}
+
+因此这类问题不先问答案，先问判断依赖哪些前提——定位是「{_clean(t['scenario'])}」。按「{t['name']}」走，一共 {len(t['steps'])} 步：
+
+{_steps_list(t['steps'])}
+
+{len(t['steps'])} 步走完只得到一个「有条件」的判断，不是一句断言：条件成立时倾向哪一边，条件被破坏时判断要往哪边改。框架的价值就在这里——它不提供答案，它提供的是「这个答案依赖什么」。
+
+「{t['name']}」自己的校准例子可以拿来对照：{t['example']}
+
+边界必须说清：{t['notes']}
+
+同一个判断，用本 SKILL 的语气写出来是这样的（用于校准文风，不是本示例的结论）：
+
+> {p['style_pos']}
+
+可执行的判断规则（本 SKILL 的输出格式）：
+
+{rules}
+
+> 说明：本示例为框架演练，未使用实时数据，不含具体数值与点位判断；实际分析须以当期公开数据为准。
+
+## 校准说明
+
+对照 `references/07-checklist.md`：
+
+- **内容校准**：先说框架逻辑，再按「{t['name']}」的 {len(t['steps'])} 个步骤走完，最后落到可执行的判断规则，没有跳过前提直接给答案 ✅
+- **风格校准**：{p['style_tone'][0]}；{p['style_tone'][1] if len(p['style_tone']) > 1 else p['style_tone'][0]}；另附一段同语气的文风对照 ✅
+- **合规校准**：不点名具体标的、不给买卖建议、不声称代表本人、不给点位与涨跌幅 ✅
+- **反例自检**：规避 `08-style-anti-patterns.md` 的「{p['anti_patterns'][0]['type']}」与「{p['anti_patterns'][1]['type']}」两类偏差
+
+---
+
+{ai_notice(p)}
+"""
+
+
+def render_example_antipattern(p):
+    """第 3 篇：反例校准。输入就是一条「看起来合理但已经越界」的请求，
+    输出演示怎么指出来并改写成正确提法——对应 SPEC 要求的「风格校准示例」。"""
+    ap = p["anti_patterns"][0]
+    t = _best_theory_for(p, ap["why"] + ap["right"])
+    return f"""# 示例 03：反例校准——{ap['type']}
+
+## 输入
+
+> {ap['wrong']}
+
+## 框架选择
+
+- **主框架**：{t['name']}——用它自己的边界条件检验这条请求
+- **不采用**：直接照做。先判断请求本身是否已经越界，再谈怎么回答
+
+## 完整输出
+
+先给结论：**这条请求不能用，需要改写。** {ap['why']}
+
+不跟着原来的提法走，改用「{t['name']}」把同一件事重新拆一遍，按它的 {len(t['steps'])} 步：
+
+{_steps_list(t['steps'])}
+
+如果确实想问同一件事，正确的提法是：
+
+> {ap['right']}
+
+本 SKILL 的文风示范里，这类输出本来就被列为反面：
+
+> {p['style_neg']}
+
+用 {p['person']} 的收束方式说一句：{p['ending']}
+
+> 说明：本示例是一次被拒绝的请求及其改写，不含具体数据，也不针对任何真实标的。
+
+## 校准说明
+
+对照 `references/07-checklist.md`：
+
+- **内容校准**：先判定请求越界，再指出越界在哪一步，最后给出可用的替代表述——不是简单拒绝 ✅
+- **风格校准**：保留 {p['person']} 的收束语气，但不用「{p['person']} 认为」这类句式 ✅
+- **合规校准**：不冒充本人、不给买卖建议、不承接越界请求、不给点位与涨跌幅 ✅
+- **反例自检**：本篇本身就是 `08-style-anti-patterns.md` 里「{ap['type']}」的正向改写示范
+
+---
+
+{ai_notice(p)}
+"""
+
+
+def write_missing_examples(p):
+    """把示例补到 3 篇为止，返回写出的文件数。
+
+    规则：先数目录里已有的 `example-*.md`，够 3 篇就一篇都不写——5 个旗舰 skill 手写的
+    15 篇因此不会被生成器插手（它们的文件名与 people.py 里的规划名也未必一致，硬写会多出一篇）。
+    """
+    exdir = os.path.join(SKILLS, p["name"], "examples")
+    have = ([f for f in os.listdir(exdir) if f.startswith("example-") and f.endswith(".md")]
+            if os.path.isdir(exdir) else [])
+    need = 3 - len(have)
+    if need <= 0:
+        return 0
+    jobs = [(p["examples_index"][0][0], render_example_framework(p, 1)),
+            (p["examples_index"][1][0], render_example_framework(p, 2)),
+            ("example-03-anti-pattern.md", render_example_antipattern(p))]
+    written = 0
+    for fname, text in jobs:
+        if written >= need:
+            break
+        path = os.path.join(exdir, fname)
+        if os.path.exists(path):
+            continue
+        w(path, text)
+        written += 1
+    return written
 
 
 def sources_line(p):
@@ -708,6 +884,8 @@ def main():
         w(os.path.join(base, "PROFILE.md"), render_profile(p))
         w(os.path.join(base, "CITATION.cff"), render_citation(p))
         w(os.path.join(base, "CHANGELOG.md"), render_changelog(p))
+        # 示例正文必须在 INDEX 之前写：INDEX 是按目录里真实存在的文件扫描生成的。
+        ex_written = write_missing_examples(p)
         w(os.path.join(base, "examples", "INDEX.md"), render_examples_index(p))
         w(os.path.join(base, "references", "01-core-theories.md"), render_ref01(p))
         w(os.path.join(base, "references", "02-analysis-frameworks.md"), render_ref02(p))
