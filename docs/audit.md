@@ -6,6 +6,19 @@
 > 审计方式：只读。本报告为唯一新增文件，未修改任何已有文件（`git status --short` 除本文件外为空）。
 > 审计日期：2026-10-30
 
+> **本报告是 `1dc94cc` 这个时间点的快照，不作为当前状态引用。** 其中列出的主要问题随后续提交
+> 已处理，当前状态请以两个脚本的实测输出为准：
+>
+> | 本报告的条目 | 当前状态 |
+> |---|---|
+> | B-1「示例文件 0 个、索引 102 条幻影引用」 | 已解决：`build.py` 补写至每 skill 3 篇，全库 153 篇，INDEX 改为按目录扫描生成 |
+> | §7「至少 3 个示例」全库违规 | 已解决：audit 的 EX-02 通过，51/51 |
+> | 15 个 skill 的 `01-core-theories.md` 理论块 < 5 | 已解决：补写 39 个理论块，theories 分布 `{5: 16, 6: 35}` |
+> | 协作声明模板化（未逐条点名 complements） | 已解决：`build.py` 的 `collab_block()` 逐条点名，QL-03 通过 |
+> | CI 只查文件名与 frontmatter，绿灯 ≠ 符合 SPEC | 已解决：新增 `scripts/check_registry.py`（R01-R21）与 `scripts/audit_skills.py`（ERROR 0 ／ WARN 0） |
+>
+> 复核命令：`python scripts/check_registry.py && python scripts/audit_skills.py`。
+
 ### 关于字节数的一个口径说明
 
 工作区字节数受 CRLF 影响，与 GitHub 上的真实大小不一致。本报告**一律使用 git blob 尺寸**：
