@@ -244,18 +244,35 @@ def render_changelog(p):
 """
 
 def render_examples_index(p):
-    rows = "\n".join(f"| {i:02d} | {f} | {t} | {n} |" for i, (f, t, n) in enumerate(p["examples_index"], 1))
+    """索引以「目录里真实存在的文件」为准，不再把计划中的选题渲染成看起来可点的表格。
+
+    历史问题：旧版把 people.py 里的选题直接渲染成 `example-01-xxx.md` 表格，但仓库里
+    从来没有对应的示例正文，51 份 INDEX 共出现 102 条幻影引用。现在改为：状态由扫描
+    目录得出，选题单列为「规划选题（未落地）」，二者不混淆。
+    """
+    exdir = os.path.join(SKILLS, p["name"], "examples")
+    real = sorted(f for f in os.listdir(exdir)
+                  if f.startswith("example-") and f.endswith(".md")) if os.path.isdir(exdir) else []
+    if real:
+        lines = "\n".join(f"| [{f}]({f}) | {os.path.getsize(os.path.join(exdir, f))} B |" for f in real)
+        status = (f"本目录当前有 **{len(real)} 个**示例正文（由构建脚本扫描目录得出）：\n\n"
+                  "| 文件 | 大小 |\n|------|------|\n" + lines)
+    else:
+        status = ("本目录当前**没有**任何示例正文（此结论由构建脚本扫描目录得出，非手写）。\n\n"
+                  "> 下节「规划选题」只是选题清单，**没有对应的示例文件**，"
+                  "请勿当作已落地内容引用或链接。")
+    plans = "\n".join(f"- **{t}** —— {n}" for (_f, t, n) in p["examples_index"])
     return f"""# 示例索引
 
-> 本目录存放 {p['person']} skill 的示例输出，供用户预期效果、供 Agent 校准风格。
+> 本目录用于存放 {p['person']} skill 的示例输出：给用户看预期效果，给 Agent 校准风格。
 
-## 分类索引
+## 当前状态
 
-### 框架应用示例
+{status}
 
-| # | 文件 | 主题 | 涉及框架 |
-|---|------|------|---------|
-{rows}
+## 规划选题（未落地）
+
+{plans}
 
 ## 示例编写规范
 
@@ -270,7 +287,7 @@ def render_examples_index(p):
 
 - **人类用户**：浏览本目录了解 skill 的输出效果
 - **Agent**：运行时不加载本目录（仅供参考），按 SKILL.md 和 references/ 执行
-- **贡献者**：新增示例后更新本索引
+- **贡献者**：新增示例文件（命名 `example-NN-<topic>.md`）后重跑 `build.py`，本索引会自动列出
 """
 
 def render_ref01(p):
