@@ -4,11 +4,15 @@
 
 ## 当前状态
 
-本目录当前**没有**任何示例正文（此结论由构建脚本扫描目录得出，非手写）。
+本目录当前有 **3 个**示例正文（由构建脚本扫描目录得出）：
 
-> 下节「规划选题」只是选题清单，**没有对应的示例文件**，请勿当作已落地内容引用或链接。
+| 文件 | 大小 |
+|------|------|
+| [example-01-property.md](example-01-property.md) | 3283 B |
+| [example-02-asset-revaluation.md](example-02-asset-revaluation.md) | 3456 B |
+| [example-03-rate-cut-transmission.md](example-03-rate-cut-transmission.md) | 3493 B |
 
-## 规划选题（未落地）
+## 选题参考（历史规划；某条是否已落地，以上表实际文件为准）
 
 - **房地产长周期分析** —— 用河床/水位框架判断楼市趋势
 - **资产重估判断** —— 判断利率中枢下移对A股的影响

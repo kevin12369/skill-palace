@@ -248,7 +248,7 @@ def render_examples_index(p):
 
     历史问题：旧版把 people.py 里的选题直接渲染成 `example-01-xxx.md` 表格，但仓库里
     从来没有对应的示例正文，51 份 INDEX 共出现 102 条幻影引用。现在改为：状态由扫描
-    目录得出，选题单列为「规划选题（未落地）」，二者不混淆。
+    目录得出，选题单列且与状态分离，二者不混淆。
     """
     exdir = os.path.join(SKILLS, p["name"], "examples")
     real = sorted(f for f in os.listdir(exdir)
@@ -257,10 +257,12 @@ def render_examples_index(p):
         lines = "\n".join(f"| [{f}]({f}) | {os.path.getsize(os.path.join(exdir, f))} B |" for f in real)
         status = (f"本目录当前有 **{len(real)} 个**示例正文（由构建脚本扫描目录得出）：\n\n"
                   "| 文件 | 大小 |\n|------|------|\n" + lines)
+        plan_head = "选题参考（历史规划；某条是否已落地，以上表实际文件为准）"
     else:
         status = ("本目录当前**没有**任何示例正文（此结论由构建脚本扫描目录得出，非手写）。\n\n"
                   "> 下节「规划选题」只是选题清单，**没有对应的示例文件**，"
                   "请勿当作已落地内容引用或链接。")
+        plan_head = "规划选题（未落地）"
     plans = "\n".join(f"- **{t}** —— {n}" for (_f, t, n) in p["examples_index"])
     return f"""# 示例索引
 
@@ -270,7 +272,7 @@ def render_examples_index(p):
 
 {status}
 
-## 规划选题（未落地）
+## {plan_head}
 
 {plans}
 
