@@ -333,6 +333,22 @@ def main() -> int:
             elif ref not in idx_set:
                 add("ERROR", "R18", nm, f"complements 引用了不存在的 skill：{ref}")
 
+    # ---------- R19 living / died 自洽 ----------
+    # living 是 build.py 从 people.py 生成的权威生死标记（True=在世 / False=已故 / None=待考或方法论条目）
+    # 校验三点：① 字段必存在；② 取值只能是 true/false/null；③ 已故必须带 died，其余不许带 died。
+    for nm, e in by_name.items():
+        if "living" not in e:
+            add("ERROR", "R19", nm, "缺少 living 字段（应由 build.py 从 people.py 生成）")
+            continue
+        living, died = e.get("living"), e.get("died")
+        if living not in (True, False, None):
+            add("ERROR", "R19", nm, f"living 只能是 true/false/null，实际 {living!r}")
+        if living is False:
+            if not (isinstance(died, str) and died.strip()):
+                add("ERROR", "R19", nm, "living=false 但 died 为空（人物状态声明需要卒年）")
+        elif died not in (None, ""):
+            add("ERROR", "R19", nm, f"living={living!r} 却带 died={died!r}（非已故不应有卒年）")
+
     # ---------- 输出 ----------
     errors = [p for p in problems if p[0] == "ERROR"]
     warns = [p for p in problems if p[0] == "WARN"]

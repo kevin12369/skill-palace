@@ -104,7 +104,7 @@ CHECKS: dict[str, tuple[str, str, str]] = {
     "QL-01": ("ERROR", "§9 质量检查", "无 TODO / TBD / 占位符"),
     "QL-02": ("ERROR", "§9 质量检查 / §5 正反双校验", "07 与 08 同时存在（双校验完整）"),
     "QL-03": ("WARN", "§9 质量检查 互补关系", "协作声明与 registry/index.json 的 complements 一致"),
-    "QL-04": ("INFO", "§9 质量检查 已故人物", "含致敬 / 伦理声明（名单需人工确认）"),
+    "QL-04": ("ERROR", "§9 质量检查 已故人物", "按 registry 的 living 字段核对致敬 / 伦理声明"),
 }
 
 rows: list[dict] = []
@@ -344,11 +344,34 @@ def audit_one(slug: str, base: str, index_by_name: dict) -> None:
         if lacking:
             add(slug, "QL-03", "协作声明未提及 " + ", ".join(lacking),
                 "逐条对应 registry/index.json 的 complements")
-    memorial = [k for k in ("致敬", "纪念", "伦理") if k in text or k in profile_text]
+    # QL-04：已故人物的致敬 / 伦理声明。名单来源是 registry/index.json 的 living 字段
+    # （由 build.py 从 tools/skill-gen/people.py 生成），不再靠人工确认或关键词猜测。
+    #   living === False → 必须出现「人物状态」且写明「逝世」
+    #   living === True  → 必须出现「人物状态」且写明「在世」
+    #   living === None  → 必须出现「条目性质」（方法论条目）或「待考」（生卒未定）
+    living = entry.get("living") if entry else "无 registry 条目"
+    merged = text + "\n" + profile_text
+    if living is False:
+        want = ("人物状态", "逝世")
+    elif living is True:
+        want = ("人物状态", "在世")
+    elif living is None:
+        want = None
+    else:
+        want = None
+    if want:
+        miss = [k for k in want if k not in merged]
+        if miss:
+            add(slug, "QL-04", "living=" + str(living) + " 但缺少 " + " / ".join(miss),
+                "按 living 字段渲染人物状态声明")
+    elif living is None and entry:
+        if "条目性质" not in merged and "待考" not in merged:
+            add(slug, "QL-04", "living=None 但既无「条目性质」也无「待考」说明",
+                "方法论条目写「条目性质」，生卒未定写「待考」")
     rows.append({"skill": slug, "id": "QL-04", "severity": "INFO",
                  "spec": CHECKS["QL-04"][1], "clause": CHECKS["QL-04"][2],
-                 "actual": ("含 " + "/".join(memorial)) if memorial else "未见致敬/伦理措辞",
-                 "expected": "已故人物应有（名单需人工确认，见 docs/compliance-review.md）"})
+                 "actual": "living=" + str(living),
+                 "expected": "已故写明逝世并致意／在世声明不代表当前观点／方法论标注条目性质"})
 
 
 CLARIFICATIONS = [
@@ -384,9 +407,11 @@ CLARIFICATIONS = [
      "建议明确为「协作声明必须点名 complements 中的每个 skill（可用 slug 或中文名）」，"
      "或降级为「至少点名 1 个」。当前脚本按「点名」判定，全部记 WARN。"),
     ("§9「如人物已故，含致敬与伦理声明」",
-     "「已故」需要一份权威名单，SPEC 没有提供，registry 里也没有 living/deceased 字段，脚本无法判定。",
-     "建议在 `registry/index.json` 增加 `living: true/false` 字段，由 build.py 从 people.py 生成；"
-     "脚本即可据此判定。名单与依据整理见 docs/compliance-review.md。"),
+     "「已故」需要一份权威名单，SPEC 没有提供。原始脚本只能靠「致敬/纪念/伦理」关键词猜，"
+     "既会漏判（生前表述里也可能出现这些词）也会误判（漏写声明的人反而因别处出现关键词而通过）。",
+     "已落地：`tools/skill-gen/people.py` 增加 `living` / `died` 字段 → `build.py` 写入 "
+     "`registry/index.json` 并按在世 / 已故 / 方法论三态渲染「人物状态」「条目性质」声明。"
+     "QL-04 因此升级为 ERROR，直接按 registry 的 `living` 核对，不再依赖关键词。"),
 ]
 
 
@@ -491,8 +516,16 @@ def main() -> int:
     for cid in ("ST-06", "ST-11", "QL-04"):
         vals = [r for r in rows if r["id"] == cid]
         if cid == "QL-04":
-            n_mem = sum(1 for r in vals if r["actual"].startswith("含"))
-            print(f"  QL-04 含致敬/纪念/伦理措辞：{n_mem}/{len(vals)}")
+            # 只统计「通过」的实例行（actual 恰为 living=True/False/None）；
+            # 不合规行已在上面按条列出，不重复计入分档。
+            vals_ok = [r for r in vals
+                       if re.fullmatch(r"living=(True|False|None)", r["actual"])]
+            dist: dict[str, int] = {}
+            for r in vals_ok:
+                key = r["actual"].replace("living=", "")
+                dist[key] = dist.get(key, 0) + 1
+            pretty = " / ".join(f"{k} {v}" for k, v in sorted(dist.items())) or "（无）"
+            print(f"  QL-04 按 registry 的 living 分档：{pretty}")
         elif cid == "ST-06":
             nums = sorted(int(r["actual"].split()[0]) for r in vals)
             if nums:
