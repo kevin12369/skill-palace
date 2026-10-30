@@ -860,6 +860,8 @@ cp /tmp/skill-palace/skills/charlie-munger/SKILL-condensed.md <skills路径>/cha
 - **创建新 skill**：复制 `skills/_template/` 目录开始，遵循 [SKILL_SPEC.md](SKILL_SPEC.md) 规范
 - **提交智囊团组合**：在 `combos/` 下新建组合方案文件
 
+参与前请读一遍[行为准则](CODE_OF_CONDUCT.md)。发现安全问题请按[安全策略](SECURITY.md)私下上报，不要开公开 Issue。
+
 ---
 
 ## 兼容性
@@ -887,7 +889,16 @@ cp /tmp/skill-palace/skills/charlie-munger/SKILL-condensed.md <skills路径>/cha
 - [智囊团组合指南](docs/combination-guide.md)——如何使用和创建组合
 - [常见问题（FAQ）](FAQ.md)——是否冒充名人、如何触发、变体怎么选、支持哪些平台、组合怎么用
 - [机器可读索引](registry/index.json)——程序化发现与安装
+- [引用信息](CITATION.cff)——仓库级 CFF；每个 skill 目录下另有自己的 `CITATION.cff`
+
+三个校验脚本（均在 CI 中运行，也可本地手动执行）：
+
+| 脚本 | 查什么 | 退出码 |
+|------|--------|--------|
+| [lint-skills.yml](.github/workflows/lint-skills.yml) | 目录结构、frontmatter、references 是否齐全 | 有错误则非 0 |
+| [scripts/check_registry.py](scripts/check_registry.py) | `registry/` 两份索引与 `skills/` 目录是否漂移 | 0 一致 / 1 有差异 |
+| [scripts/audit_skills.py](scripts/audit_skills.py) | 按 `SKILL_SPEC.md` 全量体检，逐条列不合规 | 0 无结构性不合规 / 1 有 |
 
 ## License
 
-MIT
+[MIT](LICENSE)。可自由使用、修改、商用，保留版权声明即可。
