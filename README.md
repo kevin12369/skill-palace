@@ -859,6 +859,7 @@ cp /tmp/skill-palace/skills/charlie-munger/SKILL-condensed.md <skills路径>/cha
 - [SKILL 编写规范](SKILL_SPEC.md)——frontmatter、结构、验收标准
 - [设计哲学](docs/philosophy.md)——为什么是"框架"而非"替身"
 - [智囊团组合指南](docs/combination-guide.md)——如何使用和创建组合
+- [常见问题（FAQ）](FAQ.md)——是否冒充名人、如何触发、变体怎么选、支持哪些平台、组合怎么用
 - [机器可读索引](registry/index.json)——程序化发现与安装
 
 ## License
