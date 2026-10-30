@@ -199,6 +199,17 @@ def ethics_block(p):
     return f"\n> **使用限定**：{note}\n" if note else ""
 
 
+def sources_line(p):
+    """生卒与现任职务的依据。只在 people.py 填了 sources 时渲染——
+    宁可留空，也不给没查证过的条目编一个出处。"""
+    src = p.get("sources") or []
+    if not src:
+        return ""
+    if len(src) == 1:
+        return f"- **事实依据**：{src[0]}\n"
+    return "- **事实依据**：\n" + "".join(f"  - {s}\n" for s in src)
+
+
 def render_profile(p):
     src = fmt_list([f"- 《{t}》——框架提炼来源：{s}" for t, s in p["bio_sources"]])
     comp = fmt_list([f"- 与 `{c}` 互补：覆盖 {p['domain_cn']} 视角的不同侧面" for c in p["complements"]])
@@ -208,7 +219,7 @@ def render_profile(p):
 
 - **姓名**：{p['person']} / {p['person_en']}
 - **生卒**：{lifespan(p)}
-- **国籍**：{p['nationality']}
+{sources_line(p)}- **国籍**：{p['nationality']}
 - **领域**：{p['domain_cn']}
 - **身份**：{p['identity']}
 
@@ -616,12 +627,13 @@ def update_registry():
             "domain_cn": p["domain_cn"], "region": p["region"], "status": "released",
             "code": CODE_MAP.get(p["name"], ""),
             "living": p.get("living"), "died": p.get("died"),
+            "sources": p.get("sources") or [],
             "frameworks": p["frameworks"], "style_keywords": p["style_keywords"],
             "roundtable_role": p["roundtable_role"], "roundtable_tags": p["roundtable_tags"],
             "complements": p["complements"], "path": f"skills/{p['name']}"
         })
         added += 1
-    # 回填 code / living / died：即便已存在的 skill 也确保字段与 people.py 同步
+    # 回填 code / living / died / sources：即便已存在的 skill 也确保字段与 people.py 同步
     people_by_slug = {p["name"]: p for p in PEOPLE}
     for s in d["skills"]:
         s["code"] = CODE_MAP.get(s["name"], "")
@@ -629,6 +641,7 @@ def update_registry():
         if p:
             s["living"] = p.get("living")
             s["died"] = p.get("died")
+            s["sources"] = p.get("sources") or []
     d["version"] = REPO_VERSION
     d["updated"] = REPO_UPDATED
     json.dump(d, open(REG, "w", encoding="utf-8"), ensure_ascii=False, indent=2)

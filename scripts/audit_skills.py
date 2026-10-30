@@ -106,6 +106,7 @@ CHECKS: dict[str, tuple[str, str, str]] = {
     "QL-02": ("ERROR", "§9 质量检查 / §5 正反双校验", "07 与 08 同时存在（双校验完整）"),
     "QL-03": ("WARN", "§9 质量检查 互补关系", "协作声明与 registry/index.json 的 complements 一致"),
     "QL-04": ("ERROR", "§9 质量检查 已故人物", "按 registry 的 living 字段核对致敬 / 伦理声明"),
+    "QL-05": ("INFO", "§6 PROFILE 基本信息", "生卒与现任职务是否给了事实依据"),
 }
 
 rows: list[dict] = []
@@ -378,6 +379,13 @@ def audit_one(slug: str, base: str, index_by_name: dict) -> None:
                  "spec": CHECKS["QL-04"][1], "clause": CHECKS["QL-04"][2],
                  "actual": "living=" + str(living),
                  "expected": "已故写明逝世并致意／在世声明不代表当前观点／方法论标注条目性质"})
+    # QL-05：生卒与现任职务的事实依据。只统计覆盖率，不判合规——没查证过的条目
+    # 宁可留空也不该编一个出处，所以「无」本身不算错，只说明这块还是欠债。
+    n_src = len((entry or {}).get("sources") or [])
+    rows.append({"skill": slug, "id": "QL-05", "severity": "INFO",
+                 "spec": CHECKS["QL-05"][1], "clause": CHECKS["QL-05"][2],
+                 "actual": ("有 %d 条事实依据" % n_src) if n_src else "无事实依据",
+                 "expected": "已故人物与有任职变动的在世人物应给出可查证出处"})
 
 
 CLARIFICATIONS = [
@@ -519,7 +527,7 @@ def main() -> int:
     print()
 
     print("【量化分布】INFO 项汇总")
-    for cid in ("ST-06", "ST-11", "QL-04"):
+    for cid in ("ST-06", "ST-11", "QL-04", "QL-05"):
         vals = [r for r in rows if r["id"] == cid]
         if cid == "QL-04":
             # 只统计「通过」的实例行（actual 恰为 living=True/False/None）；
@@ -540,6 +548,12 @@ def main() -> int:
             nums = sorted(int(r["actual"].split()[0]) for r in vals)
             if nums:
                 print(f"  ST-11 SKILL.md 正文字数：{nums[0]}–{nums[-1]} 字符（中位 {nums[len(nums)//2]}）")
+        elif cid == "QL-05":
+            have = {r["skill"] for r in vals if r["actual"].startswith("有")}
+            dead = {r["skill"] for r in rows
+                    if r["id"] == "QL-04" and r["actual"] == "living=False"}
+            print(f"  QL-05 带事实依据的条目：{len(have)}/{len(vals)}"
+                  f"（其中已故 {len(have & dead)}/{len(dead)}）")
     print()
 
     print("=" * 100)

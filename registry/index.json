@@ -37,7 +37,11 @@
       "path": "skills/gao-shanwen",
       "code": "GS",
       "living": false,
-      "died": "2026-07-07"
+      "died": "2026-07-07",
+      "sources": [
+        "逝世日期 2026-07-07、终年 55 岁：澎湃新闻、证券时报、重庆日报、金羊网、腾讯新闻 2026-07-07 报道",
+        "任职变动：安信证券 2023-12 更名国投证券；本人 2025-11 离职"
+      ]
     },
     {
       "name": "greenspan",
@@ -76,7 +80,10 @@
       "path": "skills/greenspan",
       "code": "GP",
       "living": false,
-      "died": "2026-06-22"
+      "died": "2026-06-22",
+      "sources": [
+        "逝世日期 2026-06-22、享年 100 岁、死因为帕金森并发症：Britannica 人物条目与《中国新闻周刊》2026-06 报道"
+      ]
     },
     {
       "name": "charlie-munger",
@@ -118,7 +125,8 @@
       "path": "skills/charlie-munger",
       "code": "CM",
       "living": false,
-      "died": "2023"
+      "died": "2023",
+      "sources": []
     },
     {
       "name": "warren-buffett",
@@ -165,7 +173,11 @@
       "path": "skills/warren-buffett",
       "code": "WB",
       "living": true,
-      "died": null
+      "died": null,
+      "sources": [
+        "现任职务：2026-09-18 卸任伯克希尔·哈撒韦董事长，即日出任名誉董事长并留任董事，董事长由其子霍华德·G·巴菲特接任（伯克希尔公告；新华社、央视新闻、CNBC 当日报道）",
+        "CEO 交接：格雷格·阿贝尔自 2026-01-01 起任总裁兼 CEO，巴菲特此前保留董事长职务（伯克希尔 2025-05-05 公告）"
+      ]
     },
     {
       "name": "carlota-perez",
@@ -207,7 +219,8 @@
       "path": "skills/carlota-perez",
       "code": "CP",
       "living": true,
-      "died": null
+      "died": null,
+      "sources": []
     },
     {
       "name": "kondratiev",
@@ -247,7 +260,8 @@
       "path": "skills/kondratiev",
       "code": "KN",
       "living": false,
-      "died": "1938"
+      "died": "1938",
+      "sources": []
     },
     {
       "name": "george-soros",
@@ -291,7 +305,8 @@
       "path": "skills/george-soros",
       "code": "SZ",
       "living": true,
-      "died": null
+      "died": null,
+      "sources": []
     },
     {
       "name": "irving-fisher",
@@ -334,7 +349,8 @@
       "path": "skills/irving-fisher",
       "code": "IF",
       "living": false,
-      "died": "1947"
+      "died": "1947",
+      "sources": []
     },
     {
       "name": "philip-fisher",
@@ -376,7 +392,8 @@
       "path": "skills/philip-fisher",
       "code": "PF",
       "living": false,
-      "died": "2004"
+      "died": "2004",
+      "sources": []
     },
     {
       "name": "hyman-minsky",
@@ -418,7 +435,8 @@
       "path": "skills/hyman-minsky",
       "code": "HM",
       "living": false,
-      "died": "1996"
+      "died": "1996",
+      "sources": []
     },
     {
       "name": "ray-dalio",
@@ -460,7 +478,8 @@
       "path": "skills/ray-dalio",
       "code": "RD",
       "living": true,
-      "died": null
+      "died": null,
+      "sources": []
     },
     {
       "name": "joseph-schumpeter",
@@ -502,7 +521,8 @@
       "path": "skills/joseph-schumpeter",
       "code": "SP",
       "living": false,
-      "died": "1950"
+      "died": "1950",
+      "sources": []
     },
     {
       "name": "william-jevons",
@@ -543,7 +563,8 @@
       "path": "skills/william-jevons",
       "code": "JV",
       "living": false,
-      "died": "1882"
+      "died": "1882",
+      "sources": []
     },
     {
       "name": "theodore-wright",
@@ -585,7 +606,8 @@
       "path": "skills/theodore-wright",
       "code": "WR",
       "living": null,
-      "died": null
+      "died": null,
+      "sources": []
     },
     {
       "name": "gartner-hype-cycle",
@@ -626,7 +648,11 @@
       "path": "skills/gartner-hype-cycle",
       "code": "GT",
       "living": null,
-      "died": null
+      "died": null,
+      "sources": [
+        "提出者与年份：Hype Cycle 由 Gartner 分析师 Jackie Fenn 于 1995 年提出（Wikipedia / Cambridge 词典 Gartner Hype Cycle 词条）",
+        "机构背景：Gartner 公司由 Gideon Gartner 于 1979 年创立，Gideon Gartner 1935–2020"
+      ]
     },
     {
       "name": "howard-marks",
@@ -668,7 +694,8 @@
       "path": "skills/howard-marks",
       "code": "HOM",
       "living": true,
-      "died": null
+      "died": null,
+      "sources": []
     },
     {
       "name": "burton-malkiel",
@@ -708,7 +735,8 @@
       "path": "skills/burton-malkiel",
       "code": "BM",
       "living": true,
-      "died": null
+      "died": null,
+      "sources": []
     },
     {
       "name": "fred-schwed",
@@ -748,7 +776,8 @@
       "path": "skills/fred-schwed",
       "code": "FS",
       "living": false,
-      "died": "1992"
+      "died": "1992",
+      "sources": []
     },
     {
       "name": "daniel-kahneman",
@@ -789,7 +818,8 @@
       "path": "skills/daniel-kahneman",
       "code": "DK",
       "living": false,
-      "died": "2024"
+      "died": "2024",
+      "sources": []
     },
     {
       "name": "qiu-guolu",
@@ -830,7 +860,8 @@
       "path": "skills/qiu-guolu",
       "code": "QG",
       "living": true,
-      "died": null
+      "died": null,
+      "sources": []
     },
     {
       "name": "liu-shunren",
@@ -871,7 +902,8 @@
       "path": "skills/liu-shunren",
       "code": "LS",
       "living": true,
-      "died": null
+      "died": null,
+      "sources": []
     },
     {
       "name": "john-gordon",
@@ -911,7 +943,8 @@
       "path": "skills/john-gordon",
       "code": "JG",
       "living": true,
-      "died": null
+      "died": null,
+      "sources": []
     },
     {
       "name": "robert-shiller",
@@ -953,7 +986,8 @@
       "path": "skills/robert-shiller",
       "code": "RS",
       "living": true,
-      "died": null
+      "died": null,
+      "sources": []
     },
     {
       "name": "charles-ellis",
@@ -993,7 +1027,8 @@
       "path": "skills/charles-ellis",
       "code": "CE",
       "living": true,
-      "died": null
+      "died": null,
+      "sources": []
     },
     {
       "name": "nassim-taleb",
@@ -1036,7 +1071,8 @@
       "path": "skills/nassim-taleb",
       "code": "NT",
       "living": true,
-      "died": null
+      "died": null,
+      "sources": []
     },
     {
       "name": "ben-bernanke",
@@ -1079,7 +1115,8 @@
       "path": "skills/ben-bernanke",
       "code": "BB",
       "living": true,
-      "died": null
+      "died": null,
+      "sources": []
     },
     {
       "name": "duan-yongping",
@@ -1125,7 +1162,8 @@
       "path": "skills/duan-yongping",
       "code": "DY",
       "living": true,
-      "died": null
+      "died": null,
+      "sources": []
     },
     {
       "name": "li-daxiao",
@@ -1168,7 +1206,8 @@
       "path": "skills/li-daxiao",
       "code": "LD",
       "living": true,
-      "died": null
+      "died": null,
+      "sources": []
     },
     {
       "name": "hong-hao",
@@ -1212,7 +1251,8 @@
       "path": "skills/hong-hao",
       "code": "HH",
       "living": true,
-      "died": null
+      "died": null,
+      "sources": []
     },
     {
       "name": "peter-lynch",
@@ -1257,7 +1297,8 @@
       "path": "skills/peter-lynch",
       "code": "PL",
       "living": true,
-      "died": null
+      "died": null,
+      "sources": []
     },
     {
       "name": "fu-peng",
@@ -1302,7 +1343,8 @@
       "path": "skills/fu-peng",
       "code": "FP",
       "living": true,
-      "died": null
+      "died": null,
+      "sources": []
     },
     {
       "name": "xu-xiang",
@@ -1347,7 +1389,8 @@
       "path": "skills/xu-xiang",
       "code": "XX",
       "living": true,
-      "died": null
+      "died": null,
+      "sources": []
     },
     {
       "name": "beijing-chaojia",
@@ -1392,7 +1435,8 @@
       "path": "skills/beijing-chaojia",
       "code": "BC",
       "living": true,
-      "died": null
+      "died": null,
+      "sources": []
     },
     {
       "name": "jesse-livermore",
@@ -1437,7 +1481,8 @@
       "path": "skills/jesse-livermore",
       "code": "JL",
       "living": false,
-      "died": "1940"
+      "died": "1940",
+      "sources": []
     },
     {
       "name": "william-gann",
@@ -1482,7 +1527,8 @@
       "path": "skills/william-gann",
       "code": "WG",
       "living": false,
-      "died": "1955"
+      "died": "1955",
+      "sources": []
     },
     {
       "name": "michael-steinhardt",
@@ -1526,7 +1572,8 @@
       "path": "skills/michael-steinhardt",
       "code": "SH",
       "living": true,
-      "died": null
+      "died": null,
+      "sources": []
     },
     {
       "name": "martin-schwartz",
@@ -1570,7 +1617,8 @@
       "path": "skills/martin-schwartz",
       "code": "MZ",
       "living": true,
-      "died": null
+      "died": null,
+      "sources": []
     },
     {
       "name": "larry-williams",
@@ -1613,7 +1661,8 @@
       "path": "skills/larry-williams",
       "code": "LW",
       "living": true,
-      "died": null
+      "died": null,
+      "sources": []
     },
     {
       "name": "joseph-granville",
@@ -1658,7 +1707,8 @@
       "path": "skills/joseph-granville",
       "code": "GR",
       "living": false,
-      "died": "2013"
+      "died": "2013",
+      "sources": []
     },
     {
       "name": "richard-wyckoff",
@@ -1703,7 +1753,8 @@
       "path": "skills/richard-wyckoff",
       "code": "RW",
       "living": false,
-      "died": "1934"
+      "died": "1934",
+      "sources": []
     },
     {
       "name": "george-douglas-taylor",
@@ -1745,7 +1796,8 @@
       "path": "skills/george-douglas-taylor",
       "code": "GD",
       "living": false,
-      "died": "1976"
+      "died": "1976",
+      "sources": []
     },
     {
       "name": "jeff-cooper",
@@ -1790,7 +1842,8 @@
       "path": "skills/jeff-cooper",
       "code": "JC",
       "living": true,
-      "died": null
+      "died": null,
+      "sources": []
     },
     {
       "name": "yeshan-zhangwenhua",
@@ -1835,7 +1888,8 @@
       "path": "skills/yeshan-zhangwenhua",
       "code": "YS",
       "living": true,
-      "died": null
+      "died": null,
+      "sources": []
     },
     {
       "name": "junshan-jushi",
@@ -1879,7 +1933,8 @@
       "path": "skills/junshan-jushi",
       "code": "JS",
       "living": true,
-      "died": null
+      "died": null,
+      "sources": []
     },
     {
       "name": "xu-wenming",
@@ -1924,7 +1979,8 @@
       "path": "skills/xu-wenming",
       "code": "XW",
       "living": true,
-      "died": null
+      "died": null,
+      "sources": []
     },
     {
       "name": "qin-guoan",
@@ -1968,7 +2024,8 @@
       "path": "skills/qin-guoan",
       "code": "QA",
       "living": true,
-      "died": null
+      "died": null,
+      "sources": []
     },
     {
       "name": "long-qitian",
@@ -2011,7 +2068,8 @@
       "path": "skills/long-qitian",
       "code": "LQ",
       "living": true,
-      "died": null
+      "died": null,
+      "sources": []
     },
     {
       "name": "yang-jiyuan",
@@ -2056,7 +2114,8 @@
       "path": "skills/yang-jiyuan",
       "code": "YJ",
       "living": true,
-      "died": null
+      "died": null,
+      "sources": []
     },
     {
       "name": "james-simons",
@@ -2107,7 +2166,8 @@
       "path": "skills/james-simons",
       "code": "JM",
       "living": false,
-      "died": "2024"
+      "died": "2024",
+      "sources": []
     },
     {
       "name": "stanley-druckenmiller",
@@ -2150,7 +2210,8 @@
       ],
       "path": "skills/stanley-druckenmiller",
       "living": true,
-      "died": null
+      "died": null,
+      "sources": []
     },
     {
       "name": "william-oneil",
@@ -2193,7 +2254,8 @@
       ],
       "path": "skills/william-oneil",
       "living": false,
-      "died": "2023"
+      "died": "2023",
+      "sources": []
     }
   ],
   "roundtable": {

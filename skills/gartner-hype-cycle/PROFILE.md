@@ -4,6 +4,9 @@
 
 - **姓名**：加特纳Hype Cycle / Gartner Hype Cycle
 - **生卒**：1995 年提出／持续更新
+- **事实依据**：
+  - 提出者与年份：Hype Cycle 由 Gartner 分析师 Jackie Fenn 于 1995 年提出（Wikipedia / Cambridge 词典 Gartner Hype Cycle 词条）
+  - 机构背景：Gartner 公司由 Gideon Gartner 于 1979 年创立，Gideon Gartner 1935–2020
 - **国籍**：美国(Gartner公司)
 - **领域**：技术采纳与成熟度
 - **身份**：Gartner公司提出的技术成熟度曲线，衡量新技术从炒作曲线的定位工具

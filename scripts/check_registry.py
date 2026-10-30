@@ -349,6 +349,22 @@ def main() -> int:
         elif died not in (None, ""):
             add("ERROR", "R19", nm, f"living={living!r} 却带 died={died!r}（非已故不应有卒年）")
 
+    # ---------- R20 sources 字段格式 ----------
+    # sources 只在查到出处时才填（见 people.py）；这里是格式校验，不要求非空。
+    for nm, e in by_name.items():
+        if "sources" not in e:
+            add("ERROR", "R20", nm, "缺少 sources 字段（应为数组，可为空）")
+            continue
+        v = e.get("sources")
+        if not isinstance(v, list):
+            add("ERROR", "R20", nm, f"sources 必须是数组，实际 {type(v).__name__}")
+            continue
+        bad = [x for x in v if not (isinstance(x, str) and x.strip())]
+        if bad:
+            add("ERROR", "R20", nm, f"sources 含空值或非字符串元素：{bad!r}")
+        if len(set(v)) != len(v):
+            add("ERROR", "R20", nm, "sources 含重复项")
+
     # ---------- 输出 ----------
     errors = [p for p in problems if p[0] == "ERROR"]
     warns = [p for p in problems if p[0] == "WARN"]

@@ -2743,6 +2743,10 @@ PEOPLE = [
   "born": "1971",
   "living": False,
   "died": "2026-07-07",
+  "sources": [
+    "逝世日期 2026-07-07、终年 55 岁：澎湃新闻、证券时报、重庆日报、金羊网、腾讯新闻 2026-07-07 报道",
+    "任职变动：安信证券 2023-12 更名国投证券；本人 2025-11 离职"
+  ],
   "nationality": "中国",
   "identity": "国投证券（原安信证券）前首席经济学家、中国宏观经济研究权威",
   "roundtable_role": "中国宏观背景提供者",
@@ -2990,6 +2994,10 @@ PEOPLE = [
   "born": "1995",
   "living": None,
   "died": None,
+  "sources": [
+    "提出者与年份：Hype Cycle 由 Gartner 分析师 Jackie Fenn 于 1995 年提出（Wikipedia / Cambridge 词典 Gartner Hype Cycle 词条）",
+    "机构背景：Gartner 公司由 Gideon Gartner 于 1979 年创立，Gideon Gartner 1935–2020"
+  ],
   "nationality": "美国(Gartner公司)",
   "identity": "Gartner公司提出的技术成熟度曲线，衡量新技术从炒作曲线的定位工具",
   "roundtable_role": "技术成熟度定位分析师",
@@ -3729,6 +3737,9 @@ PEOPLE = [
   "born": "1926",
   "living": False,
   "died": "2026-06-22",
+  "sources": [
+    "逝世日期 2026-06-22、享年 100 岁、死因为帕金森并发症：Britannica 人物条目与《中国新闻周刊》2026-06 报道"
+  ],
   "nationality": "美国",
   "identity": "美联储前主席(1987-2006)、全球宏观政策制定者",
   "roundtable_role": "全球宏观背景提供者",
@@ -11547,8 +11558,12 @@ PEOPLE = [
   "born": "1930",
   "living": True,
   "died": None,
+  "sources": [
+    "现任职务：2026-09-18 卸任伯克希尔·哈撒韦董事长，即日出任名誉董事长并留任董事，董事长由其子霍华德·G·巴菲特接任（伯克希尔公告；新华社、央视新闻、CNBC 当日报道）",
+    "CEO 交接：格雷格·阿贝尔自 2026-01-01 起任总裁兼 CEO，巴菲特此前保留董事长职务（伯克希尔 2025-05-05 公告）"
+  ],
   "nationality": "美国",
-  "identity": "伯克希尔·哈撒韦董事长兼CEO、价值投资代表人物",
+  "identity": "伯克希尔·哈撒韦名誉董事长、价值投资代表人物",
   "roundtable_role": "估值与最终决策者",
   "stage": "微观决策",
   "roundtable_tags": [
