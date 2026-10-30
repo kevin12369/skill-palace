@@ -4,11 +4,15 @@
 
 ## 当前状态
 
-本目录当前**没有**任何示例正文（此结论由构建脚本扫描目录得出，非手写）。
+本目录当前有 **3 个**示例正文（由构建脚本扫描目录得出）：
 
-> 下节「规划选题」只是选题清单，**没有对应的示例文件**，请勿当作已落地内容引用或链接。
+| 文件 | 大小 |
+|------|------|
+| [example-01-fomc-fedspeak.md](example-01-fomc-fedspeak.md) | 2667 B |
+| [example-02-irrational-exuberance.md](example-02-irrational-exuberance.md) | 3027 B |
+| [example-03-balance-sheet.md](example-03-balance-sheet.md) | 2678 B |
 
-## 规划选题（未落地）
+## 选题参考（历史规划；某条是否已落地，以上表实际文件为准）
 
 - **FOMC声明解读** —— 用Fedspeak框架解析最新联储声明
 - **非理性繁荣判断** —— 识别当前全球资产是否存在失衡
