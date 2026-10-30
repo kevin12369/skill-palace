@@ -10,6 +10,18 @@
 
 不会。每个 skill 都显式声明"不声称代表本人"，输出中用"按 <人物> 框架分析"而非"<人物> 认为"。这是思维框架的工具化，不是人格复制。
 
+### 会不会让人误以为名人本人在发言，甚至误导投资决策？
+
+这个风险是真实存在的，所以我们把它当成设计约束，而不是写一句免责声明了事。约束分三层：一是定位声明，每个 `SKILL.md` 正文都写明"不声称代表本人，也不引用任何未公开的专有研究"；二是输出前的正反双校验，`references/07-checklist.md` 把"是否滑向了本人推荐"列为必检项，`references/08-style-anti-patterns.md` 直接给出这类错误输出和正确改写；三是输出模板要求用"按 <人物> 框架分析"的句式，不允许"<人物> 认为"。但必须说清边界：**框架能提高分析的条理性，不能提高预测准确率**。涉及真金白银的判断，请自行核实数据与时点，本仓库不构成投资建议。
+
+### 为什么不用微调模型，而是用 prompt + 参考资料？
+
+四个现实原因。**可审计**：微调后的权重不透明，而 `SKILL.md` + `references/` 是纯文本，任何人都能 diff、能追溯某条结论出自哪个文件。**可组合**：同一个 Agent 能按问题分别加载不同人物的框架，微调模型做不到"这个需求用这个、那个需求用那个"。**成本与时效**：新增一位名人只需写 14 个文件、重跑一次构建，不必重新训练；改框架只改文本。**许可边界更清楚**：我们使用的是公开的方法论与文风描述，没有拿谁的语料去训练。代价也要认：上限低于微调——"神似"靠写法而非模型记忆。
+
+### 51 个 skill 的质量怎么保证一致？
+
+靠"规范 + 构建 + 校验"三层，而不是逐个目检。**规范**是 [SKILL_SPEC.md](SKILL_SPEC.md)：每个 skill 固定 14 个文件，`references/` 下 01–08 编号文件各司其职，其中 07（正向 checklist）与 08（反向反例库）组成正反双校验。**构建**是 `tools/skill-gen/build.py`：51 个目录共用一套渲染逻辑，结构天然一致，手改文件会在下次构建时被覆盖。**校验**三道，全部在 CI 里跑：`lint-skills.yml` 查结构与 frontmatter，`scripts/check_registry.py` 查索引与目录是否漂移，`scripts/audit_skills.py` 按 SPEC 全量体检并逐条列出不合规。三道都过才算"已发布"；已发布里仍存在的缺口照实写在体检报告里。
+
 ### 安装后如何触发？
 
 安装后无需手动注册。Agent 会根据 SKILL.md 中 `description` 字段的触发词自动激活。例如说"用芒格的框架分析一下"，Agent 即加载 charlie-munger skill。
@@ -18,28 +30,36 @@
 
 ### 完整版和精简版有什么区别？该装哪个？
 
-| 变体 | 大小 | 适用场景 |
+| 变体 | 体积（实测） | 适用场景 |
 |------|------|---------|
-| 完整版（SKILL.md） | 完整 | 深度分析，全量框架 |
-| 精简版（SKILL-condensed.md） | ~5KB | token 预算有限，快速调用 |
+| 完整版（SKILL.md） | 正文 1440–2289 字符 | 深度分析，全量框架 |
+| 精简版（SKILL-condensed.md） | 1754–2963 B（51 份全量统计） | token 预算有限，快速调用 |
 
-建议默认装完整版。token 紧张时切换精简版：将 `SKILL-condensed.md` 重命名为 `SKILL.md` 即可。
+建议默认装完整版。token 紧张时切换精简版：将 `SKILL-condensed.md` 重命名为 `SKILL.md` 即可。上表区间可用 `python scripts/audit_skills.py | grep -E "ST-06|ST-11"` 复现，不是估的。
 
 ### 支持哪些平台？
 
-| 平台 | 安装路径 |
+与 README 的[兼容性](README.md#兼容性)表同源，共 7 行（含末尾的 agentskills.io 兜底行）。用户级路径：
+
+| 平台 | 用户级安装路径 |
 |------|---------|
 | WorkBuddy | `~/.workbuddy/skills/<name>/` |
-| Claude Code | `.claude/skills/<name>/` |
-| Cursor | `.cursor/skills/<name>/` |
+| Claude Code | `~/.claude/skills/<name>/` |
+| Cursor | `~/.cursor/skills/<name>/` |
 | OpenClaw | `~/.openclaw/skills/<name>/` |
-| Codex | `$CODEX_HOME/skills/` |
-| Trae | `.trae/skills/` |
-| 其他 agentskills.io 兼容平台 | 对应 skills 目录 |
+| Codex | `$CODEX_HOME/skills/<name>/` |
+| Trae | `~/.trae/skills/<name>/` |
+| 其他 agentskills.io 兼容平台 | 各平台文档指定的 skills 目录 |
+
+项目级路径（如 `.claude/skills/<name>/`）见该表。
 
 ### 如何使用智囊团组合？
 
-参见 [combos/](combos/) 目录。每个 combo 文件定义了多 skill 会诊的协作流程。在对话中说明需要多视角分析即可触发，如"用高善文和格林斯潘的框架一起分析"。
+两条路。**自动组阁**：运行 `python tools/skill-gen/assemble.py "你的问题"`，脚本按领域标签两级命中专家，再按宏观定调 / 中观筛选 / 微观决策分配席位（上限 3 / 2 / 2，列席不超过 6 人），并列出建议的数据清单；加 `--json` 便于程序消费。**手工指定**：在对话里直接说"用高善文和格林斯潘的框架一起分析"，或参见 [combos/](combos/) 目录下已写好的组合方案。规则细节见 [docs/combination-guide.md](docs/combination-guide.md)。
+
+### 组合使用时多个专家结论冲突怎么办？
+
+冲突是预期结果，不是故障——不同框架本来会给出不同结论，这正是圆桌的价值。处理固定三步：**先看分歧在哪一层**（宏观定调 / 中观筛选 / 微观决策），层次不同则本就不该互相否证；**再对齐数据与时点**，用的不是同一套数据就先统一数据；**最后看谁的前提更可证伪**，把双方成立条件写出来，而不是投票取平均。`combos/ROUNDTABLE.md` 里定了"候选收敛"规则：如果某位专家的结论依赖你无法验证的假设，它的权重就应该下调。落到输出上，要求写"分歧点 + 各自成立条件"，而不是只留一个平均过的结论。
 
 ## 贡献
 
