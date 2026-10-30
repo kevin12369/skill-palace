@@ -798,17 +798,21 @@ cp -r /tmp/skill-palace/skills/* <skills路径>/
 | OpenClaw | `~/.openclaw/skills/` | `your-project/.openclaw/skills/` |
 | Codex | `$CODEX_HOME/skills/` | — |
 | Trae | `~/.trae/skills/` | — |
+| 其他 agentskills.io 兼容平台 | 见各平台文档的 skills 目录 | — |
 
 ### 选择 SKILL 变体
 
-每个 skill 支持多个变体，按需选用。安装时将所需变体重命名为 `SKILL.md` 即可：
+每个 skill 支持多版本体例。安装时将所需变体重命名为 `SKILL.md` 即可。当前仓库实际提供完整版与精简版两种；专项版与英文版是规范预留的文件名约定，`SKILL_SPEC.md` 允许但未强制，本仓库尚未落地（见下表"现有实例"列，数字可由 `find` 直接数出）。
 
-| 变体 | 文件名 | 适用场景 |
-|------|--------|---------|
-| 完整版（默认） | `SKILL.md` | 深度分析，全量框架与文风 |
-| 精简版 | `SKILL-condensed.md` | token 预算有限，快速调用（~5KB） |
-| 专项版 | `SKILL-<topic>.md` | 特定领域专项（如 A 股 / 房地产） |
-| 英文版 | `SKILL.en.md` | 国际化场景 |
+| 变体 | 文件名 | 适用场景 | 现有实例 |
+|------|--------|---------|---------|
+| 完整版（默认） | `SKILL.md` | 深度分析，全量框架与文风 | 52 份（51 位专家 + `_template`） |
+| 精简版 | `SKILL-condensed.md` | token 预算有限，快速调用（实测 1.8–3.0 KB） | 52 份 |
+| 专项版 | `SKILL-<topic>.md` | 特定领域专项（如 A 股 / 房地产） | 0 份（规范预留，未使用） |
+| 英文版 | `SKILL.en.md` | 国际化场景 | 0 份（规范预留，未使用） |
+
+> 复核命令：`find skills -maxdepth 2 -name 'SKILL*.md' | sed 's|.*/||' | sort | uniq -c`
+> 当前输出为 `52 SKILL-condensed.md` 与 `52 SKILL.md` 两行，即上表前两行。
 
 ```bash
 # 示例：安装精简版（将变体重命名为 SKILL.md 即可）
