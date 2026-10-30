@@ -127,3 +127,19 @@ jobs:
           else:
               print("\nAll skills passed validation.")
           PYEOF
+
+  # 新增 job：registry 漂移校验（不改动上方 lint job 及其触发条件）
+  # 检查 registry/index.json、registry/roundtable-matrix.json 与 skills/ 三者是否同步，
+  # 差异精确到「哪个 skill 的哪个字段」，实现见 scripts/check_registry.py。
+  registry-drift:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Check registry drift
+        run: python scripts/check_registry.py
