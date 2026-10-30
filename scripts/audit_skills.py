@@ -480,7 +480,6 @@ def main() -> int:
     # 否则真正的结构性问题会被数量淹没。哪一条补齐了就从这里删掉，报告里的口径自动跟着变。
     DEBT_NOTES = {
         "EX-02": "示例正文不足 3 个",
-        "RF-01": "01-core-theories 理论块不足 5 个",
     }
     DEBT = set(DEBT_NOTES)
     bad_strict: dict[str, set[str]] = defaultdict(set)
