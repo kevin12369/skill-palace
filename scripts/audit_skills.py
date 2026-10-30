@@ -97,6 +97,7 @@ CHECKS: dict[str, tuple[str, str, str]] = {
     "EX-02": ("WARN", "§7 / §9 至少 3 个示例", "examples/ 示例正文 ≥3 个"),
     "EX-03": ("WARN", "§1 命名规则", "examples 文件名带两位数字前缀"),
     "EX-04": ("WARN", "§7", "示例含「输入」与「校准说明」"),
+    "EX-05": ("ERROR", "§7 / §9 质量检查", "示例正文结尾含「AI 生成声明」"),
     "PF-01": ("ERROR", "§6 PROFILE.md 规范 / §9", "PROFILE.md 五个必需区块齐全"),
     "CT-01": ("WARN", "§8 / §9 配套文件", "CITATION.cff 含 cff-version/title/authors/version/date-released"),
     "CL-01": ("WARN", "§8 / §9", "CHANGELOG.md 含已发布版本条目"),
@@ -302,6 +303,11 @@ def audit_one(slug: str, base: str, index_by_name: dict) -> None:
             lacking = [k for k in ("输入", "校准说明") if k not in t]
             if lacking:
                 add(slug, "EX-04", f"{f} 缺 " + "/".join(lacking), "含「输入」与「校准说明」")
+            # EX-05：示例正文是最像「真人观点 / 真实研报」的形态，必须自带 AI 生成声明。
+            # 只认文末 20 行内的声明，避免正文里顺嘴提一句「AI」也算数。
+            tail = "\n".join(t.rstrip().split("\n")[-20:])
+            if "AI 生成声明" not in tail:
+                add(slug, "EX-05", f"{f} 文末无 AI 生成声明", "文末 20 行内出现「AI 生成声明」")
 
     # ---------- PF PROFILE ----------
     if profile_text:

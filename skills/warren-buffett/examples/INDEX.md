@@ -8,9 +8,9 @@
 
 | 文件 | 大小 |
 |------|------|
-| [example-01-moat.md](example-01-moat.md) | 3129 B |
-| [example-02-intrinsic-value.md](example-02-intrinsic-value.md) | 2964 B |
-| [example-03-capital-allocation.md](example-03-capital-allocation.md) | 2828 B |
+| [example-01-moat.md](example-01-moat.md) | 3387 B |
+| [example-02-intrinsic-value.md](example-02-intrinsic-value.md) | 3222 B |
+| [example-03-capital-allocation.md](example-03-capital-allocation.md) | 3086 B |
 
 ## 选题参考（历史规划；某条是否已落地，以上表实际文件为准）
 
@@ -30,4 +30,6 @@
 
 - **人类用户**：浏览本目录了解 skill 的输出效果
 - **Agent**：运行时不加载本目录（仅供参考），按 SKILL.md 和 references/ 执行
-- **贡献者**：新增示例文件（命名 `example-NN-<topic>.md`）后重跑 `build.py`，本索引会自动列出
+- **贡献者**：新增示例文件（命名 `example-NN-<topic>.md`）后重跑 `build.py`，本索引会自动列出。
+  示例正文结尾必须写一段 `> **AI 生成声明**：……`（AI 撰写、经人工校对、不代表本人观点、
+  不构成投资建议），缺了 `scripts/audit_skills.py` 的 EX-05 会报错，见 `SKILL_SPEC.md` §7。
