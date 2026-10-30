@@ -464,6 +464,11 @@ def render_ref08(p):
 
 # ---------- registry & matrix ----------
 
+# 仓库版本口径（单一来源）。index.json 与 roundtable-matrix.json 统一使用三段式，
+# 避免此前 index 写 "2.5.0"、matrix 写 "2.5" 的格式分裂。发版只改这两行。
+REPO_VERSION = "2.7.0"
+REPO_UPDATED = "2026-10-30"
+
 # 单一来源的 slug → 短代码 映射。slug（如 gao-shanwen）才是唯一主键；
 # 短代码（如 GS）仅为「展示别名」，集中在此处维护，避免跨 4 个文件手动同步。
 # 新增人物时在此追加一行即可；build 会自动做冲突检测。
@@ -559,8 +564,8 @@ def update_registry():
     # 回填空 code 字段：即便已存在的 skill 也确保带有短代码别名
     for s in d["skills"]:
         s["code"] = CODE_MAP.get(s["name"], "")
-    d["version"] = "2.5.0"
-    d["updated"] = "2026-08-06"
+    d["version"] = REPO_VERSION
+    d["updated"] = REPO_UPDATED
     json.dump(d, open(REG, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     return added, len(d["skills"])
 
@@ -583,7 +588,7 @@ def rebuild_matrix():
         for t in s["roundtable_tags"]:
             tag_index.setdefault(t, []).append(slug)
         stages[stage_map[slug]].append(slug)
-    matrix = {"version":"2.5","updated":"2026-08-06","alias_map":code_map,
+    matrix = {"version": REPO_VERSION, "updated": REPO_UPDATED, "alias_map": code_map,
               "stages":stages,"experts":experts,"tag_index":tag_index}
     json.dump(matrix, open(MAT, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     return len(d["skills"]), len(experts), len(tag_index)
@@ -614,7 +619,7 @@ def main():
     added, reg_total = update_registry()
     m_total, m_exp, m_tag = rebuild_matrix()
     print(f"\n生成 skill: {total}")
-    print(f"registry: +{added} → 共 {reg_total} 人 (v2.5.0)")
+    print(f"registry: +{added} → 共 {reg_total} 人 (v{REPO_VERSION})")
     print(f"matrix: {m_exp} 专家 / {m_tag} 标签")
 
 if __name__ == "__main__":
