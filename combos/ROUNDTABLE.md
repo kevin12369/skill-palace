@@ -8,7 +8,7 @@
 
 **标识符约定**：每位专家以 **slug**（如 `gao-shanwen` / `junshan-jushi`）为**唯一主键**；圆括号里的 2 字母**短代码**（如 GS / JS）仅为**展示别名**，集中定义在 `tools/skill-gen/build.py` 的 `CODE_MAP`，由构建脚本统一生成并做**冲突检测**——新增人物无需在多处手动同步代码，也绝不会再出现"西蒙斯被迫用 JM 因 JS 已被君山居士占用"这类静默冲突。
 
-**低 token 原则**：组阁时优先读本节"快速组阁速查" + `registry/roundtable-matrix.json`，**不要**逐个读取 49 份完整 SKILL.md。仅在确定席位后，才加载被选中专家的 SKILL.md（其路径见 matrix 的 `path` 字段）。
+**低 token 原则**：组阁时优先读本节"快速组阁速查" + `registry/roundtable-matrix.json`，**不要**逐个读取 51 份完整 SKILL.md。仅在确定席位后，才加载被选中专家的 SKILL.md（其路径见 matrix 的 `path` 字段）。
 
 ---
 
@@ -288,4 +288,4 @@
 - `experts`：slug → {code, person, role, tags, stage, path}
 - `tag_index`：标签 → 候选 slug 列表（332 个标签，供程序化命中）
 
-agent 可据此在单次读取内完成"解析 → 组阁 → 排序"，无需遍历 49 份 SKILL.md。
+agent 可据此在单次读取内完成"解析 → 组阁 → 排序"，无需遍历 51 份 SKILL.md。
