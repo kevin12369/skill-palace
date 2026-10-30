@@ -77,10 +77,11 @@ SKILL Palace 不是"人设聊天机器人"。它走的是相反路线：**不追
 | 威廉·欧奈尔 | CAN SLIM选股与突破交易 | CAN SLIM七字母系统、杯柄形态、带量突破、相对强度(RS)、止损铁律、龙头股集中、市场方向(M) | 系统化选股、图表与技术结合、规则至上、纪律严格 | ✅ 已发布 | → [安装说明](#快速开始) |
 
 > **注①**：表中只有高善文这一行给出独立仓库地址，其余 50 位都指向本仓库的[快速开始](#快速开始)。
-> 原因：`kevin12369/gaoshanwen-skill` 是这条 SKILL 的首发上游（`git ls-remote` 可访问，HEAD `401e4fc`），
-> 提供本仓库未包含的多版本文件；本仓库内的 [`skills/gao-shanwen/`](skills/gao-shanwen) 与其他 50 位一样
-> 由 `tools/skill-gen/build.py` 渲染生成，框架与文风内容一致。**两者择一安装即可，不要同时装**，
-> 否则同一个 skill 名会在 skills 目录里互相覆盖。
+> 原因：`kevin12369/gaoshanwen-skill` 是这条 SKILL 的单点前身，提供本仓库未包含的
+> `SKILL-a-share.md` / `SKILL-real-estate.md` / `SKILL.en.md` 三个变体与 13 篇示例正文。
+> 本仓库内的 [`skills/gao-shanwen/`](skills/gao-shanwen) 与其他 50 位一样由
+> `tools/skill-gen/build.py` 渲染生成，框架与文风内容一致。**两者择一安装即可，不要同时装**。
+> 完整分工与选型见[两个仓库的关系](#两个仓库的关系)。
 
 ---
 
@@ -779,6 +780,28 @@ SKILL Palace 不是"预设组合"，而是"按需组阁"。你提出一个问题
 ---
 
 ## 快速开始
+
+### 两个仓库的关系
+
+本仓库旁边还有一个单点仓库 [`kevin12369/gaoshanwen-skill`](https://github.com/kevin12369/gaoshanwen-skill)。
+一句话分工：**它是高善文这一条 SKILL 的单点前身（单 skill 但工程更深），本仓库是含 51 个 SKILL 的库；
+库里 [`skills/gao-shanwen/`](skills/gao-shanwen) 是同一套框架按本库 14 文件标准重新渲染的版本**。
+
+| | `gaoshanwen-skill`（单点前身） | 本仓库 `skills/gao-shanwen/`（库内版本） |
+|---|---|---|
+| 范围 | 1 个 skill | 51 个 skill |
+| 跟踪文件数 | 56 | 17 |
+| `references/` | 8 个编号文件 | 8 个编号文件（同名同体系） |
+| 示例正文 | 13 篇（`01-…`–`13-…`） | 3 篇（`example-0N-…`） |
+| 额外 SKILL 变体 | `SKILL-a-share.md`、`SKILL-real-estate.md`、`SKILL.en.md` | 无（本库变体口径见[选择 SKILL 变体](#选择-skill-变体)） |
+| `PROFILE.md` | 无 | 有（本库 14 文件标准要求） |
+| 自检与治理 | `scripts/validate-skill.py`（53 项）、`tests/` | 由 `tools/skill-gen/` 统一渲染，无单点脚本 |
+| 发布节奏 | 独立 tag `v1.0.0`–`v1.4.3` | 随本库 tag 走（`v2.x`） |
+
+**怎么选**：只要高善文一个人的深度用法（含 A 股版 / 房地产版 / 英文版）→ 装 `gaoshanwen-skill`；
+要一批人物、还要圆桌组阁 → 装本仓库。**两者择一，不要同时装**，否则同名 skill 会在 skills 目录里互相覆盖。
+
+> 上表数字都可用 `git ls-files | wc -l`、`ls references`、`ls examples` 在两个仓库里直接数出。
 
 ### 安装
 
