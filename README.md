@@ -4,7 +4,7 @@
 
 ![License](https://img.shields.io/badge/license-MIT-blue)
 ![Skills](https://img.shields.io/badge/skills-51%20released-green)
-![Platform](https://img.shields.io/badge/platform-WorkBuddy%20%7C%20Claude%20Code-purple)
+![Platform](https://img.shields.io/badge/platform-WorkBuddy%20%7C%20Claude%20Code%20%7C%20%2B5-purple)
 
 ---
 
@@ -787,7 +787,7 @@ SKILL Palace 不是"预设组合"，而是"按需组阁"。你提出一个问题
 git clone https://github.com/kevin12369/skill-palace /tmp/skill-palace
 
 # 2. 复制你需要的 skill 到对应平台的 skills 目录
-#    以 charlie-munger 为例，路径详见下方各平台对照表
+#    以 charlie-munger 为例，路径见文末「兼容性」表
 cp -r /tmp/skill-palace/skills/charlie-munger <skills路径>/charlie-munger
 
 # 3. 安装全部 skill
@@ -796,15 +796,8 @@ cp -r /tmp/skill-palace/skills/* <skills路径>/
 
 ### 各平台 skills 路径
 
-| 平台 | 用户级（推荐，全局可用） | 项目级（随项目走） |
-|------|------------------------|-------------------|
-| WorkBuddy | `~/.workbuddy/skills/` | `your-project/.workbuddy/skills/` |
-| Claude Code | `~/.claude/skills/` | `your-project/.claude/skills/` |
-| Cursor | `~/.cursor/skills/` | `your-project/.cursor/skills/` |
-| OpenClaw | `~/.openclaw/skills/` | `your-project/.openclaw/skills/` |
-| Codex | `$CODEX_HOME/skills/` | — |
-| Trae | `~/.trae/skills/` | — |
-| 其他 agentskills.io 兼容平台 | 见各平台文档的 skills 目录 | — |
+各平台的用户级 / 项目级 skills 目录见文末[兼容性](#兼容性)表（7 行，与本文件其余平台说法同源）。
+下文所说的 `<skills路径>` 即该表中对应平台的目录。
 
 ### 选择 SKILL 变体
 
@@ -848,15 +841,19 @@ cp /tmp/skill-palace/skills/charlie-munger/SKILL-condensed.md <skills路径>/cha
 
 ## 兼容性
 
-| 平台 | 安装路径 | 状态 |
-|------|---------|------|
-| WorkBuddy | `~/.workbuddy/skills/<name>/` | ✅ 完全兼容 |
-| Claude Code | `.claude/skills/<name>/` | ✅ 兼容 |
-| Cursor | `.cursor/skills/<name>/` | ✅ 兼容 |
-| OpenClaw | `~/.openclaw/skills/<name>/` | ✅ 兼容 |
-| Codex | `$CODEX_HOME/skills/` | ✅ 兼容 |
-| Trae | `.trae/skills/` | ✅ 兼容 |
-| 其他 agentskills.io 兼容平台 | 对应 skills 目录 | ✅ 兼容 |
+全仓库只有这一张平台表；顶部徽章、[快速开始](#各平台-skills-路径)都以此为准（7 行，含末尾的兜底行）。
+
+| 平台 | 用户级（推荐，全局可用） | 项目级（随项目走） | 状态 |
+|------|------------------------|-------------------|------|
+| WorkBuddy | `~/.workbuddy/skills/<name>/` | `your-project/.workbuddy/skills/<name>/` | ✅ 完全兼容 |
+| Claude Code | `~/.claude/skills/<name>/` | `your-project/.claude/skills/<name>/` | ✅ 兼容 |
+| Cursor | `~/.cursor/skills/<name>/` | `your-project/.cursor/skills/<name>/` | ✅ 兼容 |
+| OpenClaw | `~/.openclaw/skills/<name>/` | `your-project/.openclaw/skills/<name>/` | ✅ 兼容 |
+| Codex | `$CODEX_HOME/skills/<name>/` | — | ✅ 兼容 |
+| Trae | `~/.trae/skills/<name>/` | — | ✅ 兼容 |
+| 其他 agentskills.io 兼容平台 | 各平台文档指定的 skills 目录 | — | ✅ 兼容 |
+
+> 复核命令：`sed -n '/^## 兼容性/,/^---/p' README.md | grep -c '^| '` → `8`（1 行表头 + 7 个平台行；分隔行以 `|---` 开头，不计入）。
 
 ---
 
