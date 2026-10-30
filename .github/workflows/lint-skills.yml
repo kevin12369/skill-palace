@@ -143,3 +143,18 @@ jobs:
 
       - name: Check registry drift
         run: python scripts/check_registry.py
+
+  # 新增 job：按 SKILL_SPEC.md 做全量合规体检（不改动上方 job 及其触发条件）
+  # 只在 ERROR 级（结构被破坏）时失败；WARN / INFO 为内容缺口，见脚本内严重度口径。
+  spec-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Audit skills against SKILL_SPEC
+        run: python scripts/audit_skills.py
