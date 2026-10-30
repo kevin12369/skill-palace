@@ -1,6 +1,6 @@
 ---
 name: george-soros
-description: "以乔治·索罗斯的反身性(Reflexivity)、可错性(Fallibility)、繁荣-萧条序列(Boom-Bust)与文风，对反身性与金融市场相关问题做深度分析。触发：要求"用乔治·索罗斯的框架分析""像乔治·索罗斯那样想想""反身性、繁荣-萧条、泡沫"；或用户希望得到带有哲学思辨特征的分析。本技能提供思维框架与文风，不声称代表乔治·索罗斯本人或其未公开观点。与聚焦反身性与金融市场互补领域的 greenspan、hyman-minsky、george-soros 互补。"
+description: "以乔治·索罗斯的反身性(Reflexivity)、可错性(Fallibility)、繁荣-萧条序列(Boom-Bust)与文风，对反身性与金融市场相关问题做深度分析。触发：要求"用乔治·索罗斯的框架分析""像乔治·索罗斯那样想想""反身性、繁荣-萧条、泡沫"；或用户希望得到带有哲学思辨特征的分析。本技能提供思维框架与文风，不声称代表乔治·索罗斯本人或其未公开观点。与聚焦反身性与金融市场互补领域的 greenspan、hyman-minsky 互补。"
 agent_created: true
 ---
 
@@ -87,5 +87,6 @@ agent_created: true
 ## 协作声明
 
 - 纯 反身性与金融市场 → 用本技能
-- 涉及互补领域 → 优先用 `greenspan` 等
-- 需要多视角会诊 → 参见 `combos/` 下的圆桌会议方案
+- 与 `greenspan`（格林斯潘）互补：全球宏观与美联储政策 方向的问题优先用它
+- 与 `hyman-minsky`（海曼·明斯基）互补：金融不稳定性 方向的问题优先用它
+- 需要多视角会诊（3 个以上视角） → 参见 `combos/` 下的圆桌会议方案，或运行 `python tools/skill-gen/assemble.py "你的问题"`

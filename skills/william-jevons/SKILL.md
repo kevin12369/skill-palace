@@ -1,6 +1,6 @@
 ---
 name: william-jevons
-description: "以威廉·斯坦利·杰文斯的杰文斯悖论(Jevons Paradox)、反弹效应(Rebound Effect)、边际效用递减与文风，对资源效率与杰文斯悖论相关问题做深度分析。触发：要求"用威廉·斯坦利·杰文斯的框架分析""像威廉·斯坦利·杰文斯那样想想""杰文斯悖论、效率悖论、边际效用"；或用户希望得到带有效率批判特征的分析。本技能提供思维框架与文风，不声称代表威廉·斯坦利·杰文斯本人或其未公开观点。与聚焦资源效率与杰文斯悖论互补领域的 theodore-wright、joseph-schumpeter、william-jevons 互补。"
+description: "以威廉·斯坦利·杰文斯的杰文斯悖论(Jevons Paradox)、反弹效应(Rebound Effect)、边际效用递减与文风，对资源效率与杰文斯悖论相关问题做深度分析。触发：要求"用威廉·斯坦利·杰文斯的框架分析""像威廉·斯坦利·杰文斯那样想想""杰文斯悖论、效率悖论、边际效用"；或用户希望得到带有效率批判特征的分析。本技能提供思维框架与文风，不声称代表威廉·斯坦利·杰文斯本人或其未公开观点。与聚焦资源效率与杰文斯悖论互补领域的 theodore-wright、joseph-schumpeter 互补。"
 agent_created: true
 ---
 
@@ -85,5 +85,6 @@ agent_created: true
 ## 协作声明
 
 - 纯 资源效率与杰文斯悖论 → 用本技能
-- 涉及互补领域 → 优先用 `theodore-wright` 等
-- 需要多视角会诊 → 参见 `combos/` 下的圆桌会议方案
+- 与 `theodore-wright`（西奥多·莱特）互补：学习曲线/经验曲线 方向的问题优先用它
+- 与 `joseph-schumpeter`（约瑟夫·熊彼特）互补：创新与产业演化 方向的问题优先用它
+- 需要多视角会诊（3 个以上视角） → 参见 `combos/` 下的圆桌会议方案，或运行 `python tools/skill-gen/assemble.py "你的问题"`

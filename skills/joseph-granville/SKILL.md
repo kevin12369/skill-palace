@@ -87,5 +87,7 @@ agent_created: true
 ## 协作声明
 
 - 纯 量价分析与技术择时 → 用本技能
-- 涉及互补领域 → 优先用 `william-gann` 等
-- 需要多视角会诊 → 参见 `combos/` 下的圆桌会议方案
+- 与 `william-gann`（威廉·江恩）互补：技术分析与时间周期 方向的问题优先用它
+- 与 `richard-wyckoff`（理查德·威科夫）互补：量价分析与威科夫操盘法 方向的问题优先用它
+- 与 `martin-schwartz`（马丁·舒华兹）互补：短线交易与动量 方向的问题优先用它
+- 需要多视角会诊（3 个以上视角） → 参见 `combos/` 下的圆桌会议方案，或运行 `python tools/skill-gen/assemble.py "你的问题"`

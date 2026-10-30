@@ -1,6 +1,6 @@
 ---
 name: philip-fisher
-description: "以菲利普·费雪(小)的15点清单(Scuttlebutt Method)、闲聊调研(Scuttlebutt)、管理层质量评估与文风，对成长股投资与定性研究相关问题做深度分析。触发：要求"用菲利普·费雪(小)的框架分析""像菲利普·费雪(小)那样想想""成长股、scuttlebutt、15点清单"；或用户希望得到带有定性深挖特征的分析。本技能提供思维框架与文风，不声称代表菲利普·费雪(小)本人或其未公开观点。与聚焦成长股投资与定性研究互补领域的 warren-buffett、philip-fisher、peter-lynch 互补。"
+description: "以菲利普·费雪(小)的15点清单(Scuttlebutt Method)、闲聊调研(Scuttlebutt)、管理层质量评估与文风，对成长股投资与定性研究相关问题做深度分析。触发：要求"用菲利普·费雪(小)的框架分析""像菲利普·费雪(小)那样想想""成长股、scuttlebutt、15点清单"；或用户希望得到带有定性深挖特征的分析。本技能提供思维框架与文风，不声称代表菲利普·费雪(小)本人或其未公开观点。与聚焦成长股投资与定性研究互补领域的 warren-buffett、peter-lynch 互补。"
 agent_created: true
 ---
 
@@ -87,5 +87,6 @@ agent_created: true
 ## 协作声明
 
 - 纯 成长股投资与定性研究 → 用本技能
-- 涉及互补领域 → 优先用 `warren-buffett` 等
-- 需要多视角会诊 → 参见 `combos/` 下的圆桌会议方案
+- 与 `warren-buffett`（沃伦·巴菲特）互补：价值投资与企业评估 方向的问题优先用它
+- 与 `peter-lynch`（彼得·林奇）互补：成长股投资 方向的问题优先用它
+- 需要多视角会诊（3 个以上视角） → 参见 `combos/` 下的圆桌会议方案，或运行 `python tools/skill-gen/assemble.py "你的问题"`

@@ -8,6 +8,10 @@ SKILLS = os.path.join(ROOT, "skills")
 REG = os.path.join(ROOT, "registry", "index.json")
 MAT = os.path.join(ROOT, "registry", "roundtable-matrix.json")
 
+# slug → 人物条目。协作声明、示例正文等需要引用「对方是谁」的地方都用它，
+# 保证一处改名全库同步，不在模板里手写第二次。
+PERSON_BY_SLUG = {p["name"]: p for p in PEOPLE}
+
 def w(path, text):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
@@ -106,8 +110,7 @@ agent_created: true
 ## 协作声明
 
 - 纯 {p['domain_cn']} → 用本技能
-- 涉及互补领域 → 优先用 `{p['complements'][0]}` 等
-- 需要多视角会诊 → 参见 `combos/` 下的圆桌会议方案
+{collab_block(p)}- 需要多视角会诊（3 个以上视角） → 参见 `combos/` 下的圆桌会议方案，或运行 `python tools/skill-gen/assemble.py "你的问题"`
 {ethics_block(p)}"""
 
 def render_condensed(p):
@@ -208,6 +211,20 @@ def sources_line(p):
     if len(src) == 1:
         return f"- **事实依据**：{src[0]}\n"
     return "- **事实依据**：\n" + "".join(f"  - {s}\n" for s in src)
+
+
+def collab_block(p):
+    """协作声明：逐条点名 complements 里的每个 skill（slug + 中文名 + 对方领域）。
+    模板化的「涉及互补领域 → 优先用某某等」等于没说，读的人不知道到底能找谁。"""
+    lines = []
+    for c in p.get("complements") or []:
+        other = PERSON_BY_SLUG.get(c)
+        if other:
+            lines.append(
+                f"- 与 `{c}`（{other['person']}）互补：{other['domain_cn']} 方向的问题优先用它")
+        else:
+            lines.append(f"- 与 `{c}` 互补：对方主领域的问题优先用它")
+    return "".join(l + "\n" for l in lines)
 
 
 def render_profile(p):
@@ -633,15 +650,23 @@ def update_registry():
             "complements": p["complements"], "path": f"skills/{p['name']}"
         })
         added += 1
-    # 回填 code / living / died / sources：即便已存在的 skill 也确保字段与 people.py 同步
-    people_by_slug = {p["name"]: p for p in PEOPLE}
+    # 回填人物衍生字段：registry/index.json 是 people.py 的投影，唯一由人工维护的是
+    # status（发布状态）。其余字段全部按 people.py 重写一遍，避免「改了 people.py 却忘了
+    # 同步索引」——这类漂移曾经让 7 个 skill 的 complements 与 people.py 对不上。
+    sync_keys = ("person", "domain", "domain_cn", "region", "frameworks",
+                 "style_keywords", "roundtable_role", "roundtable_tags",
+                 "complements", "path")
     for s in d["skills"]:
         s["code"] = CODE_MAP.get(s["name"], "")
-        p = people_by_slug.get(s["name"])
-        if p:
-            s["living"] = p.get("living")
-            s["died"] = p.get("died")
-            s["sources"] = p.get("sources") or []
+        p = PERSON_BY_SLUG.get(s["name"])
+        if not p:
+            continue
+        for k in sync_keys:
+            s[k] = p.get(k)
+        s["living"] = p.get("living")
+        s["died"] = p.get("died")
+        s["sources"] = p.get("sources") or []
+        s["path"] = f"skills/{p['name']}"
     d["version"] = REPO_VERSION
     d["updated"] = REPO_UPDATED
     json.dump(d, open(REG, "w", encoding="utf-8"), ensure_ascii=False, indent=2)

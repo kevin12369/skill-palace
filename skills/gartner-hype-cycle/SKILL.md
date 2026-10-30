@@ -85,5 +85,7 @@ agent_created: true
 ## 协作声明
 
 - 纯 技术采纳与成熟度 → 用本技能
-- 涉及互补领域 → 优先用 `carlota-perez` 等
-- 需要多视角会诊 → 参见 `combos/` 下的圆桌会议方案
+- 与 `carlota-perez`（卡洛塔·佩雷斯）互补：技术周期与范式转型 方向的问题优先用它
+- 与 `theodore-wright`（西奥多·莱特）互补：学习曲线/经验曲线 方向的问题优先用它
+- 与 `joseph-schumpeter`（约瑟夫·熊彼特）互补：创新与产业演化 方向的问题优先用它
+- 需要多视角会诊（3 个以上视角） → 参见 `combos/` 下的圆桌会议方案，或运行 `python tools/skill-gen/assemble.py "你的问题"`

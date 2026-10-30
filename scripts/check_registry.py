@@ -365,6 +365,33 @@ def main() -> int:
         if len(set(v)) != len(v):
             add("ERROR", "R20", nm, "sources 含重复项")
 
+    # ---------- R21 registry 与 people.py 字段一致 ----------
+    # 这一条防的是最隐蔽的一类漂移：people.py 改了、build.py 却只回填了部分字段，
+    # 索引看起来「有内容」但已经是旧的。历史案例：7 个 skill 的 complements 与
+    # people.py 不一致，而它们各自的 complements 里还把自己列了进去。
+    sys.path.insert(0, os.path.join(ROOT, "tools", "skill-gen"))
+    try:
+        from people import PEOPLE as _PEOPLE  # noqa: PLC0415
+    except Exception as exc:  # noqa: BLE001
+        add("INFO", "R21", "tools/skill-gen/people.py",
+            f"无法导入 people.py，跳过投影一致性校验（{type(exc).__name__}: {exc}）")
+    else:
+        proj = {p["name"]: p for p in _PEOPLE}
+        mirror = ("person", "domain", "domain_cn", "region", "frameworks",
+                  "style_keywords", "roundtable_role", "roundtable_tags", "complements")
+        for nm, e in by_name.items():
+            p = proj.get(nm)
+            if not p:
+                continue
+            for k in mirror:
+                if e.get(k) != p.get(k):
+                    add("ERROR", "R21", nm,
+                        f"字段 {k} 与 people.py 不一致（索引 {e.get(k)!r} ／ people.py {p.get(k)!r}）")
+            if e.get("living") != p.get("living") or e.get("died") != p.get("died"):
+                add("ERROR", "R21", nm,
+                    f"living/died 与 people.py 不一致（索引 {e.get('living')!r}/{e.get('died')!r}"
+                    f" ／ people.py {p.get('living')!r}/{p.get('died')!r}）")
+
     # ---------- 输出 ----------
     errors = [p for p in problems if p[0] == "ERROR"]
     warns = [p for p in problems if p[0] == "WARN"]

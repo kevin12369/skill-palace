@@ -88,5 +88,7 @@ agent_created: true
 ## 协作声明
 
 - 纯 宏观对冲与利率汇率 → 用本技能
-- 涉及互补领域 → 优先用 `greenspan` 等
-- 需要多视角会诊 → 参见 `combos/` 下的圆桌会议方案
+- 与 `greenspan`（格林斯潘）互补：全球宏观与美联储政策 方向的问题优先用它
+- 与 `ben-bernanke`（本·伯南克）互补：货币政策与危机 方向的问题优先用它
+- 与 `howard-marks`（霍华德·马克斯）互补：周期与风险 方向的问题优先用它
+- 需要多视角会诊（3 个以上视角） → 参见 `combos/` 下的圆桌会议方案，或运行 `python tools/skill-gen/assemble.py "你的问题"`

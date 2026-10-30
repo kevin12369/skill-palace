@@ -23,7 +23,6 @@
 ## 互补关系
 
 - - 与 `carlota-perez` 互补：覆盖 学习曲线/经验曲线 视角的不同侧面
-- - 与 `theodore-wright` 互补：覆盖 学习曲线/经验曲线 视角的不同侧面
 - - 与 `gartner-hype-cycle` 互补：覆盖 学习曲线/经验曲线 视角的不同侧面
 
 > 完整的互补关系映射见 `registry/index.json` 的 `complements` 字段。

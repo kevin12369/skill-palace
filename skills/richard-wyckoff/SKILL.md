@@ -87,5 +87,7 @@ agent_created: true
 ## 协作声明
 
 - 纯 量价分析与威科夫操盘法 → 用本技能
-- 涉及互补领域 → 优先用 `joseph-granville` 等
-- 需要多视角会诊 → 参见 `combos/` 下的圆桌会议方案
+- 与 `joseph-granville`（约瑟夫·格伦维尔）互补：量价分析与技术择时 方向的问题优先用它
+- 与 `jesse-livermore`（杰西·利弗莫尔）互补：投机与市场心理 方向的问题优先用它
+- 与 `howard-marks`（霍华德·马克斯）互补：周期与风险 方向的问题优先用它
+- 需要多视角会诊（3 个以上视角） → 参见 `combos/` 下的圆桌会议方案，或运行 `python tools/skill-gen/assemble.py "你的问题"`

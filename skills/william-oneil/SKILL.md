@@ -91,5 +91,7 @@ agent_created: true
 ## 协作声明
 
 - 纯 CAN SLIM选股与成长股突破 → 用本技能
-- 涉及互补领域 → 优先用 `jesse-livermore` 等
-- 需要多视角会诊 → 参见 `combos/` 下的圆桌会议方案
+- 与 `jesse-livermore`（杰西·利弗莫尔）互补：投机与市场心理 方向的问题优先用它
+- 与 `philip-fisher`（菲利普·费雪(小)）互补：成长股投资与定性研究 方向的问题优先用它
+- 与 `peter-lynch`（彼得·林奇）互补：成长股投资 方向的问题优先用它
+- 需要多视角会诊（3 个以上视角） → 参见 `combos/` 下的圆桌会议方案，或运行 `python tools/skill-gen/assemble.py "你的问题"`

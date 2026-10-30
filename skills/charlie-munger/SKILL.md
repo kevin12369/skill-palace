@@ -90,5 +90,7 @@ agent_created: true
 ## 协作声明
 
 - 纯 微观决策与商业判断 → 用本技能
-- 涉及互补领域 → 优先用 `warren-buffett` 等
-- 需要多视角会诊 → 参见 `combos/` 下的圆桌会议方案
+- 与 `warren-buffett`（沃伦·巴菲特）互补：价值投资与企业评估 方向的问题优先用它
+- 与 `philip-fisher`（菲利普·费雪(小)）互补：成长股投资与定性研究 方向的问题优先用它
+- 与 `howard-marks`（霍华德·马克斯）互补：周期与风险 方向的问题优先用它
+- 需要多视角会诊（3 个以上视角） → 参见 `combos/` 下的圆桌会议方案，或运行 `python tools/skill-gen/assemble.py "你的问题"`

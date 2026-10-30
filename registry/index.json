@@ -7,20 +7,23 @@
     {
       "name": "gao-shanwen",
       "person": "高善文",
-      "domain": "macroeconomics",
-      "domain_cn": "宏观经济",
+      "domain": "china-macro",
+      "domain_cn": "中国宏观经济与资产重估",
       "region": "china",
       "status": "released",
       "frameworks": [
         "资产重估理论",
-        "河床水位比喻",
-        "刘易斯拐点",
-        "人口结构分析"
+        "河床与水位比喻",
+        "刘易斯拐点与人口结构",
+        "房地产长周期",
+        "资本回报率与劳动力供给",
+        "汇率均衡框架"
       ],
       "style_keywords": [
-        "隐喻化",
-        "方法论先行",
-        "长期视角"
+        "数据驱动",
+        "结构性叙事",
+        "比喻化解释",
+        "谨慎推断"
       ],
       "roundtable_role": "中国宏观背景提供者",
       "roundtable_tags": [
@@ -32,7 +35,9 @@
         "汇率"
       ],
       "complements": [
-        "greenspan"
+        "greenspan",
+        "hong-hao",
+        "ray-dalio"
       ],
       "path": "skills/gao-shanwen",
       "code": "GS",
@@ -46,23 +51,23 @@
     {
       "name": "greenspan",
       "person": "格林斯潘",
-      "domain": "macroeconomics",
-      "domain_cn": "全球宏观",
+      "domain": "fed-global-macro",
+      "domain_cn": "全球宏观与美联储政策",
       "region": "global",
       "status": "released",
       "frameworks": [
-        "Fedspeak",
-        "全球储蓄过剩",
-        "利率之谜",
-        "生产率奇迹",
-        "非理性繁荣",
-        "Greenspan Put"
+        "非理性繁荣(Irrational Exuberance)",
+        "美联储双重使命(通胀+就业)",
+        "风险管理范式vs规则导向",
+        "数据依赖的渐进主义",
+        "格林斯潘期权(Greenspan Put)",
+        "泡沫事后清理vs事前戳破争议"
       ],
       "style_keywords": [
-        "数据驱动",
-        "谨慎含蓄",
-        "多层语义",
-        "长期视角"
+        "审慎模糊",
+        "数据依赖",
+        "长句规避",
+        "'如果我听懂了你的问题'"
       ],
       "roundtable_role": "全球宏观背景提供者",
       "roundtable_tags": [
@@ -75,7 +80,9 @@
         "非理性繁荣"
       ],
       "complements": [
-        "gao-shanwen"
+        "gao-shanwen",
+        "ben-bernanke",
+        "ray-dalio"
       ],
       "path": "skills/greenspan",
       "code": "GP",
@@ -88,25 +95,28 @@
     {
       "name": "charlie-munger",
       "person": "查理·芒格",
-      "domain": "investment-decision",
-      "domain_cn": "投资决策",
+      "domain": "micro-decision",
+      "domain_cn": "微观决策与商业判断",
       "region": "global",
       "status": "released",
       "frameworks": [
+        "逆向思考(总是反过来想)",
+        "能力圈与硬Gate",
         "多元思维模型格栅",
-        "逆向思考",
-        "能力圈",
         "安全边际",
+        "二阶思维",
+        "机会成本",
+        "激励机制",
         "Lollapalooza效应",
         "人类误判心理学25条",
         "三筐分类法",
         "冲浪模型"
       ],
       "style_keywords": [
-        "犀利直白",
-        "逆向先行",
-        "警句式",
-        "承认无知"
+        "逆向直率",
+        "跨学科格栅",
+        "讽刺与格言",
+        "不拖泥带水"
       ],
       "roundtable_role": "首席逆向质疑者",
       "roundtable_tags": [
@@ -119,8 +129,9 @@
         "风险识别"
       ],
       "complements": [
-        "gao-shanwen",
-        "greenspan"
+        "warren-buffett",
+        "philip-fisher",
+        "howard-marks"
       ],
       "path": "skills/charlie-munger",
       "code": "CM",
@@ -132,29 +143,23 @@
       "name": "warren-buffett",
       "person": "沃伦·巴菲特",
       "domain": "value-investing",
-      "domain_cn": "价值投资",
+      "domain_cn": "价值投资与企业评估",
       "region": "global",
       "status": "released",
       "frameworks": [
+        "护城河(Moat)",
+        "安全边际(Margin of Safety)",
+        "宽护城河+优秀管理层+合理价格",
+        "内在价值vs市场价格",
         "能力圈",
-        "安全边际",
-        "市场先生",
-        "经济护城河",
-        "所有者盈余",
-        "资本配置",
-        "内在价值",
-        "长期复利",
-        "管理层质量",
-        "集中投资",
-        "通胀绦虫",
-        "20孔打卡"
+        "资本配置纪律",
+        "长期主义"
       ],
       "style_keywords": [
-        "朴实平易",
-        "故事化",
-        "自嘲式幽默",
-        "长期视角",
-        "股东信语体"
+        "耐心常识",
+        "护城河为王",
+        "讨厌投机",
+        "管理层品格优先"
       ],
       "roundtable_role": "估值与最终决策者",
       "roundtable_tags": [
@@ -168,7 +173,8 @@
       ],
       "complements": [
         "charlie-munger",
-        "greenspan"
+        "philip-fisher",
+        "howard-marks"
       ],
       "path": "skills/warren-buffett",
       "code": "WB",
@@ -182,24 +188,22 @@
     {
       "name": "carlota-perez",
       "person": "卡洛塔·佩雷斯",
-      "domain": "technology-cycles",
-      "domain_cn": "技术周期",
+      "domain": "tech-cycles",
+      "domain_cn": "技术周期与范式转型",
       "region": "global",
       "status": "released",
       "frameworks": [
         "技术-经济范式",
-        "大浪潮四阶段",
-        "金融资本vs生产资本",
-        "转折点",
-        "转型条件",
-        "范式判断"
+        "导入期vs展开期",
+        "金融资本与生产资本脱钩",
+        "大泡沫→转折点→黄金时代",
+        "技术革命的四阶段模型"
       ],
       "style_keywords": [
-        "结构性叙事",
-        "周期直觉",
-        "金融vs生产区分",
-        "历史类比",
-        "冷疏离"
+        "历史纵深",
+        "阶段对比",
+        "宏观叙事",
+        "系统性"
       ],
       "roundtable_role": "技术周期分析师",
       "roundtable_tags": [
@@ -213,8 +217,9 @@
         "转折点"
       ],
       "complements": [
+        "joseph-schumpeter",
         "kondratiev",
-        "george-soros"
+        "gartner-hype-cycle"
       ],
       "path": "skills/carlota-perez",
       "code": "CP",
@@ -225,23 +230,23 @@
     {
       "name": "kondratiev",
       "person": "康德拉季耶夫",
-      "domain": "technology-cycles",
-      "domain_cn": "经济长周期",
+      "domain": "long-wave",
+      "domain_cn": "长波/康波周期",
       "region": "global",
       "status": "released",
       "frameworks": [
-        "长波周期(K-Wave)",
-        "四阶段(春夏秋冬)",
-        "创新集群理论",
-        "价格-生产波",
-        "战争与革命周期论"
+        "康波周期(Kondratiev Wave)",
+        "50-60年长周期",
+        "春季(复苏)→夏季(繁荣)→秋季(滞胀)→冬季(萧条)",
+        "价格长波与创新集群",
+        "战争周期与康波",
+        "康波的全球递推"
       ],
       "style_keywords": [
-        "宏大历史叙事",
-        "数据驱动",
-        "结构性因果",
-        "谨慎不确定性",
-        "历史类比"
+        "超长周期视野",
+        "四季比喻",
+        "历史类比",
+        "周期嵌套"
       ],
       "roundtable_role": "长周期分析师",
       "roundtable_tags": [
@@ -255,6 +260,7 @@
         "地缘政治周期"
       ],
       "complements": [
+        "joseph-schumpeter",
         "carlota-perez"
       ],
       "path": "skills/kondratiev",
@@ -266,26 +272,23 @@
     {
       "name": "george-soros",
       "person": "乔治·索罗斯",
-      "domain": "macro-trading",
-      "domain_cn": "宏观对冲与反身性",
+      "domain": "reflexivity",
+      "domain_cn": "反身性与金融市场",
       "region": "global",
       "status": "released",
       "frameworks": [
-        "反身性",
-        "繁荣-萧条模型",
-        "可错性",
-        "三维诊断",
-        "试错投资法",
-        "政治-经济反身性",
-        "开放社会哲学"
+        "反身性(Reflexivity)",
+        "可错性(Fallibility)",
+        "繁荣-萧条序列(Boom-Bust)",
+        "主流偏见与正反馈",
+        "临界点与逆转",
+        "金融炼金术框架"
       ],
       "style_keywords": [
-        "哲学术语驱动",
-        "自我批判",
-        "宏大历史叙事",
-        "因果链拆解",
-        "警惕叙事陷阱",
-        "自传体风格"
+        "哲学思辨",
+        "反身性视角",
+        "攻击共识",
+        "叙事捕捉"
       ],
       "roundtable_role": "反身性理论家与泡沫剖析者",
       "roundtable_tags": [
@@ -299,8 +302,8 @@
         "金融炼金术"
       ],
       "complements": [
-        "carlota-perez",
-        "greenspan"
+        "greenspan",
+        "hyman-minsky"
       ],
       "path": "skills/george-soros",
       "code": "SZ",
@@ -311,25 +314,22 @@
     {
       "name": "irving-fisher",
       "person": "欧文·费雪(大)",
-      "domain": "macroeconomics",
-      "domain_cn": "货币经济学",
+      "domain": "debt-deflation",
+      "domain_cn": "债务通缩与货币理论",
       "region": "global",
       "status": "released",
       "frameworks": [
         "债务通缩理论",
-        "货币数量方程(MV=PT)",
-        "费雪方程",
-        "永久性高原",
-        "费雪分离定理",
-        "跨期选择理论",
-        "指数理论"
+        "费雪方程(MV=PT)",
+        "实际利率与名义利率区分",
+        "资产负债表衰退",
+        "过度负债的9步螺旋"
       ],
       "style_keywords": [
-        "数学化",
-        "因果链拆解",
-        "公式驱动",
-        "承认错误",
-        "学术化但通俗"
+        "理论严谨",
+        "数理清晰",
+        "通缩叙事",
+        "周期视角"
       ],
       "roundtable_role": "货币与债务周期理论家",
       "roundtable_tags": [
@@ -343,8 +343,8 @@
         "资产负债表衰退"
       ],
       "complements": [
-        "gao-shanwen",
-        "greenspan"
+        "hyman-minsky",
+        "ray-dalio"
       ],
       "path": "skills/irving-fisher",
       "code": "IF",
@@ -356,23 +356,22 @@
       "name": "philip-fisher",
       "person": "菲利普·费雪(小)",
       "domain": "growth-investing",
-      "domain_cn": "成长股投资",
+      "domain_cn": "成长股投资与定性研究",
       "region": "global",
       "status": "released",
       "frameworks": [
-        "闲聊法(Scuttlebutt)",
-        "15点选股清单",
-        "成长股投资哲学",
-        "长期持有",
+        "15点清单(Scuttlebutt Method)",
+        "闲聊调研(Scuttlebutt)",
         "管理层质量评估",
-        "集中投资与深度研究"
+        "研发能力与创新持续性",
+        "长期持有与集中投资",
+        "定性>定量"
       ],
       "style_keywords": [
-        "研究导向",
-        "定性优先",
-        "耐心",
-        "坚定自信",
-        "娓娓道来"
+        "定性深挖",
+        "管理层关注",
+        "长期耐心",
+        "成长至上"
       ],
       "roundtable_role": "成长股识别与管理层评估师",
       "roundtable_tags": [
@@ -387,7 +386,7 @@
       ],
       "complements": [
         "warren-buffett",
-        "charlie-munger"
+        "peter-lynch"
       ],
       "path": "skills/philip-fisher",
       "code": "PF",
@@ -399,23 +398,22 @@
       "name": "hyman-minsky",
       "person": "海曼·明斯基",
       "domain": "financial-instability",
-      "domain_cn": "金融不稳定",
+      "domain_cn": "金融不稳定性",
       "region": "global",
       "status": "released",
       "frameworks": [
         "金融不稳定假说",
-        "三种融资结构",
-        "明斯基时刻",
-        "大政府+大央行稳定器",
-        "二价格体系",
-        "最后雇主计划"
+        "三阶段融资分类(对冲/投机/庞氏)",
+        "明斯基时刻(Minsky Moment)",
+        "稳定性孕育不稳定性",
+        "最后贷款人角色",
+        "金融脆弱性累积"
       ],
       "style_keywords": [
-        "学术但犀利",
-        "机制解构",
-        "周期敏感",
-        "批判性",
-        "历史案例"
+        "反直觉洞察",
+        "周期警觉",
+        "系统视角",
+        "警示叙事"
       ],
       "roundtable_role": "金融不稳定分析师",
       "roundtable_tags": [
@@ -441,24 +439,24 @@
     {
       "name": "ray-dalio",
       "person": "瑞·达里奥",
-      "domain": "macro-cycles",
-      "domain_cn": "宏观周期与债务",
+      "domain": "debt-cycles",
+      "domain_cn": "债务周期与宏观配置",
       "region": "global",
       "status": "released",
       "frameworks": [
         "经济机器模型",
-        "长期债务周期与漂亮去杠杆",
-        "全天候投资组合",
-        "原则",
-        "债务危机模板",
-        "世界秩序与大国周期"
+        "长期债务周期与短期债务周期",
+        "去杠杆的三种方式(通胀/通缩/漂亮去杠杆)",
+        "全天候策略",
+        "生产率驱动长期增长",
+        "大国兴衰周期",
+        "原则化决策与彻底透明"
       ],
       "style_keywords": [
-        "系统化思维",
-        "极度理性",
-        "经济史类比",
-        "坦诚认错",
-        "原则驱动"
+        "模板化透明",
+        "因果机械论",
+        "原则驱动",
+        "历史计算机"
       ],
       "roundtable_role": "债务周期分析师与宏观配置师",
       "roundtable_tags": [
@@ -472,8 +470,9 @@
         "原则决策"
       ],
       "complements": [
-        "hyman-minsky",
-        "greenspan"
+        "gao-shanwen",
+        "greenspan",
+        "hyman-minsky"
       ],
       "path": "skills/ray-dalio",
       "code": "RD",
@@ -484,24 +483,23 @@
     {
       "name": "joseph-schumpeter",
       "person": "约瑟夫·熊彼特",
-      "domain": "innovation-economics",
-      "domain_cn": "创新经济学",
+      "domain": "innovation-cycles",
+      "domain_cn": "创新与产业演化",
       "region": "global",
       "status": "released",
       "frameworks": [
-        "创造性破坏",
-        "企业家创新",
-        "创新五形态",
-        "创新集群与长波",
-        "演化经济学",
-        "资本主义终局判断"
+        "创造性破坏(Creative Destruction)",
+        "企业家精神与新组合",
+        "创新集群与经济周期",
+        "产业突变",
+        "资本主义演化动力",
+        "技术创新vs资本积累"
       ],
       "style_keywords": [
-        "宏大历史叙事",
-        "比喻驱动",
-        "精英视角",
-        "反均衡思维",
-        "预言性"
+        "演化视角",
+        "宏观叙事",
+        "动态破坏",
+        "企业家驱动"
       ],
       "roundtable_role": "创新与产业演化理论家",
       "roundtable_tags": [
@@ -515,8 +513,9 @@
         "资本主义演化"
       ],
       "complements": [
+        "kondratiev",
         "carlota-perez",
-        "kondratiev"
+        "theodore-wright"
       ],
       "path": "skills/joseph-schumpeter",
       "code": "SP",
@@ -527,23 +526,23 @@
     {
       "name": "william-jevons",
       "person": "威廉·斯坦利·杰文斯",
-      "domain": "resource-tech",
-      "domain_cn": "资源与技术悖论",
+      "domain": "resource-efficiency",
+      "domain_cn": "资源效率与杰文斯悖论",
       "region": "global",
       "status": "released",
       "frameworks": [
-        "杰文斯悖论",
-        "边际效用理论",
-        "经济数学化",
-        "太阳黑子周期论",
-        "煤炭枯竭论"
+        "杰文斯悖论(Jevons Paradox)",
+        "反弹效应(Rebound Effect)",
+        "边际效用递减",
+        "效率提升→总消费增加",
+        "能源转型中的效率悖论",
+        "资源约束与技术进步"
       ],
       "style_keywords": [
-        "数学化逻辑",
-        "悖论感",
-        "长远视角",
-        "跨界思维",
-        "预言性"
+        "效率批判",
+        "反向洞察",
+        "数理严密",
+        "悖论叙事"
       ],
       "roundtable_role": "资源效率悖论分析师",
       "roundtable_tags": [
@@ -557,8 +556,8 @@
         "数学经济"
       ],
       "complements": [
-        "joseph-schumpeter",
-        "theodore-wright"
+        "theodore-wright",
+        "joseph-schumpeter"
       ],
       "path": "skills/william-jevons",
       "code": "JV",
@@ -569,23 +568,23 @@
     {
       "name": "theodore-wright",
       "person": "西奥多·莱特",
-      "domain": "resource-tech",
-      "domain_cn": "制造业成本曲线",
+      "domain": "learning-curve",
+      "domain_cn": "学习曲线/经验曲线",
       "region": "global",
       "status": "released",
       "frameworks": [
-        "莱特定律",
-        "学习曲线",
-        "经验曲线",
-        "技术成本预测",
-        "莱特定律与摩尔定律关系"
+        "莱特定律(Wright's Law)",
+        "每累计产量翻倍→单位成本下降固定百分比",
+        "学习曲线(Learning Curve)",
+        "经验曲线(Experience Curve)",
+        "干中学(Learning by Doing)",
+        "制造业规模化的成本预测"
       ],
       "style_keywords": [
-        "数据驱动",
-        "量化预测",
-        "实证主义",
-        "简单直接",
-        "制造业视角"
+        "数理精确",
+        "曲线外推",
+        "成本导向",
+        "制造优先"
       ],
       "roundtable_role": "技术成本曲线分析师",
       "roundtable_tags": [
@@ -601,7 +600,7 @@
       ],
       "complements": [
         "carlota-perez",
-        "william-jevons"
+        "gartner-hype-cycle"
       ],
       "path": "skills/theodore-wright",
       "code": "WR",
@@ -612,23 +611,21 @@
     {
       "name": "gartner-hype-cycle",
       "person": "加特纳Hype Cycle",
-      "domain": "technology-adoption",
-      "domain_cn": "技术采纳",
+      "domain": "tech-adoption",
+      "domain_cn": "技术采纳与成熟度",
       "region": "global",
       "status": "released",
       "frameworks": [
-        "技术成熟度曲线五阶段",
-        "炒作vs实质识别",
-        "技术采纳生命周期",
-        "优先级矩阵",
-        "多技术交叉定位"
+        "Hype Cycle五阶段模型",
+        "技术触发→期望膨胀→幻灭低谷→复苏爬升→生产力平台",
+        "与Geoffrey Moore跨越鸿沟的整合",
+        "炒作vs现实差距分析"
       ],
       "style_keywords": [
-        "结构化",
-        "冷静克制",
-        "实用主义",
-        "图表化思维",
-        "区分信号与噪音"
+        "定位导向",
+        "阶段对比",
+        "务实清醒",
+        "数据可视化"
       ],
       "roundtable_role": "技术成熟度定位分析师",
       "roundtable_tags": [
@@ -643,7 +640,8 @@
       ],
       "complements": [
         "carlota-perez",
-        "theodore-wright"
+        "theodore-wright",
+        "joseph-schumpeter"
       ],
       "path": "skills/gartner-hype-cycle",
       "code": "GT",

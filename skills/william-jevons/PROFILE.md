@@ -23,7 +23,6 @@
 
 - - 与 `theodore-wright` 互补：覆盖 资源效率与杰文斯悖论 视角的不同侧面
 - - 与 `joseph-schumpeter` 互补：覆盖 资源效率与杰文斯悖论 视角的不同侧面
-- - 与 `william-jevons` 互补：覆盖 资源效率与杰文斯悖论 视角的不同侧面
 
 > 完整的互补关系映射见 `registry/index.json` 的 `complements` 字段。
 

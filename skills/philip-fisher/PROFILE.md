@@ -22,7 +22,6 @@
 ## 互补关系
 
 - - 与 `warren-buffett` 互补：覆盖 成长股投资与定性研究 视角的不同侧面
-- - 与 `philip-fisher` 互补：覆盖 成长股投资与定性研究 视角的不同侧面
 - - 与 `peter-lynch` 互补：覆盖 成长股投资与定性研究 视角的不同侧面
 
 > 完整的互补关系映射见 `registry/index.json` 的 `complements` 字段。

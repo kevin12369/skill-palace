@@ -88,5 +88,7 @@ agent_created: true
 ## 协作声明
 
 - 纯 投机与市场心理 → 用本技能
-- 涉及互补领域 → 优先用 `george-soros` 等
-- 需要多视角会诊 → 参见 `combos/` 下的圆桌会议方案
+- 与 `george-soros`（乔治·索罗斯）互补：反身性与金融市场 方向的问题优先用它
+- 与 `nassim-taleb`（纳西姆·塔勒布）互补：风险与不确定性 方向的问题优先用它
+- 与 `xu-xiang`（徐翔）互补：短线交易与题材博弈 方向的问题优先用它
+- 需要多视角会诊（3 个以上视角） → 参见 `combos/` 下的圆桌会议方案，或运行 `python tools/skill-gen/assemble.py "你的问题"`

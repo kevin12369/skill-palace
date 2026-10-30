@@ -24,7 +24,6 @@
 
 - - 与 `greenspan` 互补：覆盖 反身性与金融市场 视角的不同侧面
 - - 与 `hyman-minsky` 互补：覆盖 反身性与金融市场 视角的不同侧面
-- - 与 `george-soros` 互补：覆盖 反身性与金融市场 视角的不同侧面
 
 > 完整的互补关系映射见 `registry/index.json` 的 `complements` 字段。
 

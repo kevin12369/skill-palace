@@ -24,7 +24,6 @@
 
 - - 与 `hyman-minsky` 互补：覆盖 债务通缩与货币理论 视角的不同侧面
 - - 与 `ray-dalio` 互补：覆盖 债务通缩与货币理论 视角的不同侧面
-- - 与 `irving-fisher` 互补：覆盖 债务通缩与货币理论 视角的不同侧面
 
 > 完整的互补关系映射见 `registry/index.json` 的 `complements` 字段。
 

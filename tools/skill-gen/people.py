@@ -3504,8 +3504,7 @@ PEOPLE = [
   ],
   "complements": [
     "greenspan",
-    "hyman-minsky",
-    "george-soros"
+    "hyman-minsky"
   ],
   "frameworks": [
     "反身性(Reflexivity)",
@@ -4554,7 +4553,6 @@ PEOPLE = [
   ],
   "complements": [
     "irving-fisher",
-    "hyman-minsky",
     "ray-dalio"
   ],
   "frameworks": [
@@ -4787,8 +4785,7 @@ PEOPLE = [
   ],
   "complements": [
     "hyman-minsky",
-    "ray-dalio",
-    "irving-fisher"
+    "ray-dalio"
   ],
   "frameworks": [
     "债务通缩理论",
@@ -6973,8 +6970,7 @@ PEOPLE = [
   ],
   "complements": [
     "joseph-schumpeter",
-    "carlota-perez",
-    "kondratiev"
+    "carlota-perez"
   ],
   "frameworks": [
     "康波周期(Kondratiev Wave)",
@@ -9421,7 +9417,6 @@ PEOPLE = [
   ],
   "complements": [
     "warren-buffett",
-    "philip-fisher",
     "peter-lynch"
   ],
   "frameworks": [
@@ -11350,7 +11345,6 @@ PEOPLE = [
   ],
   "complements": [
     "carlota-perez",
-    "theodore-wright",
     "gartner-hype-cycle"
   ],
   "frameworks": [
@@ -12130,8 +12124,7 @@ PEOPLE = [
   ],
   "complements": [
     "theodore-wright",
-    "joseph-schumpeter",
-    "william-jevons"
+    "joseph-schumpeter"
   ],
   "frameworks": [
     "杰文斯悖论(Jevons Paradox)",

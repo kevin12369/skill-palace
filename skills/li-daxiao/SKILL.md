@@ -87,5 +87,6 @@ agent_created: true
 ## 协作声明
 
 - 纯 A股市场判断 → 用本技能
-- 涉及互补领域 → 优先用 `gao-shanwen` 等
-- 需要多视角会诊 → 参见 `combos/` 下的圆桌会议方案
+- 与 `gao-shanwen`（高善文）互补：中国宏观经济与资产重估 方向的问题优先用它
+- 与 `qiu-guolu`（邱国鹭）互补：价值投资(中国) 方向的问题优先用它
+- 需要多视角会诊（3 个以上视角） → 参见 `combos/` 下的圆桌会议方案，或运行 `python tools/skill-gen/assemble.py "你的问题"`

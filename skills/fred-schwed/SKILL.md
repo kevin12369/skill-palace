@@ -87,5 +87,6 @@ agent_created: true
 ## 协作声明
 
 - 纯 市场文化与人性 → 用本技能
-- 涉及互补领域 → 优先用 `charlie-munger` 等
-- 需要多视角会诊 → 参见 `combos/` 下的圆桌会议方案
+- 与 `charlie-munger`（查理·芒格）互补：微观决策与商业判断 方向的问题优先用它
+- 与 `daniel-kahneman`（丹尼尔·卡尼曼）互补：行为经济学 方向的问题优先用它
+- 需要多视角会诊（3 个以上视角） → 参见 `combos/` 下的圆桌会议方案，或运行 `python tools/skill-gen/assemble.py "你的问题"`

@@ -88,5 +88,7 @@ agent_created: true
 ## 协作声明
 
 - 纯 中国技术分析与交易心理 → 用本技能
-- 涉及互补领域 → 优先用 `qin-guoan` 等
-- 需要多视角会诊 → 参见 `combos/` 下的圆桌会议方案
+- 与 `qin-guoan`（秦国安）互补：中国量价分析 方向的问题优先用它
+- 与 `xu-wenming`（徐文明）互补：中国技术分析短线 方向的问题优先用它
+- 与 `daniel-kahneman`（丹尼尔·卡尼曼）互补：行为经济学 方向的问题优先用它
+- 需要多视角会诊（3 个以上视角） → 参见 `combos/` 下的圆桌会议方案，或运行 `python tools/skill-gen/assemble.py "你的问题"`

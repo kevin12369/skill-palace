@@ -416,10 +416,11 @@ CLARIFICATIONS = [
      "建议补一条量化下限，例如「SKILL.md 正文 ≥3000 字符，references 单文件 ≥1500 字符」，"
      "并允许按人物资料丰沛度上下浮动 20%。"),
     ("§9「互补关系与 registry/index.json 一致」",
-     "条款要求一致，但没说「一致」是逐条列举还是允许概括。现状 49/51 的「协作声明」是模板化措辞"
-     "（如「涉及互补领域 → 优先用 `warren-buffett` 等」），并未逐条列出 complements 里的全部 slug。",
-     "建议明确为「协作声明必须点名 complements 中的每个 skill（可用 slug 或中文名）」，"
-     "或降级为「至少点名 1 个」。当前脚本按「点名」判定，全部记 WARN。"),
+     "条款要求「一致」但没说清是逐条列举还是允许概括。原始状态：49/51 的「协作声明」是模板化措辞"
+     "（「涉及互补领域 → 优先用 `warren-buffett` 等」），读者看不出到底能找谁。",
+     "已落地：按更严的读法（必须逐条点名）执行——`build.py` 的 collab_block() 遍历 complements，"
+     "逐个渲染成「与 `<slug>`（中文名）互补：<对方领域> 方向的问题优先用它」，51/51 全部点名。"
+     "建议 SPEC 把这句读法写死，免得以后又退回概括。"),
     ("§9「如人物已故，含致敬与伦理声明」",
      "「已故」需要一份权威名单，SPEC 没有提供。原始脚本只能靠「致敬/纪念/伦理」关键词猜，"
      "既会漏判（生前表述里也可能出现这些词）也会误判（漏写声明的人反而因别处出现关键词而通过）。",
@@ -475,7 +476,13 @@ def main() -> int:
     clean = [s for s in slugs if s not in by_skill_bad]
     # 历史欠债 / 口径待澄清条款：SPEC 有明文下限但全库未落地，或条款措辞有两种合理解读。
     # 剔除这三条后的「结构合规数」更能反映仓库的真实状态。
-    DEBT = {"EX-02", "QL-03", "RF-01"}
+    # 仍未落地的欠债条款：SPEC 有明文下限、但全库还没做到，单独统计而不是混进「不合规」，
+    # 否则真正的结构性问题会被数量淹没。哪一条补齐了就从这里删掉，报告里的口径自动跟着变。
+    DEBT_NOTES = {
+        "EX-02": "示例正文不足 3 个",
+        "RF-01": "01-core-theories 理论块不足 5 个",
+    }
+    DEBT = set(DEBT_NOTES)
     bad_strict: dict[str, set[str]] = defaultdict(set)
     for r in err + warn:
         if r["id"] not in DEBT:
@@ -503,8 +510,12 @@ def main() -> int:
     print(f"体检对象：{len(slugs)} 个 skill（skills/_template 不计入）")
     print(f"结果：ERROR {len(err)} 条 ／ WARN {len(warn)} 条 ／ INFO {len(info)} 条")
     print(f"完全合规（无 ERROR 也无 WARN）：{len(clean)} 个 → {', '.join(clean) if clean else '（无）'}")
-    print(f"剔除「历史欠债/口径待澄清」三条（EX-02 示例数 / QL-03 协作声明逐条点名 / RF-01 理论块数）后："
-          f"{len(clean_strict)}/{len(slugs)} 个 skill 结构完全合规")
+    if DEBT_NOTES:
+        label = " / ".join(f"{k} {v}" for k, v in DEBT_NOTES.items())
+        print(f"剔除「历史欠债」{len(DEBT_NOTES)} 条（{label}）后："
+              f"{len(clean_strict)}/{len(slugs)} 个 skill 结构完全合规")
+    else:
+        print(f"无历史欠债项：{len(clean_strict)}/{len(slugs)} 个 skill 结构完全合规")
     print()
 
     print("-" * 100)

@@ -1,6 +1,6 @@
 ---
 name: theodore-wright
-description: "以西奥多·莱特的莱特定律(Wright's Law)、每累计产量翻倍→单位成本下降固定百分比、学习曲线(Learning Curve)与文风，对学习曲线/经验曲线相关问题做深度分析。触发：要求"用西奥多·莱特的框架分析""像西奥多·莱特那样想想""莱特定律、学习曲线、经验曲线"；或用户希望得到带有数理精确特征的分析。本技能提供思维框架与文风，不声称代表西奥多·莱特本人或其未公开观点。与聚焦学习曲线/经验曲线互补领域的 carlota-perez、theodore-wright、gartner-hype-cycle 互补。"
+description: "以西奥多·莱特的莱特定律(Wright's Law)、每累计产量翻倍→单位成本下降固定百分比、学习曲线(Learning Curve)与文风，对学习曲线/经验曲线相关问题做深度分析。触发：要求"用西奥多·莱特的框架分析""像西奥多·莱特那样想想""莱特定律、学习曲线、经验曲线"；或用户希望得到带有数理精确特征的分析。本技能提供思维框架与文风，不声称代表西奥多·莱特本人或其未公开观点。与聚焦学习曲线/经验曲线互补领域的 carlota-perez、gartner-hype-cycle 互补。"
 agent_created: true
 ---
 
@@ -86,5 +86,6 @@ agent_created: true
 ## 协作声明
 
 - 纯 学习曲线/经验曲线 → 用本技能
-- 涉及互补领域 → 优先用 `carlota-perez` 等
-- 需要多视角会诊 → 参见 `combos/` 下的圆桌会议方案
+- 与 `carlota-perez`（卡洛塔·佩雷斯）互补：技术周期与范式转型 方向的问题优先用它
+- 与 `gartner-hype-cycle`（加特纳Hype Cycle）互补：技术采纳与成熟度 方向的问题优先用它
+- 需要多视角会诊（3 个以上视角） → 参见 `combos/` 下的圆桌会议方案，或运行 `python tools/skill-gen/assemble.py "你的问题"`
