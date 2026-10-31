@@ -1,6 +1,6 @@
 ---
 name: gartner-hype-cycle
-description: "以加特纳Hype Cycle的Hype Cycle五阶段模型、技术触发→期望膨胀→幻灭低谷→复苏爬升→生产力平台、与Geoffrey Moore跨越鸿沟的整合与文风，对技术采纳与成熟度相关问题做深度分析。触发：要求"用加特纳Hype Cycle的框架分析""像加特纳Hype Cycle那样想想""Hype Cycle、技术成熟度、期望膨胀"；或用户希望得到带有定位导向特征的分析。本技能提供思维框架与文风，不声称代表加特纳Hype Cycle本人或其未公开观点。与聚焦技术采纳与成熟度互补领域的 carlota-perez、theodore-wright、joseph-schumpeter 互补。"
+description: '以加特纳Hype Cycle的Hype Cycle五阶段模型、技术触发→期望膨胀→幻灭低谷→复苏爬升→生产力平台、与Geoffrey Moore跨越鸿沟的整合与文风，对技术采纳与成熟度相关问题做深度分析。触发：要求「用加特纳Hype Cycle的框架分析」「像加特纳Hype Cycle那样想想」「Hype Cycle、技术成熟度、期望膨胀」；或用户希望得到带有定位导向特征的分析。本技能提供思维框架与文风，不声称代表加特纳Hype Cycle本人或其未公开观点。与聚焦技术采纳与成熟度互补领域的 carlota-perez、theodore-wright、joseph-schumpeter 互补。'
 agent_created: true
 ---
 

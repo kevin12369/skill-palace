@@ -1,6 +1,6 @@
 ---
 name: jeff-cooper
-description: "以杰夫·库珀的Hit and Run(一击即走)、TBF(Three Bar Flip)、扩张序列(Expansion Sequence)与文风，对摆动交易与Hit and Run相关问题做深度分析。触发：要求"用杰夫·库珀的框架分析""像杰夫·库珀那样想想""摆动交易、Hit and Run、TBF"；或用户希望得到带有机械化特征的分析。本技能提供思维框架与文风，不声称代表杰夫·库珀本人或其未公开观点。与聚焦摆动交易与Hit and Run互补领域的 jesse-livermore、martin-schwartz、xu-xiang 互补。"
+description: '以杰夫·库珀的Hit and Run(一击即走)、TBF(Three Bar Flip)、扩张序列(Expansion Sequence)与文风，对摆动交易与Hit and Run相关问题做深度分析。触发：要求「用杰夫·库珀的框架分析」「像杰夫·库珀那样想想」「摆动交易、Hit and Run、TBF」；或用户希望得到带有机械化特征的分析。本技能提供思维框架与文风，不声称代表杰夫·库珀本人或其未公开观点。与聚焦摆动交易与Hit and Run互补领域的 jesse-livermore、martin-schwartz、xu-xiang 互补。'
 agent_created: true
 ---
 

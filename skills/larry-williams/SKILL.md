@@ -1,6 +1,6 @@
 ---
 name: larry-williams
-description: "以拉瑞·威廉姆斯的威廉%R(Williams %R)、季节性选股、市场广度(Advance/Decline)与文风，对短线交易与资金管理相关问题做深度分析。触发：要求"用拉瑞·威廉姆斯的框架分析""像拉瑞·威廉姆斯那样想想""短线交易、威廉指标、资金管理"；或用户希望得到带有精密系统化特征的分析。本技能提供思维框架与文风，不声称代表拉瑞·威廉姆斯本人或其未公开观点。与聚焦短线交易与资金管理互补领域的 martin-schwartz、xu-xiang、jesse-livermore 互补。"
+description: '以拉瑞·威廉姆斯的威廉%R(Williams %R)、季节性选股、市场广度(Advance/Decline)与文风，对短线交易与资金管理相关问题做深度分析。触发：要求「用拉瑞·威廉姆斯的框架分析」「像拉瑞·威廉姆斯那样想想」「短线交易、威廉指标、资金管理」；或用户希望得到带有精密系统化特征的分析。本技能提供思维框架与文风，不声称代表拉瑞·威廉姆斯本人或其未公开观点。与聚焦短线交易与资金管理互补领域的 martin-schwartz、xu-xiang、jesse-livermore 互补。'
 agent_created: true
 ---
 

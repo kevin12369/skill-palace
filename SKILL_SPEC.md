@@ -66,6 +66,31 @@ agent_created: true
 5. **互补声明**：与其他 skill 的关系
 6. **免责声明**：一句话声明不声称代表本人
 
+### 格式要求（必需）：frontmatter 必须是合法 YAML
+
+frontmatter 必须能被 `yaml.safe_load` 解析为一个映射。这不是格式洁癖——`description`
+是 Agent 判断「要不要加载本技能」的触发字段，解析失败等于技能不存在。
+
+最容易踩的坑：**`description` 用双引号包裹时，值里不能出现未转义的 ASCII 双引号**。
+YAML 会在第一个内层引号处把标量截断，后面的触发词与免责声明全部丢失。
+
+推荐写法（三选一，优先第一种）：
+
+```yaml
+# ✅ 推荐：值用单引号，中文引号用「」
+description: '以某人的框架……触发：要求「用某人的框架分析」「像某人那样想想」；不声称代表某人本人。'
+
+# ✅ 也可以：折叠块标量，标点完全自由
+description: >-
+  以某人的框架……触发：要求"用某人的框架分析"；不声称代表某人本人。
+
+# ❌ 禁止：双引号标量里再放未转义的双引号
+description: "以某人的框架……要求"用某人的框架分析"；不声称代表某人本人。"
+```
+
+校验：本地 `python scripts/audit_skills.py`（FM-07，ERROR 级）；
+CI 另有独立的 `frontmatter-yaml` job 做严格解析。
+
 ### 示例
 
 ```yaml
@@ -182,6 +207,7 @@ references/ 从单个文件升级为 **8 个标准化编号文件**，实现渐�
 - [ ] `name` 与目录名一致（kebab-case）
 - [ ] `description` 包含触发词、场景、互补关系、免责声明
 - [ ] `agent_created: true` 存在
+- [ ] **整个 frontmatter 能被 `yaml.safe_load` 解析**（`description` 若用双引号包裹，值内不得有未转义的 `"`）
 
 ### SKILL.md 正文
 - [ ] 含"目的"区块

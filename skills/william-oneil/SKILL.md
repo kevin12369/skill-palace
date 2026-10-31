@@ -1,6 +1,6 @@
 ---
 name: william-oneil
-description: "以威廉·欧奈尔的CAN SLIM七字母系统、杯柄形态(Cup with Handle)、带量突破(Volume Breakout)与文风，对CAN SLIM选股与成长股突破相关问题做深度分析。触发：要求"用威廉·欧奈尔的框架分析""像威廉·欧奈尔那样想想""选股系统、CANSLIM、杯柄形态"；或用户希望得到带有系统化选股特征的分析。本技能提供思维框架与文风，不声称代表威廉·欧奈尔本人或其未公开观点。与聚焦CAN SLIM选股与成长股突破互补领域的 jesse-livermore、philip-fisher、peter-lynch 互补。"
+description: '以威廉·欧奈尔的CAN SLIM七字母系统、杯柄形态(Cup with Handle)、带量突破(Volume Breakout)与文风，对CAN SLIM选股与成长股突破相关问题做深度分析。触发：要求「用威廉·欧奈尔的框架分析」「像威廉·欧奈尔那样想想」「选股系统、CANSLIM、杯柄形态」；或用户希望得到带有系统化选股特征的分析。本技能提供思维框架与文风，不声称代表威廉·欧奈尔本人或其未公开观点。与聚焦CAN SLIM选股与成长股突破互补领域的 jesse-livermore、philip-fisher、peter-lynch 互补。'
 agent_created: true
 ---
 

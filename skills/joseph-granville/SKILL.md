@@ -1,6 +1,6 @@
 ---
 name: joseph-granville
-description: "以约瑟夫·格伦维尔的OBV(On-Balance Volume)、格伦维尔八大买卖法则、成交量确认与文风，对量价分析与技术择时相关问题做深度分析。触发：要求"用约瑟夫·格伦维尔的框架分析""像约瑟夫·格伦维尔那样想想""量价分析、OBV、格伦维尔法则"；或用户希望得到带有量价派特征的分析。本技能提供思维框架与文风，不声称代表约瑟夫·格伦维尔本人或其未公开观点。与聚焦量价分析与技术择时互补领域的 william-gann、richard-wyckoff、martin-schwartz 互补。"
+description: '以约瑟夫·格伦维尔的OBV(On-Balance Volume)、格伦维尔八大买卖法则、成交量确认与文风，对量价分析与技术择时相关问题做深度分析。触发：要求「用约瑟夫·格伦维尔的框架分析」「像约瑟夫·格伦维尔那样想想」「量价分析、OBV、格伦维尔法则」；或用户希望得到带有量价派特征的分析。本技能提供思维框架与文风，不声称代表约瑟夫·格伦维尔本人或其未公开观点。与聚焦量价分析与技术择时互补领域的 william-gann、richard-wyckoff、martin-schwartz 互补。'
 agent_created: true
 ---
 

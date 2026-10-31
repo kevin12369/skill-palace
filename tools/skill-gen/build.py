@@ -12,6 +12,34 @@ MAT = os.path.join(ROOT, "registry", "roundtable-matrix.json")
 # 保证一处改名全库同步，不在模板里手写第二次。
 PERSON_BY_SLUG = {p["name"]: p for p in PEOPLE}
 
+
+def assert_frontmatter(md: str, slug: str) -> None:
+    """生成物的 frontmatter 必须是合法 YAML。
+
+    description 是 Agent 判断「要不要加载这个 skill」的触发字段。它一旦写坏，
+    严格解析器的平台读不到，技能等于不存在——而 CI 只查「字段名在不在」是查不出来的。
+    """
+    m = re.match(r"^---\n(.*?)\n---", md, re.DOTALL)
+    if not m:
+        raise SystemExit(f"[frontmatter] {slug}: 缺少 frontmatter")
+    fm = m.group(1)
+    try:
+        import yaml
+    except ImportError:
+        yaml = None
+    if yaml is not None:
+        try:
+            loaded = yaml.safe_load(fm)
+        except Exception as e:
+            raise SystemExit(f"[frontmatter] {slug}: YAML 非法 → {e}")
+        if not isinstance(loaded, dict):
+            raise SystemExit(f"[frontmatter] {slug}: 顶层不是映射")
+        return
+    for line in fm.split("\n"):
+        mm = re.match(r'^([A-Za-z_][\w-]*):\s*"(.*)"\s*$', line)
+        if mm and '"' in re.sub(r'\\"', "", mm.group(2)):
+            raise SystemExit(f'[frontmatter] {slug}: {mm.group(1)} 内含未转义的双引号')
+
 def w(path, text):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
@@ -32,14 +60,16 @@ def fmt_list(items, numbered=False, lead="- "):
 def render_skill_md(p):
     cm = fmt_list([f"**{n}**——{d}" for n, d in p["core_models"]])
     comp = "、".join(p["complements"])
+    # 注意：description 里一律用「」而不是 ASCII 双引号。它最终会进 YAML 标量，
+    # ASCII 引号一旦嵌进双引号标量就会把 YAML 截断（v2.7.0 前 51 个文件全是这个毛病）。
     desc = (f"以{p['person']}的{('、'.join(p['frameworks'][:3]))}与文风，对{p['domain_cn']}相关问题做深度分析。"
-            f"触发：要求\"用{p['person']}的框架分析\"\"像{p['person']}那样想想\"\"{'、'.join(p['roundtable_tags'][:3])}\"；"
+            f"触发：要求「用{p['person']}的框架分析」「像{p['person']}那样想想」「{'、'.join(p['roundtable_tags'][:3])}」；"
             f"或用户希望得到带有{p['style_keywords'][0]}特征的分析。本技能提供思维框架与文风，"
             f"不声称代表{p['person']}本人或其未公开观点。与聚焦{p['domain_cn']}互补领域的 {comp} 互补。")
     of = fmt_list(p["output_format"], numbered=True)
     return f"""---
 name: {p['name']}
-description: "{desc}"
+description: '{desc.replace("'", "''")}'
 agent_created: true
 ---
 
@@ -862,7 +892,10 @@ def rebuild_matrix():
         slug = s["name"]
         code = code_map.get(slug, "")
         # slug 是主键；code 仅为展示别名，存入对象便于 assemble 显示
+        # domain 是英文 slug（如 value-investing），是英文问题进入组阁的免费入口，
+        # 不需要给 345 个中文标签逐个做英文别名就能命中。
         experts[slug] = {"code": code, "person": s["person"], "role": s["roundtable_role"],
+                         "domain": s.get("domain", ""),
                          "tags": s["roundtable_tags"], "stage": stage_map[slug], "path": s["path"]}
         for t in s["roundtable_tags"]:
             tag_index.setdefault(t, []).append(slug)
@@ -877,6 +910,9 @@ def rebuild_matrix():
 def main():
     total = 0
     validate_maps()  # 先守卫再写盘，避免写到一半才发现映射表缺人
+    # 同理：先全量预渲染并校验 frontmatter，模板坏了不要写盘
+    for p in PEOPLE:
+        assert_frontmatter(render_skill_md(p), p["name"])
     for p in PEOPLE:
         base = os.path.join(SKILLS, p["name"])
         w(os.path.join(base, "SKILL.md"), render_skill_md(p))

@@ -39,6 +39,11 @@ import re
 import sys
 from collections import Counter, defaultdict
 
+try:  # PyYAML 是校验 frontmatter 合法性的唯一可靠方式；缺失时降级为结构启发式检查
+    import yaml as _yaml
+except ImportError:  # pragma: no cover
+    _yaml = None
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SKILLS_DIR = os.path.join(ROOT, "skills")
 INDEX_PATH = os.path.join(ROOT, "registry", "index.json")
@@ -79,6 +84,7 @@ CHECKS: dict[str, tuple[str, str, str]] = {
     "FM-04": ("WARN", "§2 description 要求 5", "description 含互补声明"),
     "FM-05": ("INFO", "§2 description 要求 3/4", "description 含引号包裹的触发词 ≥3 处"),
     "FM-06": ("INFO", "§2 description 要求（整体）", "description 长度 ≥200 字符"),
+    "FM-07": ("ERROR", "§2 frontmatter", "frontmatter 是合法 YAML（可被解析器读取）"),
     "BD-01": ("ERROR", "§3 正文结构 1", "H1 为「# <人物>思维框架与分析风格」"),
     "BD-02": ("ERROR", "§3 正文结构 2 / §9", "含「目的」区块"),
     "BD-03": ("ERROR", "§3 正文结构 3 / §9", "含「不声称代表」定位声明"),
@@ -134,6 +140,33 @@ def section_body(text: str, keyword: str) -> str:
 def frontmatter(text: str) -> tuple[str, str]:
     m = re.match(r"^---\n(.*?)\n---", text, re.DOTALL)
     return (m.group(1), text[m.end():]) if m else ("", text)
+
+
+def yaml_error(fm: str) -> str:
+    """返回 frontmatter 的 YAML 错误摘要；合法则返回空串。
+
+    有 PyYAML 时做真正的解析；没有时退化为结构启发式——专门抓
+    「双引号标量里又出现未转义的双引号」这一类，也就是本仓库踩过的坑。
+    """
+    if not fm.strip():
+        return "frontmatter 为空"
+    if _yaml is not None:
+        try:
+            loaded = _yaml.safe_load(fm)
+        except Exception as e:
+            return "YAML 解析失败：" + str(e).strip().split("\n")[0][:70]
+        if not isinstance(loaded, dict):
+            return f"frontmatter 顶层不是映射（是 {type(loaded).__name__}）"
+        return ""
+    # —— 降级模式（无 PyYAML）：只查最致命的一类 ——
+    for line in fm.split("\n"):
+        m = re.match(r'^([A-Za-z_][\w-]*):\s*"(.*)"\s*$', line)
+        if not m:
+            continue
+        inner = re.sub(r'\\"', "", m.group(2))  # 去掉合法转义后仍有裸引号即为非法
+        if '"' in inner:
+            return f'{m.group(1)} 的值是双引号标量，但内含未转义的 "（降级模式检出）'
+    return ""
 
 
 def audit_one(slug: str, base: str, index_by_name: dict) -> None:
@@ -217,6 +250,11 @@ def audit_one(slug: str, base: str, index_by_name: dict) -> None:
         add(slug, "FM-05", f"引号触发词 {quoted} 处", "≥3 处（关键词清单 / 问题示例）")
     if len(desc) < 200:
         add(slug, "FM-06", f"{len(desc)} 字符", "≥200 字符（承载 6 要素）")
+    # FM-07：frontmatter 必须是合法 YAML。description 是 Agent 决定是否加载本技能的
+    # 触发字段，写坏了会让严格解析器的平台直接读不到，技能等于不存在。
+    _err = yaml_error(fm)
+    if _err:
+        add(slug, "FM-07", _err, "frontmatter 必须是合法 YAML")
 
     # ---------- BD 正文 ----------
     h1 = body.strip().split("\n", 1)[0] if body.strip() else ""
@@ -389,6 +427,14 @@ def audit_one(slug: str, base: str, index_by_name: dict) -> None:
 
 
 CLARIFICATIONS = [
+    ("§2 frontmatter「合法 YAML」（FM-07，2026-10-31 新增）",
+     "长期缺口：51 个 SKILL.md 的 `description` 用双引号包裹，值里又嵌了未转义的 ASCII 双引号"
+     "（`触发：要求\"用X的框架分析\"…`），YAML 在第一个内层引号处就截断。`yaml.safe_load` 实测 52/52 失败。"
+     "`description` 是 Agent 判断「要不要加载本技能」的触发字段，写坏了等同于技能不存在；"
+     "而原 CI 只查字符串是否存在（`if field not in fm`），从未解析过 YAML，所以一路绿灯。",
+     "已落地：① `build.py` 的 description 改用「」，并用 YAML 单引号渲染 + 写盘前 `assert_frontmatter()` 预校验；"
+     "② 本脚本新增 FM-07（ERROR），有 PyYAML 时真正解析，无 PyYAML 时降级为「双引号标量内是否还有裸引号」的启发式；"
+     "③ `_template/SKILL.md` 同步修正，避免模板把同一问题传下去。现 52/52 合法。"),
     ("§1 / §4 「精简版 ~5KB」",
      "SPEC 写 `~5KB`，仓库实测 1.8–3.0 KB（最小 hong-hao 1811 B，最大 william-oneil 3022 B）。"
      "「~5KB」既可理解为上限也可理解为目标值，两种读法结论相反。",

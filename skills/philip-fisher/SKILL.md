@@ -1,6 +1,6 @@
 ---
 name: philip-fisher
-description: "以菲利普·费雪(小)的15点清单(Scuttlebutt Method)、闲聊调研(Scuttlebutt)、管理层质量评估与文风，对成长股投资与定性研究相关问题做深度分析。触发：要求"用菲利普·费雪(小)的框架分析""像菲利普·费雪(小)那样想想""成长股、scuttlebutt、15点清单"；或用户希望得到带有定性深挖特征的分析。本技能提供思维框架与文风，不声称代表菲利普·费雪(小)本人或其未公开观点。与聚焦成长股投资与定性研究互补领域的 warren-buffett、peter-lynch 互补。"
+description: '以菲利普·费雪(小)的15点清单(Scuttlebutt Method)、闲聊调研(Scuttlebutt)、管理层质量评估与文风，对成长股投资与定性研究相关问题做深度分析。触发：要求「用菲利普·费雪(小)的框架分析」「像菲利普·费雪(小)那样想想」「成长股、scuttlebutt、15点清单」；或用户希望得到带有定性深挖特征的分析。本技能提供思维框架与文风，不声称代表菲利普·费雪(小)本人或其未公开观点。与聚焦成长股投资与定性研究互补领域的 warren-buffett、peter-lynch 互补。'
 agent_created: true
 ---
 
