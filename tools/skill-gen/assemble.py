@@ -6,7 +6,9 @@
     python assemble.py "美联储降息对A股意味着什么" --json
 
 设计要点（对应 ROUNDTABLE.md「组阁算法」）：
-1. 两级命中：A) 问题 token 直接匹配 tag_index；B) 口语兜底词表（解决"能不能上车"类字面匹配弱）。
+1. 四条命中路径：A) 问题文本直接匹配中文 tag_index；A') 英文短语经 tag_aliases.EN_TAG_ALIASES
+   映射回中文标签（不加这条，英文问题命中 0 标签、恒定落到三个兜底专家）；
+   B) 口语兜底词表（解决"能不能上车"类字面匹配弱）；C) domain slug 拆词全中（英文零成本入口）。
 2. 确定性收敛：按 阶段顺序 -> 命中强度降序 -> slug 字母序 排序；阶段限额 宏观≤3/中观≤2/微观≤2。
 3. 兜底规则：宏观空补 gao-shanwen、中观空补 charlie-munger、微观空补 warren-buffett（保证三阶段齐全）。
 4. 列席 = 正式之外的命中者，按序取 ≤6。
@@ -18,7 +20,10 @@
 
 import json
 import os
+import re
 import sys
+
+from tag_aliases import EN_TAG_ALIASES
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 MAT = os.path.join(ROOT, "registry", "roundtable-matrix.json")
@@ -112,12 +117,20 @@ def assemble(question, column=COLUMN_MAX):
 
     hit_tags = []
     # 路径 A：标签在问题中出现（忽略大小写子串）
-    for tag, slugs in tag_index.items():
+    for tag in tag_index:
         if tag.lower() in q_lower:
             hit_tags.append(tag)
-            for s in slugs:
-                if s in experts:
-                    add(s, "A")
+    # 路径 A'：英文问题 —— 英文别名映射回中文标签，再走同一套加权。
+    # 不加这一步，英文问题命中 0 个标签，必然掉进 FALLBACK 的三个兜底专家。
+    for alias, tags in EN_TAG_ALIASES.items():
+        if alias in q_lower:
+            for t in tags:
+                if t in tag_index and t not in hit_tags:
+                    hit_tags.append(t)
+    for tag in hit_tags:
+        for s in tag_index[tag]:
+            if s in experts:
+                add(s, "A")
     # 路径 B：口语兜底词表
     used_orals = []
     for word, slugs in ORAL_MAP.items():
@@ -126,6 +139,14 @@ def assemble(question, column=COLUMN_MAX):
             for s in slugs:
                 if s in experts:
                     add(s, "B")
+    # 路径 C：domain slug 匹配 —— domain 字段本来就是英文（value-investing、
+    # short-term-trading…），不需要给 345 个中文标签逐个做英文别名就能进组阁。
+    # 规则是「domain 拆词后全部出现在问题里」，避免单词误命中（如 "trading" 单独出现不算）。
+    q_words = {w for w in re.split(r"[^a-z0-9]+", q_lower) if w}
+    for slug, e in experts.items():
+        parts = [w for w in str(e.get("domain") or "").split("-") if w]
+        if parts and all(w in q_words for w in parts):
+            add(slug, "B")
 
     # 收敛排序
     def sort_key(slug):

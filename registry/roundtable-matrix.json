@@ -118,6 +118,7 @@
       "code": "GS",
       "person": "高善文",
       "role": "中国宏观背景提供者",
+      "domain": "china-macro",
       "tags": [
         "中国宏观",
         "资产定价",
@@ -133,6 +134,7 @@
       "code": "GP",
       "person": "格林斯潘",
       "role": "全球宏观背景提供者",
+      "domain": "fed-global-macro",
       "tags": [
         "全球宏观",
         "美联储",
@@ -149,6 +151,7 @@
       "code": "CM",
       "person": "查理·芒格",
       "role": "首席逆向质疑者",
+      "domain": "micro-decision",
       "tags": [
         "微观决策",
         "逆向思考",
@@ -165,6 +168,7 @@
       "code": "WB",
       "person": "沃伦·巴菲特",
       "role": "估值与最终决策者",
+      "domain": "value-investing",
       "tags": [
         "价值投资",
         "护城河",
@@ -181,6 +185,7 @@
       "code": "CP",
       "person": "卡洛塔·佩雷斯",
       "role": "技术周期分析师",
+      "domain": "tech-cycles",
       "tags": [
         "技术革命",
         "范式转型",
@@ -198,6 +203,7 @@
       "code": "KN",
       "person": "康德拉季耶夫",
       "role": "长周期分析师",
+      "domain": "long-wave",
       "tags": [
         "长波",
         "康波",
@@ -215,6 +221,7 @@
       "code": "SZ",
       "person": "乔治·索罗斯",
       "role": "反身性理论家与泡沫剖析者",
+      "domain": "reflexivity",
       "tags": [
         "反身性",
         "繁荣-萧条",
@@ -232,6 +239,7 @@
       "code": "IF",
       "person": "欧文·费雪(大)",
       "role": "货币与债务周期理论家",
+      "domain": "debt-deflation",
       "tags": [
         "通缩",
         "债务周期",
@@ -249,6 +257,7 @@
       "code": "PF",
       "person": "菲利普·费雪(小)",
       "role": "成长股识别与管理层评估师",
+      "domain": "growth-investing",
       "tags": [
         "成长股",
         "scuttlebutt",
@@ -266,6 +275,7 @@
       "code": "HM",
       "person": "海曼·明斯基",
       "role": "金融不稳定分析师",
+      "domain": "financial-instability",
       "tags": [
         "金融不稳定",
         "明斯基时刻",
@@ -283,6 +293,7 @@
       "code": "RD",
       "person": "瑞·达里奥",
       "role": "债务周期分析师与宏观配置师",
+      "domain": "debt-cycles",
       "tags": [
         "债务周期",
         "去杠杆",
@@ -300,6 +311,7 @@
       "code": "SP",
       "person": "约瑟夫·熊彼特",
       "role": "创新与产业演化理论家",
+      "domain": "innovation-cycles",
       "tags": [
         "创造性破坏",
         "企业家精神",
@@ -317,6 +329,7 @@
       "code": "JV",
       "person": "威廉·斯坦利·杰文斯",
       "role": "资源效率悖论分析师",
+      "domain": "resource-efficiency",
       "tags": [
         "杰文斯悖论",
         "效率悖论",
@@ -334,6 +347,7 @@
       "code": "WR",
       "person": "西奥多·莱特",
       "role": "技术成本曲线分析师",
+      "domain": "learning-curve",
       "tags": [
         "莱特定律",
         "学习曲线",
@@ -352,6 +366,7 @@
       "code": "GT",
       "person": "加特纳Hype Cycle",
       "role": "技术成熟度定位分析师",
+      "domain": "tech-adoption",
       "tags": [
         "Hype Cycle",
         "技术成熟度",
@@ -369,6 +384,7 @@
       "code": "HOM",
       "person": "霍华德·马克斯",
       "role": "周期定位与风险感知者",
+      "domain": "risk-cycles",
       "tags": [
         "周期",
         "风险控制",
@@ -387,6 +403,7 @@
       "code": "BM",
       "person": "伯顿·马尔基尔",
       "role": "有效市场与被动投资倡导者",
+      "domain": "efficient-markets",
       "tags": [
         "有效市场假说",
         "指数投资",
@@ -403,6 +420,7 @@
       "code": "FS",
       "person": "弗雷德·施韦德",
       "role": "市场荒诞与人性审视者",
+      "domain": "market-culture",
       "tags": [
         "人性",
         "市场结构",
@@ -419,6 +437,7 @@
       "code": "DK",
       "person": "丹尼尔·卡尼曼",
       "role": "行为偏差与决策心理剖析者",
+      "domain": "behavioral-economics",
       "tags": [
         "行为金融",
         "认知偏差",
@@ -435,6 +454,7 @@
       "code": "QG",
       "person": "邱国鹭",
       "role": "中国价值投资实务派",
+      "domain": "value-investing",
       "tags": [
         "价值投资",
         "中国股市",
@@ -452,6 +472,7 @@
       "code": "LS",
       "person": "刘顺仁",
       "role": "财报质量与战略剖析者",
+      "domain": "financial-analysis",
       "tags": [
         "财务分析",
         "财报质量",
@@ -469,6 +490,7 @@
       "code": "JG",
       "person": "约翰·戈登",
       "role": "金融史与制度演进观察者",
+      "domain": "financial-history",
       "tags": [
         "金融史",
         "市场制度",
@@ -485,6 +507,7 @@
       "code": "RS",
       "person": "罗伯特·席勒",
       "role": "行为泡沫与叙事经济学剖析者",
+      "domain": "behavioral-finance",
       "tags": [
         "行为金融",
         "泡沫",
@@ -502,6 +525,7 @@
       "code": "CE",
       "person": "查尔斯·埃利斯",
       "role": "投资政策与长期纪律设计者",
+      "domain": "investment-policy",
       "tags": [
         "指数投资",
         "资产配置",
@@ -518,6 +542,7 @@
       "code": "NT",
       "person": "纳西姆·塔勒布",
       "role": "尾部风险与反脆弱剖析者",
+      "domain": "risk-theory",
       "tags": [
         "黑天鹅",
         "尾部风险",
@@ -535,6 +560,7 @@
       "code": "BB",
       "person": "本·伯南克",
       "role": "货币政策与危机传导分析师",
+      "domain": "monetary-policy",
       "tags": [
         "货币政策",
         "美联储",
@@ -552,6 +578,7 @@
       "code": "DY",
       "person": "段永平",
       "role": "中国价值投资与企业质量评估师",
+      "domain": "value-investing",
       "tags": [
         "价值投资",
         "商业模式",
@@ -571,6 +598,7 @@
       "code": "LD",
       "person": "李大霄",
       "role": "A股市场整体判断者",
+      "domain": "a-share-strategy",
       "tags": [
         "A股",
         "政策市",
@@ -589,6 +617,7 @@
       "code": "HH",
       "person": "洪灏",
       "role": "宏观策略与周期定位分析师",
+      "domain": "macro-strategy",
       "tags": [
         "A股策略",
         "港股",
@@ -608,6 +637,7 @@
       "code": "PL",
       "person": "彼得·林奇",
       "role": "成长股识别与选股实操派",
+      "domain": "growth-investing",
       "tags": [
         "GARP",
         "PEG",
@@ -627,6 +657,7 @@
       "code": "FP",
       "person": "付鹏",
       "role": "宏观对冲与利率汇率分析师",
+      "domain": "macro-hedge",
       "tags": [
         "宏观对冲",
         "利率",
@@ -646,6 +677,7 @@
       "code": "XX",
       "person": "徐翔",
       "role": "短线交易策略与情绪分析师",
+      "domain": "short-term-trading",
       "tags": [
         "短线交易",
         "题材龙头",
@@ -665,6 +697,7 @@
       "code": "BC",
       "person": "北京炒家",
       "role": "题材博弈与龙头战法分析师",
+      "domain": "short-term-trading",
       "tags": [
         "打板",
         "龙头战法",
@@ -684,6 +717,7 @@
       "code": "JL",
       "person": "杰西·利弗莫尔",
       "role": "趋势交易与市场心理大师",
+      "domain": "speculation-psychology",
       "tags": [
         "趋势交易",
         "关键点",
@@ -703,6 +737,7 @@
       "code": "WG",
       "person": "威廉·江恩",
       "role": "时间周期与几何分析大师",
+      "domain": "technical-analysis",
       "tags": [
         "江恩理论",
         "时间周期",
@@ -722,6 +757,7 @@
       "code": "SH",
       "person": "迈克尔·斯坦哈特",
       "role": "宏观催化剂与灵活交易大师",
+      "domain": "macro-hedge",
       "tags": [
         "宏观对冲",
         "信息优势",
@@ -740,6 +776,7 @@
       "code": "MZ",
       "person": "马丁·舒华兹",
       "role": "动量交易与交易纪律大师",
+      "domain": "short-term-trading",
       "tags": [
         "动量交易",
         "超短线",
@@ -758,6 +795,7 @@
       "code": "LW",
       "person": "拉瑞·威廉姆斯",
       "role": "短线择时与资金管理大师",
+      "domain": "short-term-trading",
       "tags": [
         "短线交易",
         "威廉指标",
@@ -775,6 +813,7 @@
       "code": "GR",
       "person": "约瑟夫·格伦维尔",
       "role": "量价分析与择时大师",
+      "domain": "technical-analysis",
       "tags": [
         "量价分析",
         "OBV",
@@ -794,6 +833,7 @@
       "code": "RW",
       "person": "理查德·威科夫",
       "role": "量价结构与主力意图解读者",
+      "domain": "volume-price-analysis",
       "tags": [
         "威科夫操盘法",
         "吸筹",
@@ -813,6 +853,7 @@
       "code": "GD",
       "person": "乔治·道格拉斯·泰勒",
       "role": "日内周期与泰勒交易法大师",
+      "domain": "technical-analysis",
       "tags": [
         "泰勒交易法",
         "三日子",
@@ -830,6 +871,7 @@
       "code": "JC",
       "person": "杰夫·库珀",
       "role": "摆动交易与短线模式大师",
+      "domain": "technical-analysis",
       "tags": [
         "摆动交易",
         "Hit and Run",
@@ -849,6 +891,7 @@
       "code": "YS",
       "person": "野山（张文华）",
       "role": "A股技术派波段分析师",
+      "domain": "technical-analysis",
       "tags": [
         "波段操作",
         "A股技术分析",
@@ -868,6 +911,7 @@
       "code": "JS",
       "person": "君山居士（康会民）",
       "role": "A股趋势与均线系统分析师",
+      "domain": "technical-analysis",
       "tags": [
         "均线系统",
         "趋势交易",
@@ -886,6 +930,7 @@
       "code": "XW",
       "person": "徐文明",
       "role": "A股散户短线技术分析师",
+      "domain": "technical-analysis",
       "tags": [
         "短线",
         "A股技术分析",
@@ -905,6 +950,7 @@
       "code": "QA",
       "person": "秦国安",
       "role": "A股量价与主力行为分析师",
+      "domain": "technical-analysis",
       "tags": [
         "量价分析",
         "主力行为",
@@ -923,6 +969,7 @@
       "code": "LQ",
       "person": "龙祺天",
       "role": "A股系统化技术分析师",
+      "domain": "technical-analysis",
       "tags": [
         "系统化交易",
         "A股技术分析",
@@ -940,6 +987,7 @@
       "code": "YJ",
       "person": "杨济源",
       "role": "A股交易心理与风险分析师",
+      "domain": "technical-analysis",
       "tags": [
         "交易心理学",
         "风险控制",
@@ -959,6 +1007,7 @@
       "code": "JM",
       "person": "詹姆斯·西蒙斯",
       "role": "量化投资与统计套利大师",
+      "domain": "quant-trading",
       "tags": [
         "量化投资",
         "统计套利",
@@ -983,6 +1032,7 @@
       "code": "SD",
       "person": "斯坦利·德鲁肯米勒",
       "role": "宏观投资与资本保全大师",
+      "domain": "macro-investing",
       "tags": [
         "宏观投资",
         "非对称风险收益",
@@ -1000,6 +1050,7 @@
       "code": "WO",
       "person": "威廉·欧奈尔",
       "role": "CAN SLIM选股与突破交易系统分析师",
+      "domain": "canslim",
       "tags": [
         "选股系统",
         "CANSLIM",
