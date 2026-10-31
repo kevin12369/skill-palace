@@ -161,3 +161,67 @@ jobs:
 
       - name: Audit skills against SKILL_SPEC
         run: python scripts/audit_skills.py
+
+  # 新增 job：strict 校验 SKILL.md 的 frontmatter 是合法 YAML。
+  # 与上方 spec-audit 的关系：audit_skills.py 的 FM-07 在没有 PyYAML 的环境下只会降级为
+  # 启发式检查；本 job 显式装 PyYAML，保证 CI 里做的是真正的 YAML 解析。
+  # 背景：description 是 Agent 判断「要不要加载本技能」的触发字段，写坏了技能等于不存在，
+  # 而原 lint job 只查字段名在不在（字符串级），从未解析过 YAML，所以 51 个非法文件一路绿灯。
+  frontmatter-yaml:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install PyYAML
+        run: pip install pyyaml
+
+      - name: Validate frontmatter parses as YAML
+        run: |
+          python - <<'PYEOF'
+          import glob, re, sys, yaml
+
+          files = sorted(glob.glob("skills/*/SKILL.md"))
+          bad = []
+          for f in files:
+              text = open(f, encoding="utf-8").read().replace("\r\n", "\n")
+              m = re.match(r"^---\n(.*?)\n---", text, re.DOTALL)
+              if not m:
+                  bad.append((f, "缺少 frontmatter"))
+                  continue
+              try:
+                  data = yaml.safe_load(m.group(1))
+              except Exception as e:
+                  bad.append((f, str(e).strip().split("\n")[0]))
+                  continue
+              if not isinstance(data, dict):
+                  bad.append((f, "frontmatter 顶层不是映射"))
+              elif not data.get("name") or not data.get("description"):
+                  bad.append((f, "缺少 name 或 description"))
+
+          for f, why in bad:
+              print("::error file=%s::%s" % (f, why))
+          print("checked %d SKILL.md, invalid %d" % (len(files), len(bad)))
+          sys.exit(1 if bad else 0)
+          PYEOF
+
+  # 新增 job：圆桌组阁回归。英文问题必须能召回，中文问题不得因英文通道而改变。
+  # 背景：assemble.py 原本只做「中文标签 in 问题」的子串匹配，345 个标签里 330 个含中文，
+  # 因此任何英文问题都命中 0 标签、恒定落到 3 个兜底专家——功能失效，不是效果差。
+  roundtable-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Assemble regression (EN recall + ZH no-regression)
+        run: python scripts/check_roundtable_en.py
+
